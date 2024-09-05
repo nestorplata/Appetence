@@ -33,6 +33,8 @@ public class FamilyMenuScript : MonoBehaviour
     private TMP_Text currency;
 
     [SerializeField]
+    private TMP_Text Food;
+    [SerializeField]
     private TMP_Text Medicine;
     [SerializeField]
     private TMP_Text totalCost;
@@ -69,6 +71,10 @@ public class FamilyMenuScript : MonoBehaviour
     private TMP_Text dayDisplay;
 
     private int totalCostVal;
+
+    private int foodCost = 60;
+
+    private int medCost = 200;
 
     public void Start()
     {
@@ -203,14 +209,14 @@ public class FamilyMenuScript : MonoBehaviour
         {
             if (item)
             {
-                totalCostVal += 60;
+                totalCostVal += GetFoodCost();
             }
         }
         foreach (var item in medList)
         {
             if (item)
             {
-                totalCostVal += 200;
+                totalCostVal += GetMedCost();
             }
         }
 
@@ -221,4 +227,27 @@ public class FamilyMenuScript : MonoBehaviour
 
         return totalCostVal;
     }
+
+    public void SetFoodCost(int newFoodCost)
+    {
+        foodCost = newFoodCost;
+        Food.text = "Food - " + newFoodCost.ToString();
+    }
+
+    public int GetFoodCost()
+    {
+        return foodCost;
+    }
+
+    public void SetMedCost(int newMedCost)
+    {
+        medCost = newMedCost;
+        Medicine.text = "Medicine - " + newMedCost.ToString();
+    }
+
+    public int GetMedCost()
+    {
+        return medCost;
+    }
+
 }
