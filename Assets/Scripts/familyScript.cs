@@ -125,4 +125,32 @@ public class familyScript : MonoBehaviour
     {
         return day;
     }
+
+    public string GetFamilyMemberState(int index)
+    {
+        if (FamilyDeathList[index] == 1)
+        {
+            return "dead";
+        }
+
+        // Priority: Dead > Sick > Hungry > Satisfied
+        if (FamilyHealthState[index] > 0)
+        {
+            return "sick";
+        }
+        if (FamilyFoodState[index] > 0)
+        {
+            return "hungry";
+        }
+        return "satisfied";
+    }
+    public int GetFamilyMemberIndex(string name)
+    {
+        for (int i = 0; i < FamilyNames.Length; i++)
+        {
+            if (FamilyNames[i] == name)
+                return i;
+        }
+        return -1;
+    }
 }

@@ -60,10 +60,13 @@ public class ShopUI : MonoBehaviour
             if (familyUIManager != null)
             {
                 string familyMember = currentItem.familyMember;
-                int clothingIndex = currentItem.clothingIndex;  
+                int clothingIndex = currentItem.clothingIndex;
+
+                string currentState = familyScript.Instance.GetFamilyMemberState(familyScript.Instance.GetFamilyMemberIndex(familyMember));
+
                 familyUIManager.ChangeClothing(familyMember, clothingIndex);
 
-                PlayerPrefs.SetInt(familyMember + "_clothingIndex", clothingIndex);
+                PlayerPrefs.SetInt(familyMember + "_" + currentState + "_clothingIndex", clothingIndex);
                 PlayerPrefs.Save();
             }
 
