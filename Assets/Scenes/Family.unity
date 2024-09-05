@@ -2659,6 +2659,7 @@ MonoBehaviour:
   - {fileID: 1714298227}
   - {fileID: 1375656313}
   currency: {fileID: 422707478}
+  Food: {fileID: 1584160373}
   Medicine: {fileID: 908337194}
   totalCost: {fileID: 1757381156}
   nextDayBtn: {fileID: 416985140}
