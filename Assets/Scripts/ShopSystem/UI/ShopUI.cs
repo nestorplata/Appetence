@@ -38,6 +38,16 @@ public class ShopUI : MonoBehaviour
 
     }
 
+    public void SetupSoldOut(ShopItem item)
+    {
+        currentItem = item;
+        itemName.text = "SOLD OUT";      // Display SOLD OUT
+        itemDescription.text = "";       // Clear description
+        itemCost.text = "";              // Clear cost
+        itemIcon.sprite = item.itemIcon;
+        buyButton.interactable = false;  // Disable the buy button
+    }
+
     void BuyItem()
     {
         if (currentItem.available == true)
@@ -52,6 +62,9 @@ public class ShopUI : MonoBehaviour
                 string familyMember = currentItem.familyMember;
                 int clothingIndex = currentItem.clothingIndex;  
                 familyUIManager.ChangeClothing(familyMember, clothingIndex);
+
+                PlayerPrefs.SetInt(familyMember + "_clothingIndex", clothingIndex);
+                PlayerPrefs.Save();
             }
 
             // Check for next upgrade
@@ -62,7 +75,6 @@ public class ShopUI : MonoBehaviour
             }
             else if (currentItem.isFinalUpgrade)
             {
-
                 itemName.text = "SOLD OUT";      // Display SOLD OUT
                 itemDescription.text = "";       // Clear description
                 itemCost.text = "";              // Clear cost

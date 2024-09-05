@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Shop : MonoBehaviour
 {
@@ -23,30 +24,39 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int currentDay = familyScript.Instance.getDay();
+
         foreach (ShopItem shop in shopItems)
         {
             //Setup
             GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
             ShopUI icon = newItem.GetComponent<ShopUI>();
 
-            // Set the shop item data
-            icon.Setup(shop);
-
-            if (familyScript.Instance.getDay() == 0)
+            if (currentDay == 0)
             {
+                //Reset everything
+                icon.Setup(shop);
                 icon.SetAvailability(true);
                 PlayerPrefs.DeleteAll();
                 PlayerPrefs.Save();
             }
-
-            bool savedAvailability = PlayerPrefs.GetInt(shop.itemName + "_available", shop.available ? 1 : 0) == 1;
-            icon.SetAvailability(savedAvailability);
-            if (!savedAvailability)
+            else
             {
-                icon.itemName.text = "SOLD OUT";
-                icon.itemDescription.text = "";
-                icon.itemCost.text = "";
-                icon.buyButton.interactable = false;
+                bool upgradeExists = PlayerPrefs.GetInt(shop.nextUpgrade.itemName + "_available", shop.nextUpgrade.available ? 1 : 0) == 1;
+                bool baseExists = PlayerPrefs.GetInt(shop.itemName + "_available", shop.available ? 1 : 0) == 1;
+                // icon.SetAvailability(savedAvailability);
+                if (!baseExists && !upgradeExists)
+                {
+                    icon.SetupSoldOut(shop);
+                }
+                else if (baseExists)
+                {
+                    icon.Setup(shop);
+                }
+                else
+                {
+                    icon.Setup(shop.nextUpgrade);
+                }
             }
      
         }

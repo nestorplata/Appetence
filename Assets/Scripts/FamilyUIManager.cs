@@ -22,6 +22,44 @@ public class FamilyUIManager : MonoBehaviour
         clothingOptions.Add("satisfied", GetClothingOptionsForEmotion(satisfiedState));
         clothingOptions.Add("hungry", GetClothingOptionsForEmotion(hungryState));
         clothingOptions.Add("starving", GetClothingOptionsForEmotion(starvingState));
+
+        LoadClothingPreferences();
+    }
+
+    private void LoadClothingPreferences()
+    {
+        if (familyScript.Instance.getDay() == 0)
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            foreach (var state in clothingOptions)
+            {
+                foreach (var member in state.Value)
+                {
+                    string familyMember = member.Key;
+                    GameObject[] clothingOptionsForMember = member.Value;
+
+                    // Get saved clothing index for each family member
+                    int savedIndex = PlayerPrefs.GetInt(familyMember + "_clothingIndex", 0);
+
+                    // Ensure the index is within bounds
+                    if (savedIndex >= 0 && savedIndex < clothingOptionsForMember.Length)
+                    {
+                        // Disable all clothing options for the family member in the current emotional state
+                        foreach (GameObject clothing in clothingOptionsForMember)
+                        {
+                            clothing.SetActive(false);
+                        }
+
+                        // Enable the selected clothing option
+                        clothingOptionsForMember[savedIndex].SetActive(true);
+                    }
+                }
+            }
+        }
     }
 
     private Dictionary<string, GameObject[]> GetClothingOptionsForEmotion(GameObject emotionState)
@@ -98,8 +136,7 @@ public class FamilyUIManager : MonoBehaviour
         // Disable all clothing options for the family member in the current emotional state
         foreach (GameObject clothing in clothingOptionsForMember)
         {
-            clothing.SetActive(false);
-            Debug.Log("Disable all clothing options.");
+            clothing.SetActive(false);   
         }
 
         // Enable the selected clothing option
