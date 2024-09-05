@@ -58,46 +58,46 @@ public class Shop : MonoBehaviour
                     icon.Setup(shop.nextUpgrade);
                 }
             }
-     
+
         }
 
-            /* var i = 0; //TEMP
-             aliveFamily = Random.Range(1, 5);
-             sickFamily = Random.Range(0, aliveFamily);
+        /* var i = 0; //TEMP
+         aliveFamily = Random.Range(1, 5);
+         sickFamily = Random.Range(0, aliveFamily);
 
-             foreach (ShopItem shop in shopItems)
+         foreach (ShopItem shop in shopItems)
+         {
+             //Setup
+             GameObject newItem = Instantiate(shopIcon);
+             ShopUI icon = newItem.GetComponent<ShopUI>();
+
+             //Create new slot
+             icon.itemName.text = shop.itemName;
+
+
+             //LOGIC PER ITEM (TEMP)
+             if (i == 0)//Food
              {
-                 //Setup
-                 GameObject newItem = Instantiate(shopIcon);
-                 ShopUI icon = newItem.GetComponent<ShopUI>();
-
-                 //Create new slot
-                 icon.itemName.text = shop.itemName;
-
-
-                 //LOGIC PER ITEM (TEMP)
-                 if (i == 0)//Food
+                 icon.itemCost.text = (shop.cost* aliveFamily).ToString();
+                 newItem.transform.parent = vertContainer.transform;
+             }
+             else //Med
+             {
+                 icon.itemCost.text = (shop.cost * sickFamily).ToString();
+                 if (sickFamily > 0)
                  {
-                     icon.itemCost.text = (shop.cost* aliveFamily).ToString();
                      newItem.transform.parent = vertContainer.transform;
                  }
-                 else //Med
+                 else
                  {
-                     icon.itemCost.text = (shop.cost * sickFamily).ToString();
-                     if (sickFamily > 0)
-                     {
-                         newItem.transform.parent = vertContainer.transform;
-                     }
-                     else
-                     {
-                         Destroy(newItem);
-                     }
+                     Destroy(newItem);
                  }
-                 icon.itemIcon.sprite = shop.itemIcon;
-                 i++;
              }
+             icon.itemIcon.sprite = shop.itemIcon;
+             i++;
+         }
 
-             Debug.Log("alive "+aliveFamily);
-             Debug.Log("sick "+sickFamily);*/
-        }
+         Debug.Log("alive "+aliveFamily);
+         Debug.Log("sick "+sickFamily);*/
+    }
 }
