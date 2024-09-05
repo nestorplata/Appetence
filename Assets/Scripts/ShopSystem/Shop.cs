@@ -35,7 +35,20 @@ public class Shop : MonoBehaviour
             if (familyScript.Instance.getDay() == 0)
             {
                 icon.SetAvailability(true);
+                PlayerPrefs.DeleteAll();
+                PlayerPrefs.Save();
             }
+
+            bool savedAvailability = PlayerPrefs.GetInt(shop.itemName + "_available", shop.available ? 1 : 0) == 1;
+            icon.SetAvailability(savedAvailability);
+            if (!savedAvailability)
+            {
+                icon.itemName.text = "SOLD OUT";
+                icon.itemDescription.text = "";
+                icon.itemCost.text = "";
+                icon.buyButton.interactable = false;
+            }
+     
         }
 
             /* var i = 0; //TEMP

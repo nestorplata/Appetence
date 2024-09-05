@@ -95,6 +95,13 @@ public class FamilyUIManager : MonoBehaviour
             return;
         }
 
+        // Disable all clothing options for the family member in the current emotional state
+        foreach (GameObject clothing in clothingOptionsForMember)
+        {
+            clothing.SetActive(false);
+            Debug.Log("Disable all clothing options.");
+        }
+
         // Enable the selected clothing option
         clothingOptionsForMember[clothingIndex].SetActive(true);
     }

@@ -18,7 +18,7 @@ public class ShopUI : MonoBehaviour
 
     private void Start()
     {
-        familyUIManager = FindObjectOfType<FamilyUIManager>();
+       familyUIManager = FindObjectOfType<FamilyUIManager>();
     }
     public void Setup(ShopItem item)
     {
@@ -57,10 +57,12 @@ public class ShopUI : MonoBehaviour
             // Check for next upgrade
             if (currentItem.nextUpgrade != null)
             {
+                PlayerPrefs.SetInt(currentItem.nextUpgrade.itemName + "_available", 1);
                 Setup(currentItem.nextUpgrade);  // Load the next upgrade
             }
             else if (currentItem.isFinalUpgrade)
             {
+
                 itemName.text = "SOLD OUT";      // Display SOLD OUT
                 itemDescription.text = "";       // Clear description
                 itemCost.text = "";              // Clear cost
@@ -80,5 +82,7 @@ public class ShopUI : MonoBehaviour
         // Save the availability state
         PlayerPrefs.SetInt(currentItem.itemName + "_available", available ? 1 : 0);
         PlayerPrefs.Save();
+        Debug.Log($"Saved availability for {currentItem.itemName}: {available}");
     }
+
 }
