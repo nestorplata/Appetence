@@ -14,6 +14,12 @@ public class ShopUI : MonoBehaviour
     private ShopItem currentItem;
     private List<ShopItem> boughtItems = new List<ShopItem>();
 
+    private FamilyUIManager familyUIManager;
+
+    private void Start()
+    {
+       familyUIManager = FindObjectOfType<FamilyUIManager>();
+    }
     public void Setup(ShopItem item)
     {
         currentItem = item;
@@ -32,6 +38,16 @@ public class ShopUI : MonoBehaviour
 
     }
 
+    public void SetupSoldOut(ShopItem item)
+    {
+        currentItem = item;
+        itemName.text = "SOLD OUT";      // Display SOLD OUT
+        itemDescription.text = "";       // Clear description
+        itemCost.text = "";              // Clear cost
+        itemIcon.sprite = item.itemIcon;
+        buyButton.interactable = false;  // Disable the buy button
+    }
+
     void BuyItem()
     {
         if (currentItem.available == true)
@@ -40,9 +56,21 @@ public class ShopUI : MonoBehaviour
             CurrencySystem.Instance.AddCurrency(-currentItem.cost);
             boughtItems.Add(currentItem);
 
+            // Notify FamilyUIManager to change clothing
+            if (familyUIManager != null)
+            {
+                string familyMember = currentItem.familyMember;
+                int clothingIndex = currentItem.clothingIndex;  
+                familyUIManager.ChangeClothing(familyMember, clothingIndex);
+
+                PlayerPrefs.SetInt(familyMember + "_clothingIndex", clothingIndex);
+                PlayerPrefs.Save();
+            }
+
             // Check for next upgrade
             if (currentItem.nextUpgrade != null)
             {
+                PlayerPrefs.SetInt(currentItem.nextUpgrade.itemName + "_available", 1);
                 Setup(currentItem.nextUpgrade);  // Load the next upgrade
             }
             else if (currentItem.isFinalUpgrade)
@@ -66,5 +94,7 @@ public class ShopUI : MonoBehaviour
         // Save the availability state
         PlayerPrefs.SetInt(currentItem.itemName + "_available", available ? 1 : 0);
         PlayerPrefs.Save();
+        Debug.Log($"Saved availability for {currentItem.itemName}: {available}");
     }
+
 }

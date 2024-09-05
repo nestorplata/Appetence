@@ -13,5 +13,7 @@ public class ShopItem : ScriptableObject
     public Sprite itemIcon;
     public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
+    public int clothingIndex;
+    public string familyMember;
 }
 
