@@ -2962,6 +2962,7 @@ MonoBehaviour:
   tutorialText: {fileID: 394679638}
   currencyDisplay: {fileID: 680640252}
   audioBuzzer: {fileID: 2043980457}
+  waitToChange: 1
   correctSound: {fileID: 8300000, guid: 8ac2869ef42e62f42a14bdd8f616adb3, type: 3}
   failSound: {fileID: 8300000, guid: f241955226847f142a1f5ff8e5862f54, type: 3}
 --- !u!114 &1233466934
@@ -5340,8 +5341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.390976, y: 57.99999}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 33.524, y: 57.99999}
+  m_SizeDelta: {x: 416, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978403172
 MonoBehaviour:
@@ -5426,7 +5427,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -96.8656, y: 0, z: -119.13376, w: 0}
+  m_margin: {x: 1.2838287, y: 0, z: -0.8814698, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
