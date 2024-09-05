@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Adult Clothing
   itemDescription: des
-  cost: 100
+  cost: 1
   available: 1
   itemIcon: {fileID: 21300000, guid: 689a71694cb215a45b48bb9921e2b3b3, type: 3}
   nextUpgrade: {fileID: 11400000, guid: 13f51e20583f8404f91d7077fb48dd42, type: 2}
   isFinalUpgrade: 0
+  clothingIndex: 1
+  familyMember: wife

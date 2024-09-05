@@ -14,6 +14,12 @@ public class ShopUI : MonoBehaviour
     private ShopItem currentItem;
     private List<ShopItem> boughtItems = new List<ShopItem>();
 
+    private FamilyUIManager familyUIManager;
+
+    private void Start()
+    {
+        familyUIManager = FindObjectOfType<FamilyUIManager>();
+    }
     public void Setup(ShopItem item)
     {
         currentItem = item;
@@ -39,6 +45,14 @@ public class ShopUI : MonoBehaviour
             SetAvailability(false);
             CurrencySystem.Instance.AddCurrency(-currentItem.cost);
             boughtItems.Add(currentItem);
+
+            // Notify FamilyUIManager to change clothing
+            if (familyUIManager != null)
+            {
+                string familyMember = currentItem.familyMember;
+                int clothingIndex = currentItem.clothingIndex;  
+                familyUIManager.ChangeClothing(familyMember, clothingIndex);
+            }
 
             // Check for next upgrade
             if (currentItem.nextUpgrade != null)
