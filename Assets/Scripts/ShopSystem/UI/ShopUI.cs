@@ -27,7 +27,9 @@ public class ShopUI : MonoBehaviour
         currentItem.available = savedAvailability;
 
         itemIcon.sprite = item.itemIcon;  // Assign item icon
+        buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(BuyItem);
+
     }
 
     void BuyItem()
@@ -37,6 +39,19 @@ public class ShopUI : MonoBehaviour
             SetAvailability(false);
             CurrencySystem.Instance.AddCurrency(-currentItem.cost);
             boughtItems.Add(currentItem);
+
+            // Check for next upgrade
+            if (currentItem.nextUpgrade != null)
+            {
+                Setup(currentItem.nextUpgrade);  // Load the next upgrade
+            }
+            else if (currentItem.isFinalUpgrade)
+            {
+                itemName.text = "SOLD OUT";      // Display SOLD OUT
+                itemDescription.text = "";       // Clear description
+                itemCost.text = "";              // Clear cost
+                buyButton.interactable = false;  // Disable the buy button
+            }
         }
         else
         {

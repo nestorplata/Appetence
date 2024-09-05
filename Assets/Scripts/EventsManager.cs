@@ -11,6 +11,8 @@ public class EventsManager : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
 
+    private int previousEventIndex = -1;
+
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -34,7 +36,15 @@ public class EventsManager : MonoBehaviour
     {
         if (events.Count == 0) return;
 
-        int randomIndex = Random.Range(0, events.Count);
+        int randomIndex;
+
+        do
+        {
+            randomIndex = Random.Range(0, events.Count);
+        }
+        while (randomIndex == previousEventIndex);
+
+        previousEventIndex = randomIndex;
         Events selectedEvent = events[randomIndex];
 
         OpenPanel(selectedEvent.eventDescription);
