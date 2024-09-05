@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class ItemRotator : MonoBehaviour
 {
@@ -40,6 +41,9 @@ public class ItemRotator : MonoBehaviour
     private AudioSource audioBuzzer;
 
     [SerializeField]
+    private float waitToChange;
+
+    [SerializeField]
     private AudioClip correctSound;
 
     [SerializeField]
@@ -68,7 +72,7 @@ public class ItemRotator : MonoBehaviour
         }
         itemReader.itemSequence.text = allSequence;
 
-        partsPanel.GetComponent<Image>().tintColor = new Color(82.0f, 90.0f, 99.0f);
+        partsPanel.GetComponent<UnityEngine.UI.Image>().color = new Color(0.32f, 0.35f, 0.39f);
     }
 
     // Update is called once per frame
@@ -91,24 +95,28 @@ public class ItemRotator : MonoBehaviour
         {
             Debug.Log("Wrong");
             StartCoroutine(itemReader.CorrectnessDisplay("Wrong"));
+            StartCoroutine(WrongColorChanger());
             buttonSequencer.ClearNumberSequence();
 
             CurrencySystem.Instance.AddCurrency(-50);
 
             audioBuzzer.clip = failSound;
             audioBuzzer.Play();
+
         }
         else if (buttonSequencer.GetNumberSequence().Length == itemReader.item.itemSequence.Length)
         {
             Debug.Log("Correct");
             item = itemReader.item = chosenObjects[Random.Range(0, chosenObjects.Count)];
             StartCoroutine(itemReader.CorrectnessDisplay("Correct"));
+            StartCoroutine(CorrectColorChanger());
             buttonSequencer.ClearNumberSequence();
 
             CurrencySystem.Instance.AddCurrency(35);
 
             audioBuzzer.clip = correctSound;
             audioBuzzer.Play();
+
         }
         
         
@@ -138,10 +146,21 @@ public class ItemRotator : MonoBehaviour
             buttons.SetActive(true);
         }
     }
-    public void RightOrWrongColorChange()
-    {
 
+    public IEnumerator CorrectColorChanger()
+    {
+        partsPanel.GetComponent<UnityEngine.UI.Image>().color = new Color(0f, .60f, 0f);
+        yield return new WaitForSeconds(waitToChange);
+        partsPanel.GetComponent<UnityEngine.UI.Image>().color = new Color(0.32f, 0.35f, 0.39f);
     }
+
+    public IEnumerator WrongColorChanger()
+    {
+        partsPanel.GetComponent<UnityEngine.UI.Image>().color = new Color(.65f, 0f, 0f);
+        yield return new WaitForSeconds(waitToChange);
+        partsPanel.GetComponent<UnityEngine.UI.Image>().color = new Color(0.32f, 0.35f, 0.39f);
+    }
+
     public void ExitButton()
     {
         Application.Quit();
