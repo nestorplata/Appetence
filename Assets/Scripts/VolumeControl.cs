@@ -20,11 +20,11 @@ public class VolumeControl : MonoBehaviour
     {
         float savedMusicVol = PlayerPrefs.GetFloat("MusicVolume", 1f);
         musicSlider.value = savedMusicVol;
-        musicMixer.SetFloat("musicVol", Mathf.Log10(savedMusicVol) * 20);
+        UpdateMusicVolume();
 
         float savedSFXVol = PlayerPrefs.GetFloat("SFXVolume", 1f);
         sfxSlider.value = savedSFXVol;
-        sfxMixer.SetFloat("sfxVol", Mathf.Log10(savedSFXVol) * 20);
+        UpdateSFXVolume();
     }
     public void UpdateMusicVolume()
     {
