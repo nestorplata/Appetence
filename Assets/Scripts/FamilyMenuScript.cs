@@ -18,6 +18,9 @@ public class FamilyMenuScript : MonoBehaviour
     private bool shopMenu = false;
 
     [SerializeField]
+    private GameObject tutorialBackground;
+
+    [SerializeField]
     private TMP_Text tutorialText;
 
 
@@ -76,6 +79,8 @@ public class FamilyMenuScript : MonoBehaviour
 
     private int medCost = 200;
 
+    private familyScript theFamilyScript;
+
     public void Start()
     {
 
@@ -87,6 +92,7 @@ public class FamilyMenuScript : MonoBehaviour
         }
 
         if(familyScript.Instance.day > 0){
+            tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
         
@@ -125,6 +131,7 @@ public class FamilyMenuScript : MonoBehaviour
             MenuChange();
         }
         if (Input.GetMouseButtonDown(0)){
+            tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
     }
