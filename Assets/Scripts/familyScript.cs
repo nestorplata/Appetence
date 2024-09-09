@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class familyScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class familyScript : MonoBehaviour
     public static familyScript Instance { get; private set; }
 
     public int day = 0;
+
 
     void Awake()
     {
@@ -153,4 +155,5 @@ public class familyScript : MonoBehaviour
         }
         return -1;
     }
+
 }
