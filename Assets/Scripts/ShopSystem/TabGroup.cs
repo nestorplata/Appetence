@@ -12,12 +12,12 @@ public class TabGroup : MonoBehaviour
     public TabButton tabSelected;
     public List<GameObject> panels;
     private GameObject welcomeText;
-    private GameObject label;
+    [SerializeField] private GameObject label;
 
     private void Start()
     {
         welcomeText = GameObject.Find("WelcomeText");
-        label = GameObject.Find("Labels");
+        //label = GameObject.Find("Labels");
         label.SetActive(false);
     }
     public void AddToList(TabButton button)
