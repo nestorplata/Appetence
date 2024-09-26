@@ -12,6 +12,29 @@ public class EventsManager : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
 
+    private AudioSource eventSFX;
+
+    [SerializeField]
+    private AudioClip carBreakdown;
+
+    [SerializeField]
+    private AudioClip drought;
+
+    [SerializeField]
+    private AudioClip changeOne;
+
+    [SerializeField]
+    private AudioClip changeTwo;
+
+    [SerializeField]
+    private AudioClip changeThree;
+
+    [SerializeField]
+    private AudioClip changeFour;
+
+    [SerializeField]
+    private AudioClip changeFive;
+
     private FamilyMenuScript familyMenuScript;
 
     private int previousEventIndex = -1;
@@ -20,6 +43,7 @@ public class EventsManager : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         familyMenuScript = FindObjectOfType<FamilyMenuScript>();
+        AudioSource eventSFX = gameObject.AddComponent<AudioSource>();
 
         // Add events
         //negative

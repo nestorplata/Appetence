@@ -11,6 +11,10 @@ public class familyScript : MonoBehaviour
     [SerializeField] public int[] FamilyHealthState;
     [SerializeField] public int[] FamilyDeathList;
     [SerializeField] public string[] FamilyNames;
+
+    [SerializeField] private AudioSource SatisfiedMusic;
+    [SerializeField] private AudioSource HungryMusic;
+    [SerializeField] private AudioSource StarvingMusic;
     public string[] HealthValues { get; } = { "Healthy", "Sick", "Bedridden", "Dead" };
     public string[] HungerValues { get; } = { "Fine", "Hungry", "Starving", "Dead" };
 
@@ -35,6 +39,8 @@ public class familyScript : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
+
+        SatisfiedMusic.playOnAwake = true;
     }
 
     public bool DayUpdate(bool[] foodList, bool[] medList)

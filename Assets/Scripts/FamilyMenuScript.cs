@@ -81,9 +81,13 @@ public class FamilyMenuScript : MonoBehaviour
 
     private familyScript theFamilyScript;
 
+    private bool NextDayIsClicked = false;
+
     public void Start()
     {
-
+        nextDayBtn.gameObject.SetActive(true);
+        nextDayBtn.onClick.AddListener(OnNextDayButtonClick);
+        
         dayDisplay.text = "Day " + familyScript.Instance.day.ToString();
         
         if (familyScript.Instance.day >= daysToWin)
@@ -112,6 +116,11 @@ public class FamilyMenuScript : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        nextDayBtn.onClick.RemoveListener(OnNextDayButtonClick);
+    }
+
     public void Update()
     {
         currency.text = CurrencySystem.Instance.GetCurrency().ToString();
@@ -120,12 +129,12 @@ public class FamilyMenuScript : MonoBehaviour
 
         if (CurrencySystem.Instance.GetCurrency() < CalcTotal() && CalcTotal() != 0)
         {
-            totalCost.text = "TOO MUCH!";
-            nextDayBtn.transform.localScale = Vector3.zero;
+            //totalCost.text = "TOO MUCH!";
+            nextDayBtn.gameObject.SetActive(false);
         }
         else
         {
-            nextDayBtn.transform.localScale = Vector3.one;
+            nextDayBtn.gameObject.SetActive(true);
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
             MenuChange();
@@ -169,9 +178,17 @@ public class FamilyMenuScript : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
         else{
-            StartCoroutine(levelLoader.LoadLevel("Factory"));
+            StartCoroutine(levelLoader.LoadLevel("LevelSelect"));
         }
     }
+
+    private void OnNextDayButtonClick()
+    {
+        NextDayIsClicked = true;
+        nextDayBtn.interactable = false;
+        UpdateButton();
+    }
+
     public void ShopButton()
     {
         if (shopMenu)
