@@ -10,9 +10,13 @@ public class LevelSelect : MonoBehaviour
     public Button FactoryButton;
     public Button GroceryButton;
 
+    [SerializeField]
+    private LevelLoader levelLoader;
+
     // Start is called before the first frame update
     void Start()
     {
+
         FactoryButton.onClick.AddListener(() => LoadFactory());
         GroceryButton.onClick.AddListener(() => LoadGrocery());
     }
@@ -20,16 +24,16 @@ public class LevelSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GroceryButton.interactable = false;
+        //GroceryButton.interactable = false;
     }
 
     public void LoadFactory()
     {
-        SceneManager.LoadScene("Factory");
+        StartCoroutine(levelLoader.LoadLevel("FactoryTutorial"));
     }
 
     public void LoadGrocery()
     {
-        
+        StartCoroutine(levelLoader.LoadLevel("GroceryStoreTutorial"));
     }
 }
