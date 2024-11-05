@@ -13,6 +13,13 @@ public class FamilyMenuScript : MonoBehaviour
     private GameObject settingsUI;
     private bool SettingsMenu = false;
 
+    [SerializeField] 
+    private GameObject shopUI;
+    private bool shopMenu = false;
+
+    [SerializeField]
+    private GameObject tutorialBackground;
+
     [SerializeField]
     private TMP_Text tutorialText;
 
@@ -28,6 +35,8 @@ public class FamilyMenuScript : MonoBehaviour
     [SerializeField]
     private TMP_Text currency;
 
+    [SerializeField]
+    private TMP_Text Food;
     [SerializeField]
     private TMP_Text Medicine;
     [SerializeField]
@@ -66,10 +75,19 @@ public class FamilyMenuScript : MonoBehaviour
 
     private int totalCostVal;
 
+    private int foodCost = 60;
+
+    private int medCost = 200;
+
+    private familyScript theFamilyScript;
+
+    private bool NextDayIsClicked = false;
+
     public void Start()
     {
-        currency.text = CurrencySystem.Instance.GetCurrency().ToString();
-
+        nextDayBtn.gameObject.SetActive(true);
+        nextDayBtn.onClick.AddListener(OnNextDayButtonClick);
+        
         dayDisplay.text = "Day " + familyScript.Instance.day.ToString();
         
         if (familyScript.Instance.day >= daysToWin)
@@ -78,6 +96,7 @@ public class FamilyMenuScript : MonoBehaviour
         }
 
         if(familyScript.Instance.day > 0){
+            tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
         
@@ -97,23 +116,31 @@ public class FamilyMenuScript : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        nextDayBtn.onClick.RemoveListener(OnNextDayButtonClick);
+    }
+
     public void Update()
     {
+        currency.text = CurrencySystem.Instance.GetCurrency().ToString();
+
         totalCost.text = CalcTotal().ToString();
 
         if (CurrencySystem.Instance.GetCurrency() < CalcTotal() && CalcTotal() != 0)
         {
-            totalCost.text = "TOO MUCH!";
-            nextDayBtn.transform.localScale = Vector3.zero;
+            //totalCost.text = "TOO MUCH!";
+            nextDayBtn.gameObject.SetActive(false);
         }
         else
         {
-            nextDayBtn.transform.localScale = Vector3.one;
+            nextDayBtn.gameObject.SetActive(true);
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
             MenuChange();
         }
         if (Input.GetMouseButtonDown(0)){
+            tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
     }
@@ -135,7 +162,14 @@ public class FamilyMenuScript : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
+    public void MainMenuButton()
+    {
+        familyScript.Instance.Reset();
+
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void UpdateButton()
     {
         bool dead = familyScript.Instance.DayUpdate(foodList, medList);
@@ -144,9 +178,31 @@ public class FamilyMenuScript : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
         else{
-            StartCoroutine(levelLoader.LoadLevel("Factory"));
+            StartCoroutine(levelLoader.LoadLevel("LevelSelect"));
         }
     }
+
+    private void OnNextDayButtonClick()
+    {
+        NextDayIsClicked = true;
+        nextDayBtn.interactable = false;
+        UpdateButton();
+    }
+
+    public void ShopButton()
+    {
+        if (shopMenu)
+        {
+            shopUI.SetActive(false);
+            shopMenu = false;
+        }
+        else
+        {
+            shopUI.SetActive(true);
+            shopMenu = true;
+        }
+    }
+
     public void FoodButtons(int index)
     {
         if(foodList[index] == true){
@@ -177,14 +233,14 @@ public class FamilyMenuScript : MonoBehaviour
         {
             if (item)
             {
-                totalCostVal += 60;
+                totalCostVal += GetFoodCost();
             }
         }
         foreach (var item in medList)
         {
             if (item)
             {
-                totalCostVal += 200;
+                totalCostVal += GetMedCost();
             }
         }
 
@@ -195,4 +251,27 @@ public class FamilyMenuScript : MonoBehaviour
 
         return totalCostVal;
     }
+
+    public void SetFoodCost(int newFoodCost)
+    {
+        foodCost = newFoodCost;
+        Food.text = "Food - " + newFoodCost.ToString();
+    }
+
+    public int GetFoodCost()
+    {
+        return foodCost;
+    }
+
+    public void SetMedCost(int newMedCost)
+    {
+        medCost = newMedCost;
+        Medicine.text = "Medicine - " + newMedCost.ToString();
+    }
+
+    public int GetMedCost()
+    {
+        return medCost;
+    }
+
 }

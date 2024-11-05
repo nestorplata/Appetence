@@ -10,9 +10,11 @@ public class MainMenuScript : MonoBehaviour
     private GameObject mainMenu;
     [SerializeField]
     private GameObject settingsMenu;
+    [SerializeField]
+    private LevelLoader levelLoader;
     public void PlayButton()
     {
-        SceneManager.LoadScene("Family");
+        StartCoroutine(levelLoader.LoadLevel("Story"));
     }
     public void SettingsButton()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CurrencySystem : MonoBehaviour
 {
-    private int currency = 350;
+    private int currency = 350; //if changed, also change in Reset() function in familyScript
 
     public static CurrencySystem Instance { get; private set; }
 
@@ -35,5 +35,10 @@ public class CurrencySystem : MonoBehaviour
     public int GetCurrency()
     {
         return currency;
+    }
+
+    public void SetCurrency(int cur)
+    {
+        currency = cur;
     }
 }

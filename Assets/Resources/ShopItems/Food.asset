@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Food
   m_EditorClassIdentifier: 
   itemName: Food
+  itemDescription: 
   cost: 60
-  availible: 1
+  available: 0
   itemIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}

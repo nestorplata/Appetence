@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class familyScript : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class familyScript : MonoBehaviour
     [SerializeField] public int[] FamilyHealthState;
     [SerializeField] public int[] FamilyDeathList;
     [SerializeField] public string[] FamilyNames;
+
     public string[] HealthValues { get; } = { "Healthy", "Sick", "Bedridden", "Dead" };
     public string[] HungerValues { get; } = { "Fine", "Hungry", "Starving", "Dead" };
 
     public static familyScript Instance { get; private set; }
 
     public int day = 0;
+
 
     void Awake()
     {
@@ -55,7 +58,7 @@ public class familyScript : MonoBehaviour
 
                 if (FamilyFoodState[i] > 0)
                 {
-                    if ((Random.Range(0f, 10.0f)) > 8f && day > 1)
+                    if ((Random.Range(0f, 10.0f)) > 5f && day > 1)
                     {
                         FamilyHealthState[i] = FamilyHealthState[i] + 1;
                     }
@@ -80,7 +83,6 @@ public class familyScript : MonoBehaviour
         {
             dead = true;
         }
-
         day++;
         return (dead);
     }
@@ -93,6 +95,8 @@ public class familyScript : MonoBehaviour
             FamilyDeathList[i] = 0;
         }
         day = 0;
+
+        CurrencySystem.Instance.SetCurrency(350);
     }
     int getHealth(int i)
     {
@@ -119,9 +123,38 @@ public class familyScript : MonoBehaviour
             }
         }
         return (familyDead);
-        int getDay()
-        {
-            return day;
-        }
     }
+    public int getDay()
+    {
+        return day;
+    }
+
+    public string GetFamilyMemberState(int index)
+    {
+        if (FamilyDeathList[index] == 1)
+        {
+            return "dead";
+        }
+
+        // Priority: Dead > Sick > Hungry > Satisfied
+        if (FamilyHealthState[index] > 0)
+        {
+            return "sick";
+        }
+        if (FamilyFoodState[index] > 0)
+        {
+            return "hungry";
+        }
+        return "satisfied";
+    }
+    public int GetFamilyMemberIndex(string name)
+    {
+        for (int i = 0; i < FamilyNames.Length; i++)
+        {
+            if (FamilyNames[i] == name)
+                return i;
+        }
+        return -1;
+    }
+
 }
