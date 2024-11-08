@@ -59,9 +59,20 @@ public class ItemRotator : MonoBehaviour
 
         //Difficulty handler
         int maxItem = Mathf.Clamp(familyScript.Instance.day + 3,0, objects.Count);
-        for (int i = 0; i < 4; i++)
+        //k is used to randomly generate 2, 3 or 4 items for the day
+        int j = 0, k = Random.Range(2,5);
+        for (int i = 0; i < k; i++)
         {
-            chosenObjects.Add(objects[Random.Range(0, maxItem)]);
+            //randomly choose one of the items
+            j = Random.Range(0, maxItem);
+            //check if item is already in list, if not add it
+            if(!chosenObjects.Contains(objects[j])) {
+                chosenObjects.Add(objects[j]);
+            } 
+            //if duplicate decrement i to go again to add to list, prevents 1 item lists
+            else {
+                i--;
+            }
         }
 
         item = itemReader.item = chosenObjects[Random.Range(0, chosenObjects.Count)];
