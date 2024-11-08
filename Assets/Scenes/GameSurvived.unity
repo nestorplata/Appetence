@@ -1461,11 +1461,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   daysLasted: {fileID: 1578893460}
   familyList:
-  - {fileID: 621194129}
-  - {fileID: 445630979}
-  - {fileID: 1575857207}
-  - {fileID: 1116811169}
-  - {fileID: 735222940}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tombstones: []
+  people: []
+  family: {fileID: 0}
 --- !u!1 &1714269172
 GameObject:
   m_ObjectHideFlags: 0

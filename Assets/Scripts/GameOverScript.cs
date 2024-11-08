@@ -22,19 +22,23 @@ public class GameOverScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         daysLasted.text = "You Lasted " + familyScript.Instance.day.ToString() + " Days";
 
         //SetNames and States
         var i = 0;
         foreach (TMP_Text member in familyList)
         {
-            member.text = familyScript.Instance.FamilyNames[i] + " - " + familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]] + " - " + familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
+            member.text = familyScript.Instance.FamilyNames[i] + " - " +
+                familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]] + " - " +
+                familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
             i++;
 
             if (familyScript.Instance.FamilyDeathList[i] == 1)
             {
                 tombstones[i].enabled = true;
-                /*member.text = familyScript.Instance.FamilyNames[i] + " - " + familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]];
+                /*member.text = familyScript.Instance.FamilyNames[i] + " - " + 
+                 * familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]];
                 i++;*/
             }
 
