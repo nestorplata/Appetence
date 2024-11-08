@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2661489801533407813}
   - component: {fileID: 8515128406175751709}
   - component: {fileID: 3540645233445668699}
-  - component: {fileID: 7991201095416471974}
+  - component: {fileID: 4399427954925698291}
   m_Layer: 5
   m_Name: DebtLetter
   m_TagString: Untagged
@@ -89,6 +89,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da00fbe515d74e141a3aefee17a94023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4399427954925698291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202139840586856368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -106,8 +118,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9c4b1dbbcce224846abc86352b6b94f7, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 41adce0068be0ca4a9189f4e820cb697, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -120,19 +132,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8515128406175751709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7991201095416471974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7202139840586856368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d815179514074cb408f6a17a761dbe47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpenedLetterSprite: {fileID: 21300000, guid: 1b904a38a3173dc4a9d8748f41597d6b, type: 3}
-  OpenedLocalPosition: {x: 0, y: 0, z: 0}
-  OpenedLocalScale: {x: 5, y: 5, z: 0}
+      m_Calls:
+      - m_Target: {fileID: 3540645233445668699}
+        m_TargetAssemblyTypeName: LetterScript, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
