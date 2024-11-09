@@ -31,9 +31,10 @@ public class GameOverScript : MonoBehaviour
         {
             member.text = familyScript.Instance.FamilyNames[i] + " - " +
                 familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]] + " - " +
-                familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
-            i++;
+                 familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
 
+
+            i++;
             if (familyScript.Instance.FamilyDeathList[i] == 1)
             {
                 tombstones[i].enabled = true;
@@ -41,11 +42,13 @@ public class GameOverScript : MonoBehaviour
                  * familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]];
                 i++;*/
             }
-
             else if (familyScript.Instance.FamilyDeathList[i] == 0)
             {
                 people[i].enabled = true;
+
             }
+
+
         }
     }
 
