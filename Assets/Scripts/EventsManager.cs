@@ -10,6 +10,10 @@ public class EventsManager : MonoBehaviour
 {
     public List<Events> events = new List<Events>();
     public GameObject panel;
+    public GameObject Letter;
+    public Transform LetterTransfom;
+
+
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
 
@@ -63,6 +67,7 @@ public class EventsManager : MonoBehaviour
 
         events.Add(new Events("Drought", "Drought caused food prices to increase to 80 coins", 80, 0, true, drought));
         events.Add(new Events("Epidemic", "An Epidemic has caused the medicine costs to increase to 300", 0, 300, epidemic));
+
 
         //positive
         events.Add(new Events("Lucky Find", "You found 40 coins on the floor when coming out of work", 40, 0, changeOne));
@@ -126,16 +131,32 @@ public class EventsManager : MonoBehaviour
         {
             // Debug.Log("Checked scene: Family");
             // Show the random event
-            if (familyScript.Instance.getDay() != 0)
+
+            switch(familyScript.Instance.getDay())
             {
-                //Debug.Log("Triggered");
-                TriggerRandomEvent();
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    Events LetterEvent = new Events("Bank Notice", "A letter just arrived", 10, 0, changeOne);
+                    Instantiate(Letter, LetterTransfom);
+                    OpenPanel(LetterEvent.eventDescription);
+                    AffectPlayer(LetterEvent);
+                    break;
+                default:
+                    TriggerRandomEvent();
+                    break;
             }
         }
 
         //Debug.Log()
     }
 
+    public void LetterEvent()
+    {
+        
+    }
     public void ExitPanel()
     {
         panel.SetActive(false);

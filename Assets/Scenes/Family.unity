@@ -19816,6 +19816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebtLetter
       objectReference: {fileID: 0}
+    - target: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19920,6 +19924,10 @@ PrefabInstance:
     - target: {fileID: 6694352476044481923, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
       propertyPath: m_Name
       value: OpenedLetter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694352476044481923, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

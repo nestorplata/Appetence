@@ -10,6 +10,7 @@ public class LetterScript : MonoBehaviour
 
     private Image Image;
     LetterMenu LetterMenu;
+    private AudioSource AudioSource;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class LetterScript : MonoBehaviour
         LetterMenu.gameObject.SetActive(true);
         gameObject.SetActive(false);
     }
+    
 
 
 }
