@@ -54,4 +54,4 @@ MonoBehaviour:
   - girl
   - boy
   StartingDay: 1
-  day: -1
+  day: 1

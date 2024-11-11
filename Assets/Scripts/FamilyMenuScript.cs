@@ -72,9 +72,9 @@ public class FamilyMenuScript : MonoBehaviour
 
 	[SerializeField]
     private TMP_Text dayDisplay;
-
+    [SerializeField]
     private int totalCostVal;
-
+    [SerializeField]
     private int foodCost = 60;
 
     private int medCost = 200;
@@ -234,6 +234,7 @@ public class FamilyMenuScript : MonoBehaviour
             if (item)
             {
                 totalCostVal += GetFoodCost();
+
             }
         }
         foreach (var item in medList)

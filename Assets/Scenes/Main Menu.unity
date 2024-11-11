@@ -1122,14 +1122,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: day
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: StartingDay
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
