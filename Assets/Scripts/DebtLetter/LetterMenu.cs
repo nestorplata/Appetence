@@ -5,7 +5,6 @@ using UnityEngine;
 public class LetterMenu : MonoBehaviour
 {
     public LetterScript Letter;
-    public LetterOptionsScript Options;
     public delegate void OnClick();
 
     void Start()
@@ -21,8 +20,13 @@ public class LetterMenu : MonoBehaviour
     }
     public void OnYesPressed()
     {
-        Letter.gameObject.SetActive(true);
-        gameObject.SetActive(false);
+        if(CurrencySystem.Instance.GetCurrency()>=2000)
+        {
+            Letter.gameObject.SetActive(false);
+            LetterManager.Instance.LetterEvent = null;
+            gameObject.SetActive(false);
+        }
+
     }
     //public void ActivateLetter()
     //{

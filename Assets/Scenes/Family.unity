@@ -4916,8 +4916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 997251187}
-  Letter: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
-  LetterTransfom: {fileID: 1992131639}
+  LetterObject: {fileID: 1508102172}
   descriptionText: {fileID: 851898375}
   carBreakdown: {fileID: 748802599}
   drought: {fileID: 1019690693}
@@ -14055,6 +14054,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485138391}
   m_CullTransparentMesh: 1
+--- !u!1 &1508102172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+  m_PrefabInstance: {fileID: 3683412318534097114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520482834
 GameObject:
   m_ObjectHideFlags: 0
@@ -19847,12 +19851,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1581779834}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399427954925698291, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
       propertyPath: m_Name
-      value: DebtLetterSpawn
+      value: Letter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

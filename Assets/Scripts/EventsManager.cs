@@ -10,9 +10,7 @@ public class EventsManager : MonoBehaviour
 {
     public List<Events> events = new List<Events>();
     public GameObject panel;
-    public GameObject Letter;
-    public Transform LetterTransfom;
-
+    public GameObject LetterObject;
 
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
@@ -53,6 +51,9 @@ public class EventsManager : MonoBehaviour
 
     private int previousEventIndex = -1;
 
+    private Events LetterEvent;
+
+
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -75,6 +76,8 @@ public class EventsManager : MonoBehaviour
         events.Add(new Events("Welfare", "Asked government for welfare and got 75 coins", 75, 0, changeFive));
         events.Add(new Events("Charity", "Charity help gave 25 coins", 25, 0, changeOne));
         events.Add(new Events("Promotion", "Your boss notices you, you got 30 extra coins", 30, 0, changeThree));
+
+
 
         OnSceneLoaded();
     }
@@ -140,22 +143,29 @@ public class EventsManager : MonoBehaviour
                     break;
                 case 2:
                     Events LetterEvent = new Events("Bank Notice", "A letter just arrived", 10, 0, changeOne);
-                    Instantiate(Letter, LetterTransfom);
+                    LetterManager.Instance.LetterEvent = LetterEvent;
                     OpenPanel(LetterEvent.eventDescription);
                     AffectPlayer(LetterEvent);
                     break;
                 default:
+
                     TriggerRandomEvent();
                     break;
             }
+            if(LetterManager.Instance.LetterEvent!= null)
+            {
+                LetterObject.SetActive(true);
+            }
+
         }
 
         //Debug.Log()
     }
 
-    public void LetterEvent()
+    
+
+    public void LetterFunction()
     {
-        
     }
     public void ExitPanel()
     {
