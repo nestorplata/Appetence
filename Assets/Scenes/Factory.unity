@@ -2771,7 +2771,7 @@ MonoBehaviour:
   tutorialText: {fileID: 394679638}
   currencyDisplay: {fileID: 680640252}
   audioBuzzer: {fileID: 2043980457}
-  waitToChange: 1
+  waitToChange: 60
   correctSound: {fileID: 8300000, guid: 8ac2869ef42e62f42a14bdd8f616adb3, type: 3}
   failSound: {fileID: 8300000, guid: f241955226847f142a1f5ff8e5862f54, type: 3}
   animatedBoxPrefab:

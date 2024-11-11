@@ -11,7 +11,7 @@ public class LetterManager : MonoBehaviour
         if (Instance != null)
         {
             //Debug.LogError("There is more than one instance!");
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
 

@@ -11,13 +11,14 @@ public class familyScript : MonoBehaviour
     [SerializeField] public int[] FamilyHealthState;
     [SerializeField] public int[] FamilyDeathList;
     [SerializeField] public string[] FamilyNames;
+    [SerializeField] private  int StartingDay = 0;
 
     public string[] HealthValues { get; } = { "Healthy", "Sick", "Bedridden", "Dead" };
     public string[] HungerValues { get; } = { "Fine", "Hungry", "Starving", "Dead" };
 
     public static familyScript Instance { get; private set; }
 
-    public int day = 0;
+    [HideInInspector]public int day = 0;
 
 
     void Awake()
@@ -25,7 +26,7 @@ public class familyScript : MonoBehaviour
         if (Instance != null)
         {
             //Debug.LogError("There is more than one instance!");
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
 
@@ -36,6 +37,7 @@ public class familyScript : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
+        day = StartingDay;
     }
 
     public bool DayUpdate(bool[] foodList, bool[] medList)
@@ -96,7 +98,7 @@ public class familyScript : MonoBehaviour
         }
         day = 0;
 
-        CurrencySystem.Instance.SetCurrency(350);
+        CurrencySystem.Instance.ResetCurrency();
     }
     int getHealth(int i)
     {

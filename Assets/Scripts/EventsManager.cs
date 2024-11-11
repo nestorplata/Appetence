@@ -148,7 +148,6 @@ public class EventsManager : MonoBehaviour
                     AffectPlayer(LetterEvent);
                     break;
                 default:
-
                     TriggerRandomEvent();
                     break;
             }
