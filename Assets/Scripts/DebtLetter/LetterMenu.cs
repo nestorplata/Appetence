@@ -24,6 +24,7 @@ public class LetterMenu : MonoBehaviour
         {
             Letter.gameObject.SetActive(false);
             LetterManager.Instance.LetterEvent = null;
+            CurrencySystem.Instance.AddCurrency(-2000);
             gameObject.SetActive(false);
         }
 
