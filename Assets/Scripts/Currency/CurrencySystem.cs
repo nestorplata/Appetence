@@ -5,7 +5,7 @@ using UnityEngine;
 public class CurrencySystem : MonoBehaviour
 {
     [SerializeField] private int StartingCurrency;
-    private int currency; //if changed, also change in Reset() function in familyScript
+    [SerializeField] public int currency; //if changed, also change in Reset() function in familyScript
 
     public static CurrencySystem Instance { get; private set; }
 

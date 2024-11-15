@@ -79,7 +79,7 @@ public class FamilyMenuScript : MonoBehaviour
 
     private int medCost = 200;
 
-    private familyScript theFamilyScript;
+    private familyScript FamilyScript;
 
     private bool NextDayIsClicked = false;
 
@@ -243,7 +243,7 @@ public class FamilyMenuScript : MonoBehaviour
             {
                 totalCostVal += GetMedCost();
             }
-        }
+        } 
 
         if (CurrencySystem.Instance.GetCurrency() < 0 && totalCostVal <= 0)
         {
@@ -252,6 +252,27 @@ public class FamilyMenuScript : MonoBehaviour
 
         return totalCostVal;
     }
+
+    public int GetTotalCost()
+    {
+        int total = 0;
+        foreach (var item in foodList)
+        {
+            if (item)
+            {
+                total += GetFoodCost();
+
+            }
+        }
+        foreach (var item in medList)
+        {
+            if (item)
+            {
+                total += GetMedCost();
+            }
+        }
+        return total;
+    }    
 
     public void SetFoodCost(int newFoodCost)
     {

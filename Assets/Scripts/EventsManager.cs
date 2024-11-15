@@ -15,7 +15,6 @@ public class EventsManager : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
 
-    private AudioSource eventSFX;
 
     [SerializeField]
     private AudioSource carBreakdown;
@@ -47,7 +46,12 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private AudioSource workInjury;
 
+
+
+
     private FamilyMenuScript familyMenuScript;
+
+    private FamilySFX familySFX;
 
     private int previousEventIndex = -1;
 
@@ -57,7 +61,8 @@ public class EventsManager : MonoBehaviour
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene();
-        familyMenuScript = FindObjectOfType<FamilyMenuScript>();
+        familyMenuScript = GetComponent<FamilyMenuScript>();
+        familySFX = GetComponent<FamilySFX>();
         AudioSource eventSFX = gameObject.AddComponent<AudioSource>();
 
         // Add events
@@ -77,13 +82,14 @@ public class EventsManager : MonoBehaviour
         events.Add(new Events("Charity", "Charity help gave 25 coins", 25, 0, changeOne));
         events.Add(new Events("Promotion", "Your boss notices you, you got 30 extra coins", 30, 0, changeThree));
 
-
+        //other
+        LetterEvent = new Events("Bank Notice", "A letter just arrived", 10, 0, changeOne);
 
         OnSceneLoaded();
     }
-    public void TriggerRandomEvent()
+    public Events SelectRandomEvent()
     {
-        if (events.Count == 0) return;
+        if (events.Count == 0) return null;
 
         int randomIndex = Random.Range(0, events.Count);
 
@@ -94,9 +100,9 @@ public class EventsManager : MonoBehaviour
 
         previousEventIndex = randomIndex;
         Events selectedEvent = events[randomIndex];
+        return selectedEvent;
 
-        OpenPanel(selectedEvent.eventDescription);
-        AffectPlayer(selectedEvent);
+
     }
 
     public void OpenPanel(string description)
@@ -125,6 +131,7 @@ public class EventsManager : MonoBehaviour
             selectedEvent.sfx.Play();
             Debug.Log("Affecting currency");
         }
+
     }
 
     private void OnSceneLoaded()
@@ -135,25 +142,27 @@ public class EventsManager : MonoBehaviour
             // Debug.Log("Checked scene: Family");
             // Show the random event
 
-            switch(familyScript.Instance.getDay())
+            switch (familyScript.Instance.getDay())
             {
                 case 0:
                     break;
                 case 1:
                     break;
                 case 2:
-                    Events LetterEvent = new Events("Bank Notice", "A letter just arrived", 10, 0, changeOne);
                     LetterManager.Instance.LetterEvent = LetterEvent;
-                    OpenPanel(LetterEvent.eventDescription);
-                    AffectPlayer(LetterEvent);
+                    PlayEvent(LetterEvent);
                     break;
                 default:
-                    TriggerRandomEvent();
+                    PlayEvent(SelectRandomEvent());
                     break;
             }
-            if(LetterManager.Instance.LetterEvent!= null)
+            if (LetterManager.Instance.LetterEvent != null)
             {
                 LetterObject.SetActive(true);
+            }
+            if (!panel.activeSelf)
+            {
+                playSFXSuccesion();
             }
 
         }
@@ -161,13 +170,36 @@ public class EventsManager : MonoBehaviour
         //Debug.Log()
     }
 
-    
-
-    public void LetterFunction()
+    public void PlayEvent(Events Event)
     {
+        OpenPanel(Event.eventDescription);
+        AffectPlayer(Event);
+        Event.sound.Play();
     }
+
+    
     public void ExitPanel()
     {
         panel.SetActive(false);
+        playSFXSuccesion();
+    }
+
+    public void playSFXSuccesion()
+    {
+        //family, 
+        
+
+        //money
+        int currentMoney = CurrencySystem.Instance.GetCurrency();
+        int totalCost = familyMenuScript.GetTotalCost();
+        if (currentMoney < totalCost)
+        {
+            familySFX.HomeNegative.PlayDelayed(1);
+        }
+        else
+        {
+            familySFX.HomePositive.PlayDelayed(1);
+        }
+
     }
 }
