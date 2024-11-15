@@ -12,6 +12,7 @@ public class familyScript : MonoBehaviour
     [SerializeField] public int[] FamilyDeathList;
     [SerializeField] public string[] FamilyNames;
     [SerializeField] private  int StartingDay = 0;
+    
 
     public string[] HealthValues { get; } = { "Healthy", "Sick", "Bedridden", "Dead" };
     public string[] HungerValues { get; } = { "Fine", "Hungry", "Starving", "Dead" };
@@ -149,6 +150,13 @@ public class familyScript : MonoBehaviour
         }
         return "satisfied";
     }
+    public string GetFamilyMemberState(string member)
+    {
+        return GetFamilyMemberState(GetFamilyMemberIndex(member));
+    }
+
+
+
     public int GetFamilyMemberIndex(string name)
     {
         for (int i = 0; i < FamilyNames.Length; i++)
@@ -159,4 +167,8 @@ public class familyScript : MonoBehaviour
         return -1;
     }
 
+
+
 }
+
+
