@@ -102,6 +102,19 @@ public class FamilyMenuScript : MonoBehaviour
             tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
+        foreach (familyMember member in familyScript.Instance.GetFamily())
+        {
+            if (member.sickness== Sickness.Sick || member.sickness == Sickness.Bedridden )
+            {
+                GetRespectiveToogle(MedTogList, member.Role).SetActive(true);
+            }
+            if (member.sickness == Sickness.Dead || member.sickness == Sickness.Dead)
+            {
+                GetRespectiveToogle(FoodTogList, member.Role).SetActive(false);
+                GetRespectiveToogle(MedTogList, member.Role).SetActive(false);
+
+            }
+        }
 
         //UpdateGameOverText();
 
@@ -198,8 +211,8 @@ public class FamilyMenuScript : MonoBehaviour
     public void UpdateButton()
     {
 
-        UpdateButtonList(FoodTogList, foodList);
-        UpdateButtonList(MedTogList, medList);
+        UpdateOwnersList(FoodTogList, foodList);
+        UpdateOwnersList(MedTogList, medList);
 
 
         bool dead = familyScript.Instance.DayUpdate(foodList, medList);
@@ -213,7 +226,7 @@ public class FamilyMenuScript : MonoBehaviour
         }
     }
 
-    public void UpdateButtonList(GameObject[] Bottons, List<FamilyRole> ButtonOwners)
+    public void UpdateOwnersList(GameObject[] Bottons, List<FamilyRole> ButtonOwners)
     {
         foreach (GameObject FoodButoon in Bottons)
         {

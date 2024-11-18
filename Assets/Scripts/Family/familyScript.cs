@@ -115,7 +115,7 @@ public class familyScript : MonoBehaviour
         {
             return GeneralState.Dead;
         }
-        if ((int)member.sickness > (int)member.Hunger && member.sickness>0)
+        if ((int)member.sickness >1)
         {
             return GeneralState.Sick;
         }
@@ -155,6 +155,20 @@ public class familyScript : MonoBehaviour
         Debug.Log("FamilyMember not found, returning first member");
         return Family[0];
 
+    }
+
+    public familyMember GetClosestToDead()
+    {
+        GeneralState LatestGeneralState = GeneralState.Satisfied;
+        familyMember Closestmember = null;
+        foreach (var member in Family)
+        {
+            if (GetGeneralState(member)>= LatestGeneralState)
+            {
+                Closestmember = member;
+            }
+        }
+        return Closestmember;
     }
 
 

@@ -20,4 +20,4 @@ MonoBehaviour:
   nextUpgrade: {fileID: 11400000, guid: de6eee231c9fc7c4ba2fc0536368a2a9, type: 2}
   isFinalUpgrade: 0
   clothingIndex: 1
-  familyMember: boy
+  familyOwner: 2

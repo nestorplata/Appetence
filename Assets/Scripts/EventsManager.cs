@@ -11,6 +11,7 @@ public class EventsManager : MonoBehaviour
     public List<Events> events = new List<Events>();
     public GameObject panel;
     public GameObject LetterObject;
+    public List<GameObject> FamilySFXObjects;
 
     public TextMeshProUGUI descriptionText;
     private Scene currentScene;
@@ -46,6 +47,10 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private AudioSource workInjury;
 
+    [SerializeField]
+    private AudioSource GettingHomePositive; 
+    [SerializeField]
+    private AudioSource GettingHomeNegative;
 
 
 
@@ -163,6 +168,7 @@ public class EventsManager : MonoBehaviour
                 playSFXSuccesion();
             }
 
+
         }
 
         //Debug.Log()
@@ -187,20 +193,56 @@ public class EventsManager : MonoBehaviour
 
     public void playSFXSuccesion()
     {
-        //family, 
-        
+         
+        familyMember ClosestToDie = familyScript.Instance.GetClosestToDead();
+        GeneralState CurrentState = familyScript.Instance.GetGeneralState(ClosestToDie);
+
+        float audioLength = 0;
+
+        foreach (GameObject Owner in FamilySFXObjects)
+        {
+            if(Owner.GetComponent<ToogleOwner>().Owner == ClosestToDie.Role && CurrentState!=GeneralState.Dead)
+            {
+                AudioSource audioSource = Owner.GetComponent<AudioSource>();
+                switch(CurrentState)
+                {
+                    case GeneralState.Satisfied:
+                        audioSource.clip = ClosestToDie.happy;
+                        break;
+                    case GeneralState.Hungry:
+                        audioSource.clip = ClosestToDie.Sad;
+
+                        break;
+                    case GeneralState.Sick:
+                        audioSource.clip = ClosestToDie.sick;
+
+                        break;
+
+                }
+                if(audioSource.clip)
+                {
+                    audioSource.Play();
+                    audioLength = audioSource.clip.length;
+                }
+            }
+        }
 
         //money
         int currentMoney = CurrencySystem.Instance.GetCurrency();
         int totalCost = familyMenuScript.GetTotalCost();
+
+
         if (currentMoney < totalCost)
         {
-            //familySFX.HomeNegative.PlayDelayed(1);
+            GettingHomeNegative.PlayDelayed(audioLength+2);
         }
         else
         {
-            //familySFX.HomePositive.PlayDelayed(1);
+            GettingHomePositive.PlayDelayed(audioLength+2);
         }
 
+
     }
+
+
 }
