@@ -50,9 +50,6 @@ public class EventsManager : MonoBehaviour
 
 
     private FamilyMenuScript familyMenuScript;
-
-    private FamilySFX familySFX;
-
     private int previousEventIndex = -1;
 
     private Events LetterEvent;
@@ -62,7 +59,7 @@ public class EventsManager : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         familyMenuScript = GetComponent<FamilyMenuScript>();
-        familySFX = GetComponent<FamilySFX>();
+        //familySFX = GetComponent<FamilySFX>();
         AudioSource eventSFX = gameObject.AddComponent<AudioSource>();
 
         // Add events
@@ -194,11 +191,11 @@ public class EventsManager : MonoBehaviour
         int totalCost = familyMenuScript.GetTotalCost();
         if (currentMoney < totalCost)
         {
-            familySFX.HomeNegative.PlayDelayed(1);
+            //familySFX.HomeNegative.PlayDelayed(1);
         }
         else
         {
-            familySFX.HomePositive.PlayDelayed(1);
+            //familySFX.HomePositive.PlayDelayed(1);
         }
 
     }
