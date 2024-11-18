@@ -1,34 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class familyScript : MonoBehaviour
 {
-    [SerializeField] familyMember Baby;
-    [SerializeField] familyMember Girl;
-    [SerializeField] familyMember Boy;
-    [SerializeField] familyMember Mom;
-    [SerializeField] familyMember You;
 
-    [SerializeField] familyMember BabyInstance;
-    List<familyMember> familyMembers;
+    [SerializeField] familyMember[] Family;
 
-
-    [SerializeField] public int[] FamilyFoodState;
-    [SerializeField] public int[] FamilyHealthState;
-    [SerializeField] public int[] FamilyDeathList;
-    [SerializeField] public string[] FamilyNames;
     [SerializeField] private  int StartingDay = 0;
+    [Range(0, 4)] public int FamilyAllowedToPerish =1;
 
 
-    public string[] HealthValues { get; } = { "Healthy", "Sick", "Bedridden", "Dead" };
-    public string[] HungerValues { get; } = { "Fine", "Hungry", "Starving", "Dead" };
+
 
     public static familyScript Instance { get; private set; }
-
+    
 
     [HideInInspector]public int day = 0;
 
@@ -47,157 +41,130 @@ public class familyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject something = new GameObject("something");
-        //something.transform.parent = this.transform;
-
-
-        //familyMembers.Add(BabyInstance);
-        Baby.Health = Health.Dead;
-        Debug.Log(Baby.Health);
-
-
-//        foreach (var Member in familyMembers)
-//        {
-//            Member.GetComponent<familyMember>();
-//            gameObject.AddComponent<FamilyMember>(Instantiate(Member));
-//)
-//            Instantiate(Member, transform);
-//            new GameObject(Member.GetComponent<familyMember>().CharactherName).AddComponent<Transform>().parent = transform;
-//        }
-
+        
         day = StartingDay;
         DontDestroyOnLoad(transform.gameObject);
 
     }
 
-    public bool DayUpdate(bool[] foodList, bool[] medList)
+    public bool DayUpdate(List<FamilyRole> foodList, List<FamilyRole> medList)
     {
-        bool dead = false;
-        for (int i = 0; i < foodList.Length; i++)
+        day++;
+        int MembersDead = 0;
+        foreach (familyMember member in Family)
         {
-            if (FamilyDeathList[i] != 1)
+            if(!IsFamilyMemberDead(member))
             {
-                //food logic
-                if (foodList[i] == true && FamilyFoodState[i] > 0)
+                if (foodList.Contains(member.Role))
                 {
-                    FamilyFoodState[i] = FamilyFoodState[i] - 1;
+                    member.Hunger--;
                 }
-                else if (foodList[i] == false)
+                else
                 {
-                    FamilyFoodState[i] = FamilyFoodState[i] + 1;
+                    member.Hunger++;
                 }
-                //health logic
+                if (medList.Contains(member.Role))
+                {
+                    member.sickness--;
+                }
+                else
+                {
+                    member.sickness++;
+                }
+            }
+            if( IsFamilyMemberDead(member))
+            {
+                MembersDead++;
 
-                if (FamilyFoodState[i] > 0)
+                if(member.Role == FamilyRole.You || MembersDead > FamilyAllowedToPerish)
                 {
-                    if ((Random.Range(0f, 10.0f)) > 5f && day > 1)
-                    {
-                        FamilyHealthState[i] = FamilyHealthState[i] + 1;
-                    }
-                }
-                if (medList[i] == true && FamilyHealthState[i] > 0)
-                {
-                    FamilyHealthState[i] = FamilyHealthState[i] - 1;
+                    return true;
                 }
 
-                if (FamilyFoodState[i] == 3 || FamilyHealthState[i] == 3)
-                {
-                    FamilyDeathList[i] = 1;
-                }
             }
 
         }
-        if (FamilyDeathList[0] == 1)
-        {
-            dead = true;
-        }
-        if (FamilyMemberCheck())
-        {
-            dead = true;
-        }
-        day++;
-        return (dead);
+        return false;
     }
     public void Reset()
     {
-        for (int i = 0; i < FamilyFoodState.Length; i++)
+        for (int i = 0; i < Family.Length; i++)
         {
-            FamilyFoodState[i] = 0;
-            FamilyHealthState[i] = 0;
-            FamilyDeathList[i] = 0;
+            Family[i].Hunger = Hunger.Fine;
+            Family[i].sickness = Health.Healthy;
+            //FamilyDeathList[i] = 0;
         }
         day = 0;
 
         CurrencySystem.Instance.ResetCurrency();
     }
-    int getHealth(int i)
-    {
-        return FamilyHealthState[i];
-    }
 
-    private bool FamilyMemberCheck()
-    {
-        var familyDead = false;
-        int deaths = 0;
-        for (int i = 1; i < FamilyDeathList.Length; i++)
-        {
-            if (FamilyDeathList[i] == 1)
-            {
-                deaths++;
-            }
-            if (deaths >= 3)
-            {
-                familyDead = true;
-            }
-            else
-            {
-                familyDead = false;
-            }
-        }
-        return (familyDead);
-    }
+    //getters, setters and helpers
     public int getDay()
     {
         return day;
     }
 
-    public string GetFamilyMemberState(int index)
-    {
-        if (FamilyDeathList[index] == 1)
-        {
-            return "dead";
-        }
 
-        // Priority: Dead > Sick > Hungry > Satisfied
-        if (FamilyHealthState[index] > 0)
-        {
-            return "sick";
-        }
-        if (FamilyFoodState[index] > 0)
-        {
-            return "hungry";
-        }
-        return "satisfied";
-    }
-    public string GetFamilyMemberState(string member)
+
+    public GeneralState GetGeneralState(FamilyRole Role)
     {
-        return GetFamilyMemberState(GetFamilyMemberIndex(member));
+        return GetGeneralState(GetFamilyMember(Role));
     }
 
-
-
-    public int GetFamilyMemberIndex(string name)
+    public GeneralState GetGeneralState(familyMember member)
     {
-        for (int i = 0; i < FamilyNames.Length; i++)
+        if (IsFamilyMemberDead(member))
         {
-            if (FamilyNames[i] == name)
-                return i;
+            return GeneralState.Dead;
         }
-        return -1;
+        if ((int)member.sickness >= (int)member.Hunger)
+        {
+            return GeneralState.Sick;
+        }
+        if ((int)member.Hunger > 0)
+        {
+            return GeneralState.Hungry;
+        }
+        return GeneralState.Satisfied;
     }
 
+    public familyMember[] GetFamily()
+    {
+        return Family;
+    }
+
+    public bool IsFamilyMemberDead(familyMember member)
+    {
+        if (member.Hunger >= Hunger.Dead || member.sickness >= Health.Dead)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsFamilyMemberDead(FamilyRole Role)
+    {
+        return IsFamilyMemberDead(GetFamilyMember(Role));
+
+    }
+
+    public familyMember GetFamilyMember(FamilyRole DesiredMember)
+    {
+        foreach (var member in Family)
+        {
+            if(member.Role == DesiredMember) return member;
+        }
+        Debug.Log("FamilyMember not found, returning first member");
+        return Family[0];
+
+    }
 
 
 }
+
+
+
+
 
 

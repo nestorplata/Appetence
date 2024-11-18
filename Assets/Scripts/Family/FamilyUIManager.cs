@@ -26,20 +26,26 @@ public class FamilyUIManager : MonoBehaviour
     private void InitializeClothingOptions()
     {
         clothingOptions = new Dictionary<string, Dictionary<string, GameObject[]>>();
+        string SatisfiedState = familyMember.GetStateString(GeneralState.Satisfied);
+        string HungryState = familyMember.GetStateString(GeneralState.Hungry);
+        string SickState = familyMember.GetStateString(GeneralState.Sick);
 
-        clothingOptions.Add("satisfied", GetClothingOptionsForEmotion(satisfiedState));
-        clothingOptions.Add("hungry", GetClothingOptionsForEmotion(hungryState));
-        clothingOptions.Add("sick", GetClothingOptionsForEmotion(sickState));
+        Debug.Log(SickState);
+
+
+        clothingOptions.Add(SatisfiedState, GetClothingOptionsForEmotion(satisfiedState));
+        clothingOptions.Add(HungryState, GetClothingOptionsForEmotion(hungryState));
+        clothingOptions.Add(SickState, GetClothingOptionsForEmotion(sickState));
 
         familyMembers = new List<string>();
-        foreach (var member in clothingOptions["satisfied"].Keys)
+        foreach (var member in clothingOptions[SatisfiedState].Keys)
         {
             familyMembers.Add(member);
         }
     }
     private void LoadClothingPreferences()
     {
-        if (familyScript.Instance.getDay() == 0)
+        if (familyScript.Instance.getDay() == 1)
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
@@ -75,41 +81,38 @@ public class FamilyUIManager : MonoBehaviour
 
     private void UpdateAllFamilyClothing()
     {
-        for (int i = 0; i < familyScript.Instance.FamilyNames.Length; i++)
+
+        foreach(familyMember member in familyScript.Instance.GetFamily())
         {
-            string memberName = familyScript.Instance.FamilyNames[i];
-            UpdateFamilyMemberClothing(memberName);
+            UpdateFamilyMemberClothing(member);
+
         }
+
     }
 
-    public void UpdateFamilyMemberClothing(string familyMember)
+    public void UpdateFamilyMemberClothing(familyMember FamilyMember)
     {
-        int memberIndex = familyScript.Instance.GetFamilyMemberIndex(familyMember);
-        if (memberIndex == -1)
-        {
-            Debug.LogError($"Family member '{familyMember}' not found.");
-            return;
-        }
 
-        string currentState = familyScript.Instance.GetFamilyMemberState(memberIndex);
-
-        if (currentState == "dead")
+        string currentRoleString = familyMember.GetStateString(FamilyMember.Role);
+        GeneralState currentState = familyScript.Instance.GetGeneralState(FamilyMember.Role);
+        string currentStateString = familyMember.GetStateString(currentState);
+        if (currentState == GeneralState.Dead)
         {
-            SetAllClothingInactive(familyMember);
+            SetAllClothingInactive(currentRoleString);
             return;
         }
 
         foreach (var state in clothingOptions)
         {
-            if (state.Key == currentState)
+            if (state.Key == currentStateString)
             {
                 // Activate clothing for the current state based on saved preferences
-                ActivateClothingForMember(state.Key, familyMember);
+                ActivateClothingForMember(state.Key, currentRoleString);
             }
             else
             {
                 // Deactivate clothing for other states
-                DeactivateClothingForMember(state.Key, familyMember);
+                DeactivateClothingForMember(state.Key, currentRoleString);
             }
         }
     }
@@ -119,6 +122,7 @@ public class FamilyUIManager : MonoBehaviour
         if (!clothingOptions.ContainsKey(state) || !clothingOptions[state].ContainsKey(familyMember))
         {
             Debug.LogError($"Clothing options for state '{state}' or member '{familyMember}' not found.");
+            Debug.LogError(clothingOptions[state][familyMember]);
             return;
         }
 
@@ -145,6 +149,7 @@ public class FamilyUIManager : MonoBehaviour
 
     private void DeactivateClothingForMember(string state, string familyMember)
     {
+
         if (!clothingOptions.ContainsKey(state) || !clothingOptions[state].ContainsKey(familyMember))
         {
             Debug.LogError($"Clothing options for state '{state}' or member '{familyMember}' not found.");
@@ -197,26 +202,22 @@ public class FamilyUIManager : MonoBehaviour
         return memberClothingOptions;
     }
 
-    public void ChangeClothing(string familyMember, int clothingIndex)
+    public void ChangeClothing(string familyRoleString, int clothingIndex)
     {
-        int memberIndex = familyScript.Instance.GetFamilyMemberIndex(familyMember);
-        if (memberIndex == -1)
-        {
-            Debug.LogError($"Family member '{familyMember}' not found.");
-            return;
-        }
 
-        string[] states = { "satisfied", "hungry", "sick" }; // Apply the change to all emotional states
+        
+        GeneralState[] states = { GeneralState.Satisfied, GeneralState.Hungry, GeneralState.Sick }; // Apply the change to all emotional states
 
         foreach (var currentState in states)
         {
-            if (!clothingOptions.ContainsKey(currentState) || !clothingOptions[currentState].ContainsKey(familyMember))
+            string CurrentStateString = familyMember.GetStateString(currentState);
+            if (!clothingOptions.ContainsKey(CurrentStateString) || !clothingOptions[CurrentStateString].ContainsKey(familyRoleString))
             {
-                Debug.LogError($"Clothing options for state '{currentState}' or member '{familyMember}' not found.");
+                Debug.LogError($"Clothing options for state '{currentState}' or member '{familyRoleString}' not found.");
                 return;
             }
 
-            GameObject[] clothingOptionsForMember = clothingOptions[currentState][familyMember];
+            GameObject[] clothingOptionsForMember = clothingOptions[CurrentStateString][familyRoleString];
 
             // Ensure the index is within bounds
             if (clothingIndex < 0 || clothingIndex >= clothingOptionsForMember.Length)
@@ -236,7 +237,7 @@ public class FamilyUIManager : MonoBehaviour
             UpdateAllFamilyClothing();
 
             // Save the selected clothing index for each state
-            PlayerPrefs.SetInt($"{familyMember}_{currentState}_clothingIndex", clothingIndex);
+            PlayerPrefs.SetInt($"{familyRoleString}_{currentState}_clothingIndex", clothingIndex);
         }
 
         PlayerPrefs.Save();

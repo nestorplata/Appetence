@@ -31,31 +31,20 @@ public class GameOverScript : MonoBehaviour
         //SetNames and States
         var i = 0;
 
+        familyMember[] Family = familyScript.Instance.GetFamily();
         //Naming tombstones
         foreach (TMP_Text member in familyList)
         {
-            string MemberName = familyScript.Instance.FamilyNames[i];
-            string HungerState = familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]];
-            string healthState = familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
+            string MemberName = familyMember.GetStateString(Family[i].Role);
+            
+            string HungerState = familyMember.GetStateString(Family[i].Hunger);
+            string healthState = familyMember.GetStateString(Family[i].sickness);
 
 
             //print gameover information
             member.text = MemberName + " - " + HungerState + " - " +healthState;
             i++;
-            //if (familyScript.Instance.FamilyDeathList[i] == 1)
-            //{
-            //    tombstones[i].enabled = true;
-            //    /*member.text = familyScript.Instance.FamilyNames[i] + " - " + 
-            //     * familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]];
-            //    i++;*/
-            //}
-            //else if (familyScript.Instance.FamilyDeathList[i] == 0)
-            //{
-            //    people[i].enabled = true;
 
-            //}
-
-            //ShowTombstones
             Image MemberTombstone = searchImageTypeName(tombstones, MemberName);
             Image MemberAlive = searchImageTypeName(people, MemberName);
             switch (HungerState)
@@ -73,11 +62,7 @@ public class GameOverScript : MonoBehaviour
 
         }
 
-        // Setting tombstones ot 
-        foreach (string MemberName in familyScript.Instance.FamilyNames)
-        {
 
-        }
 
 
     }

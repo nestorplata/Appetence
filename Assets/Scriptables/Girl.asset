@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
   m_Name: Girl
   m_EditorClassIdentifier: 
-  CharactherName: Girl
+  Role: 3
   Hunger: 0
-  Health: 0
+  sickness: 0
   happy: {fileID: 8300000, guid: 995b05605660fa44298411fbea5d8ebe, type: 3}
   Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
   sick: {fileID: 8300000, guid: 30029be5b7df4fd4280515c9fe3dd09c, type: 3}

@@ -23,22 +23,23 @@ public class HealthBar : MonoBehaviour
 
     public void HealthBarRotation(int state)
     {
-        if (familyScript.FamilyFoodState[state] == 0)
+        if (familyScript.GetFamilyMember(FamilyRole.You).Hunger==Hunger.Fine)
         {
             healthBar.fillAmount = 1f;
             healthBar.color = Color.green;
         }
-        else if (familyScript.FamilyFoodState[state] == 1)
+        else if (familyScript.GetFamilyMember(FamilyRole.You).Hunger == Hunger.Hungry)
+
         {
             healthBar.fillAmount = .75f;
             healthBar.color = Color.yellow;
         }
-        else if (familyScript.FamilyFoodState[state] == 2)
+        else if (familyScript.GetFamilyMember(FamilyRole.You).Hunger == Hunger.Starving)
         {
             healthBar.fillAmount = .50f;
             healthBar.color = new Color(1.0f, 0.4f, 0f);
         }
-        else if (familyScript.FamilyHealthState[state] == 1)
+        else if (familyScript.GetFamilyMember(FamilyRole.You).sickness == Health.Sick)
         {
             healthBar.fillAmount = .25f;
             healthBar.color = Color.red;

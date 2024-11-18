@@ -14,6 +14,6 @@ public class ShopItem : ScriptableObject
     public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
     public int clothingIndex;
-    public string familyMember;
+    public FamilyRole familyOwner;
 }
 

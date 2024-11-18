@@ -25,12 +25,12 @@ public class FamilyMenuScript : MonoBehaviour
 
 
     [SerializeField]
-    bool[] foodList;
+    List<FamilyRole> foodList;
     [SerializeField]
-    bool[] medList;
+    List<FamilyRole> medList;
 
     [SerializeField]
-    Text[] familyList;
+    TMP_Text[] familyList;
 
     [SerializeField]
     private TMP_Text currency;
@@ -50,6 +50,8 @@ public class FamilyMenuScript : MonoBehaviour
 
     [SerializeField]
     private GameObject[] FoodTogList;
+
+    
 
     [SerializeField]
     private GameObject[] MedTogList;
@@ -83,6 +85,8 @@ public class FamilyMenuScript : MonoBehaviour
 
     private bool NextDayIsClicked = false;
 
+
+
     public void Start()
     {
         nextDayBtn.gameObject.SetActive(true);
@@ -99,21 +103,43 @@ public class FamilyMenuScript : MonoBehaviour
             tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
-        
-        //SetNames and States
-        var i = 0;
-        foreach (Text member in familyList)
+
+        //UpdateGameOverText();
+
+    }
+
+    //public TMP_Text[] UpdateGameOverText()
+    //{
+
+    //    familyMember[] Family = familyScript.Instance.GetFamily();
+    //    for (int i = 0; i < Family.Length; i++)
+    //    {
+    //        familyList[i].text = Family[i].CharactherName + " - " + HungerValues[(int)Family[i].Hunger] + " - " + SicknessValues[(int)Family[i].sickness];
+    //        if (Family[i].sickness == Health.Sick || Family[i].sickness == Health.Bedridden)
+    //        {
+    //            GetRespectiveToogle(MedTogList, Family[i].Role).SetActive(true);
+
+    //        }
+    //        if (familyScript.Instance.IsFamilyMemberDead(Family[i]))
+    //        {
+    //            GetRespectiveToogle(FoodTogList, Family[i].Role).SetActive(false);
+    //            GetRespectiveToogle(MedTogList, Family[i].Role).SetActive(false);
+    //        }
+    //    }
+    //    return familyList;
+    //}
+
+    public GameObject GetRespectiveToogle(GameObject[] Toggles, FamilyRole role)
+    {
+        foreach ( GameObject Toggle in Toggles)
         {
-            member.text = familyScript.Instance.FamilyNames[i] + " - " + familyScript.Instance.HungerValues[familyScript.Instance.FamilyFoodState[i]] + " - " + familyScript.Instance.HealthValues[familyScript.Instance.FamilyHealthState[i]];
-            if(familyScript.Instance.FamilyHealthState[i] == 1 || familyScript.Instance.FamilyHealthState[i] == 2){
-                MedTogList[i].SetActive(true);
+            if (Toggle.GetComponent<ToogleOwner>().Owner == role)
+            {
+                return Toggle;
             }
-            if(familyScript.Instance.FamilyHealthState[i] == 3 || familyScript.Instance.FamilyFoodState[i] == 3){
-                FoodTogList[i].SetActive(false);
-                MedTogList[i].SetActive(false);
-            }
-            i++;
         }
+        return null;
+
     }
 
     private void OnDestroy()
@@ -172,13 +198,35 @@ public class FamilyMenuScript : MonoBehaviour
 
     public void UpdateButton()
     {
+
+        UpdateButtonList(FoodTogList, foodList);
+        UpdateButtonList(MedTogList, medList);
+
+
         bool dead = familyScript.Instance.DayUpdate(foodList, medList);
         CurrencySystem.Instance.AddCurrency(-CalcTotal());
         if(dead){
+           // familyScript.Instance.FamilyListText = UpdateGameOverText();
             SceneManager.LoadScene("GameOver");
         }
         else{
             StartCoroutine(levelLoader.LoadLevel("LevelSelect"));
+        }
+    }
+
+    public void UpdateButtonList(GameObject[] Bottons, List<FamilyRole> ButtonOwners)
+    {
+        foreach (GameObject FoodButoon in Bottons)
+        {
+            FamilyRole owner = FoodButoon.GetComponent<ToogleOwner>().Owner;
+            if (FoodButoon.GetComponent<Toggle>().isOn)
+            {
+                ButtonOwners.Add(owner);
+            }
+            else if (ButtonOwners.Contains(owner))
+            {
+                ButtonOwners.Remove(owner);
+            }
         }
     }
 
@@ -203,47 +251,13 @@ public class FamilyMenuScript : MonoBehaviour
         }
     }
 
-    public void FoodButtons(int index)
-    {
-        if(foodList[index] == true){
-            foodList[index] = false;
-        }
-        else if(foodList[index] == false){
-			purchaseSFX.clip = foodPurchase;
-			purchaseSFX.Play();
-			foodList[index] = true;
-        }
-    }
-    public void MedButtons(int index)
-    {
-        if(medList[index] == true){
-            medList[index] = false;
-        }
-        else if(medList[index] == false){
-            purchaseSFX.clip = medPurchase;
-            purchaseSFX.Play();
-            medList[index] = true;
-        }
-    }
+
 
     private int CalcTotal()
     {
         totalCostVal = 0;
-        foreach (var item in foodList)
-        {
-            if (item)
-            {
-                totalCostVal += GetFoodCost();
+        totalCostVal = foodList.Count * GetFoodCost()+ medList.Count * GetMedCost();
 
-            }
-        }
-        foreach (var item in medList)
-        {
-            if (item)
-            {
-                totalCostVal += GetMedCost();
-            }
-        } 
 
         if (CurrencySystem.Instance.GetCurrency() < 0 && totalCostVal <= 0)
         {
@@ -256,21 +270,8 @@ public class FamilyMenuScript : MonoBehaviour
     public int GetTotalCost()
     {
         int total = 0;
-        foreach (var item in foodList)
-        {
-            if (item)
-            {
-                total += GetFoodCost();
+        total = foodList.Count * GetFoodCost() + medList.Count * GetMedCost();
 
-            }
-        }
-        foreach (var item in medList)
-        {
-            if (item)
-            {
-                total += GetMedCost();
-            }
-        }
         return total;
     }    
 

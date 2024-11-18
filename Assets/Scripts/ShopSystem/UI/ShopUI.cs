@@ -59,14 +59,16 @@ public class ShopUI : MonoBehaviour
             // Notify FamilyUIManager to change clothing
             if (familyUIManager != null)
             {
-                string familyMember = currentItem.familyMember;
+                FamilyRole MemberRole = currentItem.familyOwner;
+                string MemberRoleString = familyMember.GetStateString(currentItem.familyOwner);
+
                 int clothingIndex = currentItem.clothingIndex;
 
-                string currentState = familyScript.Instance.GetFamilyMemberState(familyScript.Instance.GetFamilyMemberIndex(familyMember));
+                GeneralState currentState = familyScript.Instance.GetGeneralState(MemberRole);
+                string CurrentStateString = familyMember.GetStateString(currentState);
+                familyUIManager.ChangeClothing(MemberRoleString, clothingIndex);
 
-                familyUIManager.ChangeClothing(familyMember, clothingIndex);
-
-                PlayerPrefs.SetInt(familyMember + "_" + currentState + "_clothingIndex", clothingIndex);
+                PlayerPrefs.SetInt(MemberRoleString + "_" + CurrentStateString + "_clothingIndex", clothingIndex);
                 PlayerPrefs.Save();
             }
 

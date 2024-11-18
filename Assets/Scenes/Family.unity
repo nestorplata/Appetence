@@ -2803,6 +2803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318850135}
   - component: {fileID: 318850136}
+  - component: {fileID: 318850137}
   m_Layer: 5
   m_Name: Kid3 Food
   m_TagString: Untagged
@@ -2878,20 +2879,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: FoodButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &318850137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318850134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330048959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,7 +4825,6 @@ GameObject:
   - component: {fileID: 559342038}
   - component: {fileID: 559342039}
   - component: {fileID: 559342040}
-  - component: {fileID: 559342041}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4936,14 +4936,14 @@ MonoBehaviour:
   shopUI: {fileID: 449375466}
   tutorialBackground: {fileID: 965835204}
   tutorialText: {fileID: 1212910087}
-  foodList: 0000000000
-  medList: 0000000000
+  foodList: 0000000000000000000000000000000000000000
+  medList: 0000000000000000000000000000000000000000
   familyList:
-  - {fileID: 276158443}
-  - {fileID: 937923845}
-  - {fileID: 73529136}
-  - {fileID: 1714298227}
-  - {fileID: 1375656313}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currency: {fileID: 422707478}
   Food: {fileID: 1584160373}
   Medicine: {fileID: 908337194}
@@ -5026,25 +5026,6 @@ MonoBehaviour:
   satisfiedState: {fileID: 2254757}
   hungryState: {fileID: 2110019203}
   sickState: {fileID: 448737215}
---- !u!114 &559342041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559342032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f0f3ebde06dce4cbad0e3c78eb7df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HomePositive: {fileID: 10468444}
-  HomeNegative: {fileID: 767737426}
-  Dad: {fileID: 0}
-  Mom: {fileID: 0}
-  Boy: {fileID: 0}
-  Girl: {fileID: 0}
-  Baby: {fileID: 0}
 --- !u!1 &571611690
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,6 +6571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698918349}
   - component: {fileID: 698918350}
+  - component: {fileID: 698918351}
   m_Layer: 5
   m_Name: You Med
   m_TagString: Untagged
@@ -6665,20 +6647,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: MedButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &698918351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698918348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699642444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7681,6 +7663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803340773}
   - component: {fileID: 803340774}
+  - component: {fileID: 803340775}
   m_Layer: 5
   m_Name: Wife Food
   m_TagString: Untagged
@@ -7756,20 +7739,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: FoodButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &803340775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803340772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &819358581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,6 +8045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 846200718}
   - component: {fileID: 846200719}
+  - component: {fileID: 846200720}
   m_Layer: 5
   m_Name: Kid3 Med
   m_TagString: Untagged
@@ -8137,20 +8121,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: MedButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &846200720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846200717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &849016540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,6 +8471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896407236}
   - component: {fileID: 896407237}
+  - component: {fileID: 896407238}
   m_Layer: 5
   m_Name: Kid2 Med
   m_TagString: Untagged
@@ -8562,20 +8547,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: MedButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &896407238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896407235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900237308
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,6 +9478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970810064}
   - component: {fileID: 970810065}
+  - component: {fileID: 970810066}
   m_Layer: 5
   m_Name: You Food
   m_TagString: Untagged
@@ -9568,20 +9554,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: FoodButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &970810066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970810063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &983352666
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,6 +9809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000698830}
   - component: {fileID: 1000698831}
+  - component: {fileID: 1000698832}
   m_Layer: 5
   m_Name: Wife Med
   m_TagString: Untagged
@@ -9898,20 +9885,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: MedButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &1000698832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000698829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019690691
 GameObject:
   m_ObjectHideFlags: 0
@@ -15314,6 +15301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627626995}
   - component: {fileID: 1627626996}
+  - component: {fileID: 1627626997}
   m_Layer: 5
   m_Name: Kid1 Food
   m_TagString: Untagged
@@ -15389,20 +15377,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: FoodButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &1627626997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627626994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1632942243
 GameObject:
   m_ObjectHideFlags: 0
@@ -15413,6 +15401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632942244}
   - component: {fileID: 1632942245}
+  - component: {fileID: 1632942246}
   m_Layer: 5
   m_Name: Kid1 Med
   m_TagString: Untagged
@@ -15488,20 +15477,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: MedButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &1632942246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632942243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1671429363
 GameObject:
   m_ObjectHideFlags: 0
@@ -16957,6 +16946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782058752}
   - component: {fileID: 1782058753}
+  - component: {fileID: 1782058754}
   m_Layer: 5
   m_Name: Kid2 Food
   m_TagString: Untagged
@@ -17032,20 +17022,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 559342037}
-        m_TargetAssemblyTypeName: FamilyMenuScript, Assembly-CSharp
-        m_MethodName: FoodButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &1782058754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782058751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782213842
 GameObject:
   m_ObjectHideFlags: 0
@@ -20118,15 +20108,15 @@ PrefabInstance:
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: Boy
       value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
+      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: Mom
       value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
+      objectReference: {fileID: 11400000, guid: eb64b72d6fcc677478972303fc23f5ec, type: 2}
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: You
       value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
+      objectReference: {fileID: 11400000, guid: 05194b04120739847984c5732e893aec, type: 2}
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: Baby
       value: 
@@ -20134,11 +20124,35 @@ PrefabInstance:
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: Girl
       value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
+      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
     - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a49c3cd770a4d94291e09323bb6fe23, type: 2}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: eb64b72d6fcc677478972303fc23f5ec, type: 2}
+    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Family.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05194b04120739847984c5732e893aec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
