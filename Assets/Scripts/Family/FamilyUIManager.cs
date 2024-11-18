@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.VersionControl.Asset;
 
 public class FamilyUIManager : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class FamilyUIManager : MonoBehaviour
     private GameObject sickState;
 
     private Dictionary<string, Dictionary<string, GameObject[]>> clothingOptions;
-    private List<string> familyMembers;
 
     // Start is called before the first frame update
     void Start()
@@ -30,18 +30,13 @@ public class FamilyUIManager : MonoBehaviour
         string HungryState = familyMember.GetStateString(GeneralState.Hungry);
         string SickState = familyMember.GetStateString(GeneralState.Sick);
 
-        Debug.Log(SickState);
 
 
         clothingOptions.Add(SatisfiedState, GetClothingOptionsForEmotion(satisfiedState));
         clothingOptions.Add(HungryState, GetClothingOptionsForEmotion(hungryState));
         clothingOptions.Add(SickState, GetClothingOptionsForEmotion(sickState));
 
-        familyMembers = new List<string>();
-        foreach (var member in clothingOptions[SatisfiedState].Keys)
-        {
-            familyMembers.Add(member);
-        }
+
     }
     private void LoadClothingPreferences()
     {
@@ -106,6 +101,7 @@ public class FamilyUIManager : MonoBehaviour
         {
             if (state.Key == currentStateString)
             {
+                //Debug.Log(state.ToString());
                 // Activate clothing for the current state based on saved preferences
                 ActivateClothingForMember(state.Key, currentRoleString);
             }
@@ -114,6 +110,8 @@ public class FamilyUIManager : MonoBehaviour
                 // Deactivate clothing for other states
                 DeactivateClothingForMember(state.Key, currentRoleString);
             }
+
+
         }
     }
 
@@ -121,8 +119,15 @@ public class FamilyUIManager : MonoBehaviour
     {
         if (!clothingOptions.ContainsKey(state) || !clothingOptions[state].ContainsKey(familyMember))
         {
-            Debug.LogError($"Clothing options for state '{state}' or member '{familyMember}' not found.");
-            Debug.LogError(clothingOptions[state][familyMember]);
+            Debug.Log($"Clothing options for state '{state}' or member '{familyMember}' not found.");
+            //Debug.Log(clothingOptions.ToString());
+            //Debug.Log(clothingOptions.Keys.ToString());
+            //Debug.Log(clothingOptions.Values.ToString());
+
+            //Debug.Log(state);
+            //Debug.Log(familyMember);
+
+
             return;
         }
 
@@ -153,7 +158,7 @@ public class FamilyUIManager : MonoBehaviour
         if (!clothingOptions.ContainsKey(state) || !clothingOptions[state].ContainsKey(familyMember))
         {
             Debug.LogError($"Clothing options for state '{state}' or member '{familyMember}' not found.");
-            return;
+             return;
         }
 
         GameObject[] clothingOptionsForMember = clothingOptions[state][familyMember];
@@ -213,7 +218,10 @@ public class FamilyUIManager : MonoBehaviour
             string CurrentStateString = familyMember.GetStateString(currentState);
             if (!clothingOptions.ContainsKey(CurrentStateString) || !clothingOptions[CurrentStateString].ContainsKey(familyRoleString))
             {
-                Debug.LogError($"Clothing options for state '{currentState}' or member '{familyRoleString}' not found.");
+
+            
+                Debug.LogError(clothingOptions.Keys.ToString());
+                Debug.LogError($"Clothing options for state '{CurrentStateString}' or member '{familyRoleString}' not found.");
                 return;
             }
 
@@ -237,7 +245,7 @@ public class FamilyUIManager : MonoBehaviour
             UpdateAllFamilyClothing();
 
             // Save the selected clothing index for each state
-            PlayerPrefs.SetInt($"{familyRoleString}_{currentState}_clothingIndex", clothingIndex);
+            PlayerPrefs.SetInt($"{familyRoleString}_{CurrentStateString}_clothingIndex", clothingIndex);
         }
 
         PlayerPrefs.Save();

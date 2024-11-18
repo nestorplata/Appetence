@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,13 +13,10 @@ using UnityEngine.UI;
 
 public class familyScript : MonoBehaviour
 {
-
     [SerializeField] familyMember[] Family;
 
     [SerializeField] private  int StartingDay = 0;
     [Range(0, 4)] public int FamilyAllowedToPerish =1;
-
-
 
 
     public static familyScript Instance { get; private set; }
@@ -41,7 +39,6 @@ public class familyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         day = StartingDay;
         DontDestroyOnLoad(transform.gameObject);
 
@@ -91,7 +88,7 @@ public class familyScript : MonoBehaviour
         for (int i = 0; i < Family.Length; i++)
         {
             Family[i].Hunger = Hunger.Fine;
-            Family[i].sickness = Health.Healthy;
+            Family[i].sickness = Sickness.Healthy;
             //FamilyDeathList[i] = 0;
         }
         day = 0;
@@ -118,7 +115,7 @@ public class familyScript : MonoBehaviour
         {
             return GeneralState.Dead;
         }
-        if ((int)member.sickness >= (int)member.Hunger)
+        if ((int)member.sickness > (int)member.Hunger && member.sickness>0)
         {
             return GeneralState.Sick;
         }
@@ -136,7 +133,7 @@ public class familyScript : MonoBehaviour
 
     public bool IsFamilyMemberDead(familyMember member)
     {
-        if (member.Hunger >= Hunger.Dead || member.sickness >= Health.Dead)
+        if (member.Hunger >= Hunger.Dead || member.sickness >= Sickness.Dead)
         {
             return true;
         }

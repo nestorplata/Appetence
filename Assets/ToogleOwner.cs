@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class ToogleOwner : MonoBehaviour
 {
-    [SerializeField]
-    public FamilyRole Owner { get; }
+    [SerializeField] public FamilyRole Owner;
 }

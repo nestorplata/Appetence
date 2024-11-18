@@ -2805,7 +2805,7 @@ GameObject:
   - component: {fileID: 318850136}
   - component: {fileID: 318850137}
   m_Layer: 5
-  m_Name: Kid3 Food
+  m_Name: Boy Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2893,6 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 2
 --- !u!1 &330048959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,8 +4937,8 @@ MonoBehaviour:
   shopUI: {fileID: 449375466}
   tutorialBackground: {fileID: 965835204}
   tutorialText: {fileID: 1212910087}
-  foodList: 0000000000000000000000000000000000000000
-  medList: 0000000000000000000000000000000000000000
+  foodList: 
+  medList: 
   familyList:
   - {fileID: 0}
   - {fileID: 0}
@@ -6661,6 +6662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &699642444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7753,6 +7755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 1
 --- !u!1 &819358581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8135,6 +8138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &849016540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8561,6 +8565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &900237308
 GameObject:
   m_ObjectHideFlags: 0
@@ -9568,6 +9573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &983352666
 GameObject:
   m_ObjectHideFlags: 0
@@ -9899,6 +9905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &1019690691
 GameObject:
   m_ObjectHideFlags: 0
@@ -15303,7 +15310,7 @@ GameObject:
   - component: {fileID: 1627626996}
   - component: {fileID: 1627626997}
   m_Layer: 5
-  m_Name: Kid1 Food
+  m_Name: Baby Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15391,6 +15398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 4
 --- !u!1 &1632942243
 GameObject:
   m_ObjectHideFlags: 0
@@ -15491,6 +15499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &1671429363
 GameObject:
   m_ObjectHideFlags: 0
@@ -16908,7 +16917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777234235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 609618fe2878d3b4cbb174062854e3a7, type: 3}
   m_Name: 
@@ -16948,7 +16957,7 @@ GameObject:
   - component: {fileID: 1782058753}
   - component: {fileID: 1782058754}
   m_Layer: 5
-  m_Name: Kid2 Food
+  m_Name: Girl Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17036,6 +17045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: 3
 --- !u!1 &1782213842
 GameObject:
   m_ObjectHideFlags: 0
@@ -20105,54 +20115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Boy
-      value: 
-      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Mom
-      value: 
-      objectReference: {fileID: 11400000, guid: eb64b72d6fcc677478972303fc23f5ec, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: You
-      value: 
-      objectReference: {fileID: 11400000, guid: 05194b04120739847984c5732e893aec, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Baby
-      value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Girl
-      value: 
-      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 99bad0405e73ee24a815a2a682ae7a24, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 3a49c3cd770a4d94291e09323bb6fe23, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: d2dcb4dfb7b2e3a4cbbd360ad4f6a104, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: eb64b72d6fcc677478972303fc23f5ec, type: 2}
-    - target: {fileID: 9186584556698974779, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Family.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 05194b04120739847984c5732e893aec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20253,6 +20215,10 @@ PrefabInstance:
     - target: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
       propertyPath: m_Name
       value: Letter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

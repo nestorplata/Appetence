@@ -81,7 +81,6 @@ public class FamilyMenuScript : MonoBehaviour
 
     private int medCost = 200;
 
-    private familyScript FamilyScript;
 
     private bool NextDayIsClicked = false;
 
@@ -256,7 +255,23 @@ public class FamilyMenuScript : MonoBehaviour
     private int CalcTotal()
     {
         totalCostVal = 0;
-        totalCostVal = foodList.Count * GetFoodCost()+ medList.Count * GetMedCost();
+        foreach (GameObject FoodTog in FoodTogList)
+        {
+            if(FoodTog.GetComponent<Toggle>().isOn)
+            {
+                totalCostVal += GetFoodCost();
+            }
+        }
+
+        foreach (GameObject MedTog in MedTogList)
+        {
+            if (MedTog.GetComponent<Toggle>().isOn)
+            {
+                totalCostVal += GetMedCost();
+            }
+        }
+
+        // totalCostVal = foodList.Count * GetFoodCost()+ medList.Count * GetMedCost();
 
 
         if (CurrencySystem.Instance.GetCurrency() < 0 && totalCostVal <= 0)
@@ -270,7 +285,21 @@ public class FamilyMenuScript : MonoBehaviour
     public int GetTotalCost()
     {
         int total = 0;
-        total = foodList.Count * GetFoodCost() + medList.Count * GetMedCost();
+        total = foodList.Count * GetFoodCost();
+        foreach (familyMember member in familyScript.Instance.GetFamily())
+        {
+            if(familyScript.Instance.GetGeneralState(member)!=GeneralState.Dead)
+            {
+                total += GetFoodCost();
+
+                if(member.sickness == Sickness.Sick || member.sickness == Sickness.Bedridden)
+                {
+                    total += GetMedCost();
+                }
+            }
+
+        }
+
 
         return total;
     }    

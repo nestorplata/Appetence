@@ -147,6 +147,7 @@ public class EventsManager : MonoBehaviour
                     break;
                 case 2:
                     LetterManager.Instance.LetterEvent = LetterEvent;
+                    LetterObject.SetActive(true);
                     PlayEvent(LetterEvent);
                     break;
                 default:
@@ -171,7 +172,10 @@ public class EventsManager : MonoBehaviour
     {
         OpenPanel(Event.eventDescription);
         AffectPlayer(Event);
-        Event.sound.Play();
+        if(Event.sound)
+        {
+            Event.sound.Play();
+        }
     }
 
     

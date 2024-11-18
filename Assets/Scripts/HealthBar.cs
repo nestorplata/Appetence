@@ -39,7 +39,7 @@ public class HealthBar : MonoBehaviour
             healthBar.fillAmount = .50f;
             healthBar.color = new Color(1.0f, 0.4f, 0f);
         }
-        else if (familyScript.GetFamilyMember(FamilyRole.You).sickness == Health.Sick)
+        else if (familyScript.GetFamilyMember(FamilyRole.You).sickness == Sickness.Sick)
         {
             healthBar.fillAmount = .25f;
             healthBar.color = Color.red;

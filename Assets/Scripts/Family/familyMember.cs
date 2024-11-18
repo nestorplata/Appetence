@@ -5,12 +5,11 @@ using System.ComponentModel;
 using System.Reflection;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FamilyMembers", menuName = "ScriptableObjects/FamilyMember", order = 1)]
-public class familyMember : ScriptableObject
+public class familyMember : MonoBehaviour
 {
     public FamilyRole Role;
     public Hunger Hunger = Hunger.Fine;
-    public Health sickness = Health.Healthy;
+    public Sickness sickness = Sickness.Healthy;
     public AudioClip happy;
     public AudioClip Sad;
     public AudioClip sick;
@@ -38,7 +37,7 @@ public enum GeneralState {
     [Description("Dead")] Dead
 
 }
-public enum Health { 
+public enum Sickness { 
     [Description("Healthy")] Healthy,
     [Description("Sick")] Sick,
     [Description("Bedridden")] Bedridden, 
@@ -52,10 +51,11 @@ public enum Hunger {
     [Description("Dead")] Dead }
 
 public enum FamilyRole {
-    [Description("Boy")] Boy,
-    [Description("Wife")] Wife,
     [Description("You")] You,
-    [Description("Girl")] Girl,
-    [Description("Baby")] Baby}
+    [Description("wife")] Wife,
+    [Description("boy")] Boy,
+    [Description("girl")] Girl,
+    [Description("baby")] Baby
+}
 
 
