@@ -9,7 +9,7 @@ public class AnimatedFamily : MonoBehaviour
     public Sprite[] sprites;
 
     //duration of each sprite in the animation, adjust for speed
-    private float duration = 0.0255F;
+    private float duration = 0.0275F;
 
     //refrence the image that will play the animation, make sure the actual image component has none as the source
     public Image img;
