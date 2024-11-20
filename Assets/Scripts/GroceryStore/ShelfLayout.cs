@@ -8,6 +8,7 @@ public class ShelfLayout : MonoBehaviour
 
     public Button shelfButton;
     public GameObject layout;
+    public GameObject placed;
     public bool isShelfOpen = false;
 
     private bool listenerAdded = false;
@@ -16,6 +17,7 @@ public class ShelfLayout : MonoBehaviour
     void Start()
     {
         layout.SetActive(false);
+        placed.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,11 +32,13 @@ public class ShelfLayout : MonoBehaviour
         if (!isShelfOpen)
         {
             layout.gameObject.SetActive(false);
+            placed.gameObject.SetActive(true);
         }
 
         else
         {
             layout.gameObject.SetActive(true);
+            placed.gameObject.SetActive(false);
         }
     }
 

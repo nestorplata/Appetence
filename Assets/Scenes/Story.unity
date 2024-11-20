@@ -182,7 +182,7 @@ MonoBehaviour:
   m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -555,7 +555,7 @@ MonoBehaviour:
     is to pay off that debt and provide as much as you can for your family.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_text: APPETENCE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     for the entire family.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

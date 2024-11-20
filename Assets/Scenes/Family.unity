@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 20358260}
   - component: {fileID: 20358262}
   - component: {fileID: 20358261}
+  - component: {fileID: 20358263}
   m_Layer: 5
   m_Name: wife1
   m_TagString: Clothing
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9519ec0aa52adee4292dd97f0fcca45a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -237,6 +238,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20358259}
   m_CullTransparentMesh: 1
+--- !u!114 &20358263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20358259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: bf379322b05078c4885db43ab867af73, type: 3}
+  - {fileID: 21300000, guid: 79dd0531b37a9d34093fc7377fc1a749, type: 3}
+  - {fileID: 21300000, guid: 109c58491b799b34d8a74a3de67ecf27, type: 3}
+  - {fileID: 21300000, guid: b5be4ea7c1d37184893ac8af298ee876, type: 3}
+  - {fileID: 21300000, guid: d402764e3d72041498dc08a50722c1c4, type: 3}
+  - {fileID: 21300000, guid: 24235f46345b3524a86d1db3ac37b0c6, type: 3}
+  - {fileID: 21300000, guid: 1b99f1b74f8a623439d0a3ec54bf0093, type: 3}
+  - {fileID: 21300000, guid: af56acd517f9ba148b357cab029ed38b, type: 3}
+  img: {fileID: 20358261}
 --- !u!1 &43744930
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +521,7 @@ GameObject:
   - component: {fileID: 79479084}
   - component: {fileID: 79479086}
   - component: {fileID: 79479085}
+  - component: {fileID: 79479087}
   m_Layer: 5
   m_Name: boy2
   m_TagString: Clothing
@@ -544,7 +568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac3acf2e8e998af4081bba7d3f71da25, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -562,6 +586,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79479083}
   m_CullTransparentMesh: 1
+--- !u!114 &79479087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79479083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 32839d8c17c5a9842b623e1a758b6fa9, type: 3}
+  - {fileID: 21300000, guid: 5cf2efda72e7ac84d9e574fd8ae2fe9a, type: 3}
+  - {fileID: 21300000, guid: 2921332ba6fd0e843ae2039a62135ada, type: 3}
+  - {fileID: 21300000, guid: 321e45d0305d32d45b7773ba320dc567, type: 3}
+  - {fileID: 21300000, guid: 2d0c869bdea04204fa66e6accf6fee06, type: 3}
+  - {fileID: 21300000, guid: fb908f45ee03ec14f926235b353035de, type: 3}
+  - {fileID: 21300000, guid: e21b02fb6e578064aacb9908ecf903e6, type: 3}
+  - {fileID: 21300000, guid: 14c8cf80a1c85704ca3405a4d73a077d, type: 3}
+  img: {fileID: 79479085}
 --- !u!1 &88514346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2067,7 @@ GameObject:
   - component: {fileID: 208968431}
   - component: {fileID: 208968433}
   - component: {fileID: 208968432}
+  - component: {fileID: 208968434}
   m_Layer: 5
   m_Name: You1
   m_TagString: Clothing
@@ -2067,7 +2114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b3ded8442102c0478e65e5bc0bfcda0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2085,6 +2132,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208968430}
   m_CullTransparentMesh: 1
+--- !u!114 &208968434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208968430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 3734f7835168f2f498abd2be01637e48, type: 3}
+  - {fileID: 21300000, guid: 29e5c3e2cc4fae84695131688557ed44, type: 3}
+  - {fileID: 21300000, guid: 617034e125000e241affbe7a9f55e675, type: 3}
+  - {fileID: 21300000, guid: 6c3e7a3c6c6814d4dae3a5ee78352d05, type: 3}
+  - {fileID: 21300000, guid: 3cc1f6ac173e8c2479b5c2ee142993c6, type: 3}
+  - {fileID: 21300000, guid: f7a9fa1b28d8b4340974e040427b57cd, type: 3}
+  - {fileID: 21300000, guid: d86c14042b1d22b438c8b049caa5867d, type: 3}
+  - {fileID: 21300000, guid: 6b2a2df6c1c547a4a9c694f2a22525eb, type: 3}
+  img: {fileID: 208968432}
 --- !u!1 &243918953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,6 +2165,7 @@ GameObject:
   - component: {fileID: 243918954}
   - component: {fileID: 243918956}
   - component: {fileID: 243918955}
+  - component: {fileID: 243918957}
   m_Layer: 5
   m_Name: baby1
   m_TagString: Clothing
@@ -2142,7 +2212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a8ba1c8ad51280941a5d11c773ec71b6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2160,6 +2230,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243918953}
   m_CullTransparentMesh: 1
+--- !u!114 &243918957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243918953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 47fd3f02580ad6341881ed6bb2a0b967, type: 3}
+  - {fileID: 21300000, guid: b24a820d5b808e94f9bb4c9644610267, type: 3}
+  - {fileID: 21300000, guid: 8bf1d0f826cb7af4eaab597ee50c3cee, type: 3}
+  - {fileID: 21300000, guid: 6364f8dbf4d8400448787b8286f2c252, type: 3}
+  - {fileID: 21300000, guid: 51ff70888cd7d834d80b7465ff44a5bd, type: 3}
+  - {fileID: 21300000, guid: 9683fa488c6eafc40aed0ee8a3046c95, type: 3}
+  - {fileID: 21300000, guid: bf4156f167b6f1440b7266a49ed2d336, type: 3}
+  - {fileID: 21300000, guid: 9edfc924832a0bb4daf99024bf19854f, type: 3}
+  img: {fileID: 243918955}
 --- !u!1 &276158441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,6 +3264,7 @@ GameObject:
   - component: {fileID: 415659171}
   - component: {fileID: 415659173}
   - component: {fileID: 415659172}
+  - component: {fileID: 415659174}
   m_Layer: 5
   m_Name: girl3
   m_TagString: Clothing
@@ -3218,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cab6c124034a2e148920af681eb5f03b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3236,6 +3329,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415659170}
   m_CullTransparentMesh: 1
+--- !u!114 &415659174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415659170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 85eff909f7564f44f93f3446d8e9661e, type: 3}
+  - {fileID: 21300000, guid: a3f1a346b6c6f44428487270cc45c1ea, type: 3}
+  - {fileID: 21300000, guid: 67ca05f17fdc1494e96086b68f1f54cc, type: 3}
+  - {fileID: 21300000, guid: 5c49f19d862c7c546a8ffcebabfc153d, type: 3}
+  - {fileID: 21300000, guid: 14c2628f002e60448beefdff3a019e53, type: 3}
+  - {fileID: 21300000, guid: 4317248a4d2c63645be29ec1ec9373ae, type: 3}
+  - {fileID: 21300000, guid: 62d534923ac82834791f8b640c6a6509, type: 3}
+  - {fileID: 21300000, guid: 847884633b98e9249b4726d6748198aa, type: 3}
+  img: {fileID: 415659172}
 --- !u!1 &416985138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,6 +3790,7 @@ GameObject:
   - component: {fileID: 439048404}
   - component: {fileID: 439048406}
   - component: {fileID: 439048405}
+  - component: {fileID: 439048407}
   m_Layer: 5
   m_Name: boy3
   m_TagString: Clothing
@@ -3721,7 +3837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ae3a84f00a301a488380bec8c5a1aff, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3739,6 +3855,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439048403}
   m_CullTransparentMesh: 1
+--- !u!114 &439048407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439048403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: bf9cee09e695daa4f88867ad98a59026, type: 3}
+  - {fileID: 21300000, guid: 8da5dcfb8fe40cc4c9379ae844716c6e, type: 3}
+  - {fileID: 21300000, guid: 3aa4a456b7fff334da73fcd29d9d22a9, type: 3}
+  - {fileID: 21300000, guid: ae42432c66d647d48b20ed2b68ee8d6b, type: 3}
+  - {fileID: 21300000, guid: f960ccb999ec2bd44ae8f23601ac442a, type: 3}
+  - {fileID: 21300000, guid: c8f52f3592f852c4ab0cdaf34a70513b, type: 3}
+  - {fileID: 21300000, guid: fad9b4916e94bf54abd772f14d3b1b31, type: 3}
+  - {fileID: 21300000, guid: 2a6cb4e607651d64c88f6e49ca6ae5fd, type: 3}
+  img: {fileID: 439048405}
 --- !u!1 &448737215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,6 +4174,7 @@ GameObject:
   - component: {fileID: 505149213}
   - component: {fileID: 505149215}
   - component: {fileID: 505149214}
+  - component: {fileID: 505149216}
   m_Layer: 5
   m_Name: girl1
   m_TagString: Clothing
@@ -4082,7 +4221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b7b4f367a2a3f14fbefbd909398ccf6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4100,6 +4239,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505149212}
   m_CullTransparentMesh: 1
+--- !u!114 &505149216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505149212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 299aa9b4cbc463e4f8b498e76d4b47d8, type: 3}
+  - {fileID: 21300000, guid: 2a6a9c2341d55ea4b88bd5d12946f33e, type: 3}
+  - {fileID: 21300000, guid: 6c50cbb20c0ea0e49a113f19815c0d84, type: 3}
+  - {fileID: 21300000, guid: 2ddd6867acc8363428ab0f584b9fcc7f, type: 3}
+  - {fileID: 21300000, guid: 5652970a0b2695e48bb65aefcc1612c1, type: 3}
+  - {fileID: 21300000, guid: cac9b1042ee80b74b8fca6b428496bc2, type: 3}
+  - {fileID: 21300000, guid: 0798a65abf6993f408670cb4b582077e, type: 3}
+  - {fileID: 21300000, guid: acb696058e036184b8427778f1618461, type: 3}
+  img: {fileID: 505149214}
 --- !u!1 &506926097
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,6 +5069,7 @@ GameObject:
   - component: {fileID: 571611691}
   - component: {fileID: 571611693}
   - component: {fileID: 571611692}
+  - component: {fileID: 571611694}
   m_Layer: 5
   m_Name: boy1
   m_TagString: Clothing
@@ -4954,7 +5116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47f7d801d41a018458526bb8b9102cc6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4972,6 +5134,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571611690}
   m_CullTransparentMesh: 1
+--- !u!114 &571611694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571611690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: c46a39e77b8a2af4d88959af320736dd, type: 3}
+  - {fileID: 21300000, guid: 8d3c5ea14a44bc8429c2a43f1787d652, type: 3}
+  - {fileID: 21300000, guid: 7acc528ac68b7874795e1ae256b2a38b, type: 3}
+  - {fileID: 21300000, guid: 39c39d69e4eb98945ad6c4e642a1ebf6, type: 3}
+  - {fileID: 21300000, guid: d0ca77beed003bb40b957b0c485b175f, type: 3}
+  - {fileID: 21300000, guid: bc35b0b5cef0b574aa117a7d00b56330, type: 3}
+  - {fileID: 21300000, guid: 5e5307ff2a0a08b48a65fc86f8bb9af6, type: 3}
+  - {fileID: 21300000, guid: 6b96b22c6754d984699b3b7bc3d72b52, type: 3}
+  img: {fileID: 571611692}
 --- !u!1 &590423395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,6 +6215,7 @@ GameObject:
   - component: {fileID: 647010942}
   - component: {fileID: 647010944}
   - component: {fileID: 647010943}
+  - component: {fileID: 647010945}
   m_Layer: 5
   m_Name: baby2
   m_TagString: Clothing
@@ -6077,7 +6262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d68598a661b91246b467dec5288830d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6095,6 +6280,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647010941}
   m_CullTransparentMesh: 1
+--- !u!114 &647010945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647010941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: cc37338257c16c5449c7490ee6b8e4b1, type: 3}
+  - {fileID: 21300000, guid: 271749af0e0c5dc4aa617cefd1cbcf51, type: 3}
+  - {fileID: 21300000, guid: 835986d5fe9215548b24bc77ba8d35e9, type: 3}
+  - {fileID: 21300000, guid: 3edd045cd69343441a73f145aeecf8b6, type: 3}
+  - {fileID: 21300000, guid: 091b13a3f183d8e4d882a57eef39f5ed, type: 3}
+  - {fileID: 21300000, guid: 7ead7fcc0a8aff94db311e6a7d835f54, type: 3}
+  - {fileID: 21300000, guid: f245eb2a23a96f54f8194146a3c883da, type: 3}
+  - {fileID: 21300000, guid: 9e3e26a6e2467d742ab6949d071c4405, type: 3}
+  img: {fileID: 647010943}
 --- !u!1 &662254203
 GameObject:
   m_ObjectHideFlags: 0
@@ -6845,6 +7052,7 @@ GameObject:
   - component: {fileID: 749299169}
   - component: {fileID: 749299171}
   - component: {fileID: 749299170}
+  - component: {fileID: 749299172}
   m_Layer: 5
   m_Name: boy1
   m_TagString: Clothing
@@ -6891,7 +7099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31bd7e2863212e041919e9d0fdc27ce7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6909,6 +7117,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749299168}
   m_CullTransparentMesh: 1
+--- !u!114 &749299172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749299168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 861d8e6cf8d3ba642adbd0a81cccfd52, type: 3}
+  - {fileID: 21300000, guid: cec81fee54a680143a6b5302a18f2257, type: 3}
+  - {fileID: 21300000, guid: 0784fcad9bd7e2d45a0512c4b3dad693, type: 3}
+  - {fileID: 21300000, guid: f95d981da849cdb4ca199a8e13eedcbc, type: 3}
+  - {fileID: 21300000, guid: 658cefb91c4352048ab46da3ae2a328d, type: 3}
+  - {fileID: 21300000, guid: 12528619fdcb5a244b6f276b9589a308, type: 3}
+  - {fileID: 21300000, guid: 8d42e0d6edf20574299c1c046ae4dffc, type: 3}
+  - {fileID: 21300000, guid: f99b8b39e7991fc43b8fd9c6274900bd, type: 3}
+  img: {fileID: 749299170}
 --- !u!1 &762941653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8137,6 +8367,7 @@ GameObject:
   - component: {fileID: 894593878}
   - component: {fileID: 894593880}
   - component: {fileID: 894593879}
+  - component: {fileID: 894593881}
   m_Layer: 5
   m_Name: girl1
   m_TagString: Clothing
@@ -8183,7 +8414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8029d996228088049b0718d51e762bde, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8201,6 +8432,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894593877}
   m_CullTransparentMesh: 1
+--- !u!114 &894593881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894593877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: cc4182d049d9ce640b8d6adc1f8845d3, type: 3}
+  - {fileID: 21300000, guid: 8ca42ab50aed2ef4ebea22d1df547e46, type: 3}
+  - {fileID: 21300000, guid: 1a0554e5b0450a44b8dc0ac8d698a9d7, type: 3}
+  - {fileID: 21300000, guid: 1877e9d69d03d5c4c97dc7e0f81bc607, type: 3}
+  - {fileID: 21300000, guid: 56ef675147e52354dab8984947bb7c24, type: 3}
+  - {fileID: 21300000, guid: 53041510126afb4459e142eeb2c82a8d, type: 3}
+  - {fileID: 21300000, guid: 0aa93f4659398ae4fa7145c5f26c7866, type: 3}
+  - {fileID: 21300000, guid: 0e030a18eb4b15c44915381b1b5d44d1, type: 3}
+  img: {fileID: 894593879}
 --- !u!1 &896407235
 GameObject:
   m_ObjectHideFlags: 0
@@ -9283,6 +9536,7 @@ GameObject:
   - component: {fileID: 983352667}
   - component: {fileID: 983352669}
   - component: {fileID: 983352668}
+  - component: {fileID: 983352670}
   m_Layer: 5
   m_Name: baby3
   m_TagString: Clothing
@@ -9329,7 +9583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6872116e8ab3fd541b64faff531d9a3b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9347,6 +9601,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983352666}
   m_CullTransparentMesh: 1
+--- !u!114 &983352670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983352666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: be4d5289ff724174da20d46951630f01, type: 3}
+  - {fileID: 21300000, guid: aacd24220d06e2148ba0f27e0fc79ccd, type: 3}
+  - {fileID: 21300000, guid: 27212f10572bf044c96300168580cacd, type: 3}
+  - {fileID: 21300000, guid: 22b6e27b6fdfc3e4f931ab35eb0adafd, type: 3}
+  img: {fileID: 983352668}
 --- !u!1 &987350085
 GameObject:
   m_ObjectHideFlags: 0
@@ -10067,6 +10339,7 @@ GameObject:
   - component: {fileID: 1086178990}
   - component: {fileID: 1086178992}
   - component: {fileID: 1086178991}
+  - component: {fileID: 1086178993}
   m_Layer: 5
   m_Name: wife2
   m_TagString: Clothing
@@ -10113,7 +10386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9e94dbaf1e89a4149a45e4a45e9ad3aa, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10131,6 +10404,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086178989}
   m_CullTransparentMesh: 1
+--- !u!114 &1086178993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086178989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: c13aec35636f2da47a705897b1cea34d, type: 3}
+  - {fileID: 21300000, guid: f58913f325a1cea4384c552dede0dc2e, type: 3}
+  - {fileID: 21300000, guid: 2dd370c013ee6444eb02dd098940f701, type: 3}
+  - {fileID: 21300000, guid: 0198e9e6d07853342adac88c9adeb966, type: 3}
+  - {fileID: 21300000, guid: 01c3b83854e081a4a97f7e17b917f9e0, type: 3}
+  - {fileID: 21300000, guid: 8cdeac10be07de8458634bd77e15f52d, type: 3}
+  - {fileID: 21300000, guid: 9d9fd6eaa1aaf9e449caac07e1b70b81, type: 3}
+  - {fileID: 21300000, guid: 12aeb11d4a66e3d4c9657265c078150d, type: 3}
+  img: {fileID: 1086178991}
 --- !u!1 &1107744003
 GameObject:
   m_ObjectHideFlags: 0
@@ -10341,6 +10636,7 @@ GameObject:
   - component: {fileID: 1127102379}
   - component: {fileID: 1127102381}
   - component: {fileID: 1127102380}
+  - component: {fileID: 1127102382}
   m_Layer: 5
   m_Name: wife1
   m_TagString: Clothing
@@ -10387,7 +10683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 997bc0410953b9449b71c3bd2d1d6e6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10405,6 +10701,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127102378}
   m_CullTransparentMesh: 1
+--- !u!114 &1127102382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127102378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 3e9e513e94118a0418980bd5d0011948, type: 3}
+  - {fileID: 21300000, guid: 04fb96fb052b8ca42b4a51e1c871dfd8, type: 3}
+  - {fileID: 21300000, guid: 2f0eebcfb3ac0264697e2564a17db5eb, type: 3}
+  - {fileID: 21300000, guid: 5d49d422257fba341b6698c09c2adfa7, type: 3}
+  - {fileID: 21300000, guid: 742fd2ca2ce3a2941b16445bc93fa713, type: 3}
+  - {fileID: 21300000, guid: 1ab6e73ff2de324429c05e773997d6bc, type: 3}
+  - {fileID: 21300000, guid: 9a75de6129ce5e94ab63427b11710c20, type: 3}
+  - {fileID: 21300000, guid: 607d7df456f3d864ca18a01ea8e2d40b, type: 3}
+  img: {fileID: 1127102380}
 --- !u!1 &1128188883
 GameObject:
   m_ObjectHideFlags: 0
@@ -10647,6 +10965,7 @@ GameObject:
   - component: {fileID: 1149135276}
   - component: {fileID: 1149135278}
   - component: {fileID: 1149135277}
+  - component: {fileID: 1149135279}
   m_Layer: 5
   m_Name: girl1
   m_TagString: Clothing
@@ -10693,7 +11012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e941f23a8649f1498300cea459e1c9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10711,6 +11030,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149135275}
   m_CullTransparentMesh: 1
+--- !u!114 &1149135279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149135275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: fb95780edbee71743bf139af78557dfd, type: 3}
+  - {fileID: 21300000, guid: 5b0eb93e6c5955649a32038353e87c0b, type: 3}
+  - {fileID: 21300000, guid: 189d9c2a01a7c9f4e97696f97574b4d8, type: 3}
+  - {fileID: 21300000, guid: 5a6c5345b1f00b14dacbd9a710065903, type: 3}
+  - {fileID: 21300000, guid: 0138edf7bad797e4a8637a7e438ef297, type: 3}
+  - {fileID: 21300000, guid: 5280bb1dd9853e343be9e708c7e67824, type: 3}
+  - {fileID: 21300000, guid: a9a8d7d86208e6d4183e8a51dc794dbb, type: 3}
+  - {fileID: 21300000, guid: ae0b23cf94b134743a46404a6488fdfa, type: 3}
+  img: {fileID: 1149135277}
 --- !u!1 &1159317245
 GameObject:
   m_ObjectHideFlags: 0
@@ -11143,6 +11484,7 @@ GameObject:
   - component: {fileID: 1203103123}
   - component: {fileID: 1203103125}
   - component: {fileID: 1203103124}
+  - component: {fileID: 1203103126}
   m_Layer: 5
   m_Name: boy3
   m_TagString: Clothing
@@ -11189,7 +11531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3dbf3dabcb51c774da9642067f52da62, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11207,6 +11549,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203103122}
   m_CullTransparentMesh: 1
+--- !u!114 &1203103126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203103122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 3e14a71bd93555a4eba1ea375bcaa7df, type: 3}
+  - {fileID: 21300000, guid: 89ae76abd186c8f4ebf6e5cc7510fcec, type: 3}
+  - {fileID: 21300000, guid: 46e4dd79638a2a24e90f8584197c742a, type: 3}
+  - {fileID: 21300000, guid: cb3cdecac9b851440bee67d27a4f2e88, type: 3}
+  - {fileID: 21300000, guid: 10d84343c8f1f3a4a8a0d883caec77e4, type: 3}
+  - {fileID: 21300000, guid: c67749fcfcd68744b8cf1f6bd61a82c3, type: 3}
+  - {fileID: 21300000, guid: ec74f3ca8a3cd8a48bd63dbbad228c68, type: 3}
+  - {fileID: 21300000, guid: 3b1af8c776ac1a34bbbd8bf32a02fea2, type: 3}
+  img: {fileID: 1203103124}
 --- !u!1 &1203798887
 GameObject:
   m_ObjectHideFlags: 0
@@ -11568,6 +11932,7 @@ GameObject:
   - component: {fileID: 1221659098}
   - component: {fileID: 1221659100}
   - component: {fileID: 1221659099}
+  - component: {fileID: 1221659101}
   m_Layer: 5
   m_Name: You1
   m_TagString: Clothing
@@ -11614,7 +11979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58a0d8684f0054f458bd2c4b293dfa79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11632,6 +11997,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221659097}
   m_CullTransparentMesh: 1
+--- !u!114 &1221659101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221659097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 40bdb57c6318bb84d9df828f915338b8, type: 3}
+  - {fileID: 21300000, guid: 0bc8c839d43af3646a1ddbb234ed3731, type: 3}
+  - {fileID: 21300000, guid: e3927e1525c463446b1231d238ba7c87, type: 3}
+  - {fileID: 21300000, guid: 7bc4d252aa3716e439e1ed1b4db71051, type: 3}
+  - {fileID: 21300000, guid: 506c3b7d849739f43968d1819efb1e50, type: 3}
+  - {fileID: 21300000, guid: 833f6c54878f402418a22e389a522843, type: 3}
+  - {fileID: 21300000, guid: 96f22ff6aa24e434aaec038b910df400, type: 3}
+  - {fileID: 21300000, guid: c62c37bd872ac5b48906d0576755f7d9, type: 3}
+  img: {fileID: 1221659099}
 --- !u!1 &1228399681
 GameObject:
   m_ObjectHideFlags: 0
@@ -11718,6 +12105,7 @@ GameObject:
   - component: {fileID: 1231042619}
   - component: {fileID: 1231042621}
   - component: {fileID: 1231042620}
+  - component: {fileID: 1231042622}
   m_Layer: 5
   m_Name: baby3
   m_TagString: Clothing
@@ -11764,7 +12152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d536249b0586ce419f0a0940f7aab5f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11782,6 +12170,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231042618}
   m_CullTransparentMesh: 1
+--- !u!114 &1231042622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231042618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: accbd397121d66543b30487845f392dc, type: 3}
+  - {fileID: 21300000, guid: b3028f2a166bfa04d81ce49d5c076b72, type: 3}
+  - {fileID: 21300000, guid: 954d8300b45003143885952ec689926e, type: 3}
+  - {fileID: 21300000, guid: 2c3caed46b5ab6c419f465dc2019d478, type: 3}
+  - {fileID: 21300000, guid: cfd9b98eedb26864eab4fe1b15311525, type: 3}
+  - {fileID: 21300000, guid: 7d5ed92af13a0fb4cb89701da69fc59b, type: 3}
+  - {fileID: 21300000, guid: b2da64c292d75c14ca3e414e6b148b3f, type: 3}
+  - {fileID: 21300000, guid: a8343c437ec83ed47b41f06734a4c56e, type: 3}
+  img: {fileID: 1231042620}
 --- !u!1 &1239332095
 GameObject:
   m_ObjectHideFlags: 0
@@ -12746,6 +13156,7 @@ GameObject:
   - component: {fileID: 1346522472}
   - component: {fileID: 1346522474}
   - component: {fileID: 1346522473}
+  - component: {fileID: 1346522475}
   m_Layer: 5
   m_Name: girl3
   m_TagString: Clothing
@@ -12792,7 +13203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a9792d42a40c944990c39c3f8de4e86, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12810,6 +13221,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346522471}
   m_CullTransparentMesh: 1
+--- !u!114 &1346522475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346522471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 85dd706b0bf80d143ae88f9cd4036aea, type: 3}
+  - {fileID: 21300000, guid: e24d256089a90474184b0e0b160be5a7, type: 3}
+  - {fileID: 21300000, guid: 2dc70601c9078874bb5c78f4beb24ac8, type: 3}
+  - {fileID: 21300000, guid: 87c00c0620840224da03574991b80ac0, type: 3}
+  - {fileID: 21300000, guid: 3fdb0cf2b7d1a94428d51cc20e9672c8, type: 3}
+  - {fileID: 21300000, guid: 7176d82e15c87514e92a2b8a019283d2, type: 3}
+  - {fileID: 21300000, guid: b4dcbb9d379eb704a956093b06da22cd, type: 3}
+  - {fileID: 21300000, guid: c30faa4e8f9b92f4c99e88d0e5462810, type: 3}
+  img: {fileID: 1346522473}
 --- !u!224 &1364895675 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3604408267110764070, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
@@ -13522,6 +13955,7 @@ GameObject:
   - component: {fileID: 1466283794}
   - component: {fileID: 1466283796}
   - component: {fileID: 1466283795}
+  - component: {fileID: 1466283797}
   m_Layer: 5
   m_Name: boy1
   m_TagString: Clothing
@@ -13568,7 +14002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 48c0efa206f7fd24eb8be11ada65b481, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13586,6 +14020,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466283793}
   m_CullTransparentMesh: 1
+--- !u!114 &1466283797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466283793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 9670a6e2a9a0c7e4a9258333ce34326e, type: 3}
+  - {fileID: 21300000, guid: d222feac1ec33634a8ebf8428f2f4b43, type: 3}
+  - {fileID: 21300000, guid: da65e66faaf990d48b81f728e022af80, type: 3}
+  - {fileID: 21300000, guid: fc4fe4add59ffb64cbb0654bce4ce131, type: 3}
+  - {fileID: 21300000, guid: d5b3e6c231ada3743b23a5ca02f11401, type: 3}
+  - {fileID: 21300000, guid: 08d85c1bda806ef45b00877ef9e3aecc, type: 3}
+  - {fileID: 21300000, guid: 1aa7d055e54f48b4dbcf62bf498e0f24, type: 3}
+  - {fileID: 21300000, guid: f89986215cf01b44b8fc24f7cc26dfda, type: 3}
+  img: {fileID: 1466283795}
 --- !u!1 &1468601170
 GameObject:
   m_ObjectHideFlags: 0
@@ -13804,6 +14260,7 @@ GameObject:
   - component: {fileID: 1481371324}
   - component: {fileID: 1481371326}
   - component: {fileID: 1481371325}
+  - component: {fileID: 1481371327}
   m_Layer: 5
   m_Name: baby2
   m_TagString: Clothing
@@ -13850,7 +14307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad8ac57d0a82a9f4196d1183dadd43e4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13868,6 +14325,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481371323}
   m_CullTransparentMesh: 1
+--- !u!114 &1481371327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481371323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: b46febe3897364f499e3af69867a27f5, type: 3}
+  - {fileID: 21300000, guid: 6f28ada6edc10e748827bae674faecd5, type: 3}
+  - {fileID: 21300000, guid: fad7a9fc1fb561348bf7a7d523d14815, type: 3}
+  - {fileID: 21300000, guid: bc3cffaa530e81744b47e8293e7d0522, type: 3}
+  img: {fileID: 1481371325}
 --- !u!1 &1485138391
 GameObject:
   m_ObjectHideFlags: 0
@@ -13879,6 +14354,7 @@ GameObject:
   - component: {fileID: 1485138392}
   - component: {fileID: 1485138394}
   - component: {fileID: 1485138393}
+  - component: {fileID: 1485138395}
   m_Layer: 5
   m_Name: boy2
   m_TagString: Clothing
@@ -13925,7 +14401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 77528b42f62e09949984034670944a22, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13943,6 +14419,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485138391}
   m_CullTransparentMesh: 1
+--- !u!114 &1485138395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485138391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 1286876b4b1aabe43a8c49113a38991e, type: 3}
+  - {fileID: 21300000, guid: a0a3d54f73100c943b66c4906870b762, type: 3}
+  - {fileID: 21300000, guid: 6fd7fb1992cba1944a8b49ea24e570e3, type: 3}
+  - {fileID: 21300000, guid: 2a58279113379d64db1e7a6921fb53e7, type: 3}
+  - {fileID: 21300000, guid: 8857a12faabf86c4c950f8084c73d28c, type: 3}
+  - {fileID: 21300000, guid: cc2c04110e8c840429f885b6e993a729, type: 3}
+  - {fileID: 21300000, guid: 2ce7da7c141cc534eb4678f3ec405dc7, type: 3}
+  - {fileID: 21300000, guid: 8396a850b4a4f0542ae1b712e060ddda, type: 3}
+  img: {fileID: 1485138393}
 --- !u!1 &1508102172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
@@ -13959,6 +14457,7 @@ GameObject:
   - component: {fileID: 1520482835}
   - component: {fileID: 1520482837}
   - component: {fileID: 1520482836}
+  - component: {fileID: 1520482838}
   m_Layer: 5
   m_Name: wife3
   m_TagString: Clothing
@@ -14005,7 +14504,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5a8f61021262e804da0dfa02a4cf26fb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14023,6 +14522,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520482834}
   m_CullTransparentMesh: 1
+--- !u!114 &1520482838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520482834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 951704c984cca5040b7f48d89b75736f, type: 3}
+  - {fileID: 21300000, guid: fa52ce2d7f6c55848abe90520ad13272, type: 3}
+  - {fileID: 21300000, guid: 143f10182b134184694d19c67a804972, type: 3}
+  - {fileID: 21300000, guid: 56dfa4c101931344599786be7e9ff8e6, type: 3}
+  - {fileID: 21300000, guid: 266054676eca5fa459cd6a84b1907ff9, type: 3}
+  - {fileID: 21300000, guid: 848e527b56402344783d60c93ddac9d3, type: 3}
+  - {fileID: 21300000, guid: 9fbce3c6414bc4f4da2c9aba16e4fc59, type: 3}
+  - {fileID: 21300000, guid: 12de9027f10dfa44683b124a0137f15d, type: 3}
+  img: {fileID: 1520482836}
 --- !u!1 &1525835921
 GameObject:
   m_ObjectHideFlags: 0
@@ -14034,6 +14555,7 @@ GameObject:
   - component: {fileID: 1525835922}
   - component: {fileID: 1525835924}
   - component: {fileID: 1525835923}
+  - component: {fileID: 1525835925}
   m_Layer: 5
   m_Name: baby3
   m_TagString: Clothing
@@ -14080,7 +14602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: da21d645f33f0f9498dd07fddd7fe42a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14098,6 +14620,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525835921}
   m_CullTransparentMesh: 1
+--- !u!114 &1525835925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525835921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 04e715d44eec82647b66befb3b170e2c, type: 3}
+  - {fileID: 21300000, guid: d719b83e767a19443abe96809a5c24ec, type: 3}
+  - {fileID: 21300000, guid: 9cc2d878c1d183a4ca63bf5450c68e8f, type: 3}
+  - {fileID: 21300000, guid: fbb46ac6addb8cc4dbf1c8d80d54758b, type: 3}
+  - {fileID: 21300000, guid: 68d7be04910124a49b22e6dc17db600f, type: 3}
+  - {fileID: 21300000, guid: 3cb6393185468284eb69866de9152303, type: 3}
+  - {fileID: 21300000, guid: 6d5001993f460474b8cdd5ce74f89170, type: 3}
+  - {fileID: 21300000, guid: 7d6f47a5a42293944986f687f73df7a7, type: 3}
+  img: {fileID: 1525835923}
 --- !u!1 &1550663522
 GameObject:
   m_ObjectHideFlags: 0
@@ -14364,6 +14908,7 @@ GameObject:
   - component: {fileID: 1570351564}
   - component: {fileID: 1570351566}
   - component: {fileID: 1570351565}
+  - component: {fileID: 1570351567}
   m_Layer: 5
   m_Name: wife2
   m_TagString: Clothing
@@ -14410,7 +14955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9445c4b96e1045469d80bcb963720be, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14428,6 +14973,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570351563}
   m_CullTransparentMesh: 1
+--- !u!114 &1570351567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570351563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: ab2bcbf7c08726d4890c2e85943c0bb3, type: 3}
+  - {fileID: 21300000, guid: a4654a7dd03f0d54bb95a44bb312f7bb, type: 3}
+  - {fileID: 21300000, guid: 1f69ea70df10f4848a1978546d96f061, type: 3}
+  - {fileID: 21300000, guid: be6786669f68eb04ca53674fae8941f8, type: 3}
+  - {fileID: 21300000, guid: 0d5db63b87d3a9e40a08b400e498b8e4, type: 3}
+  - {fileID: 21300000, guid: 166fa23f864d19d4683040c29ccca2b9, type: 3}
+  - {fileID: 21300000, guid: 22b3c64ed13ee3443828cfcaaaa8a856, type: 3}
+  - {fileID: 21300000, guid: 577cbd4220baad8498378e7ea6f4422a, type: 3}
+  img: {fileID: 1570351565}
 --- !u!1 &1581779832
 GameObject:
   m_ObjectHideFlags: 0
@@ -14782,6 +15349,7 @@ GameObject:
   - component: {fileID: 1609462837}
   - component: {fileID: 1609462839}
   - component: {fileID: 1609462838}
+  - component: {fileID: 1609462840}
   m_Layer: 5
   m_Name: boy3
   m_TagString: Clothing
@@ -14828,7 +15396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 397fadbd0cc790240a7a4871cdda70e3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14846,6 +15414,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609462836}
   m_CullTransparentMesh: 1
+--- !u!114 &1609462840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609462836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: acb2eb2eb918aec45b672ef1042da5ce, type: 3}
+  - {fileID: 21300000, guid: 7e6e721230caca44e9ac5f51f792bcb3, type: 3}
+  - {fileID: 21300000, guid: a54d2f89297a36148be85c06e2e0ea2d, type: 3}
+  - {fileID: 21300000, guid: bd5a2db7e5f10214da8df5f82d0ddb98, type: 3}
+  - {fileID: 21300000, guid: ee752d447d2b16644a9894a5caf4eff8, type: 3}
+  - {fileID: 21300000, guid: 1d41619ea6c310f4c9f7a09117e9334b, type: 3}
+  - {fileID: 21300000, guid: 5c45cfcdd763e4946839f48897fb04b0, type: 3}
+  - {fileID: 21300000, guid: 305a6017bfffddd419ebef09d5a047bb, type: 3}
+  img: {fileID: 1609462838}
 --- !u!1 &1627626994
 GameObject:
   m_ObjectHideFlags: 0
@@ -15204,6 +15794,7 @@ GameObject:
   - component: {fileID: 1694241367}
   - component: {fileID: 1694241369}
   - component: {fileID: 1694241368}
+  - component: {fileID: 1694241370}
   m_Layer: 5
   m_Name: wife1
   m_TagString: Clothing
@@ -15250,7 +15841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e554e38be58292143a3006b6a3a486f0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15268,6 +15859,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694241366}
   m_CullTransparentMesh: 1
+--- !u!114 &1694241370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694241366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 13e1ba13950381746a9f1a66bdac422f, type: 3}
+  - {fileID: 21300000, guid: 6c9e5b16d7a29a844980719e33380001, type: 3}
+  - {fileID: 21300000, guid: 32be57b407625784a990a13818f129d2, type: 3}
+  - {fileID: 21300000, guid: 752ccc1388675fc40b5627db3013cdfb, type: 3}
+  - {fileID: 21300000, guid: 047d093c71bdb3b49a356a563732ad39, type: 3}
+  - {fileID: 21300000, guid: d4a259247fe086c4197bbd55a66e2750, type: 3}
+  - {fileID: 21300000, guid: cfbeea6bb8c736a4d824c2474c41475a, type: 3}
+  - {fileID: 21300000, guid: 63a0f2f6bcca49047a2349e51090d364, type: 3}
+  img: {fileID: 1694241368}
 --- !u!1 &1695142399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15407,6 +16020,7 @@ GameObject:
   - component: {fileID: 1704024200}
   - component: {fileID: 1704024202}
   - component: {fileID: 1704024201}
+  - component: {fileID: 1704024203}
   m_Layer: 5
   m_Name: baby1
   m_TagString: Clothing
@@ -15453,7 +16067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d84d2544faad5047afa733ac126b3f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15471,6 +16085,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704024199}
   m_CullTransparentMesh: 1
+--- !u!114 &1704024203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704024199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 00b45ea5de583304c96e49e864658af0, type: 3}
+  - {fileID: 21300000, guid: cfb68c20e0609c34eb2430b94da5e28b, type: 3}
+  - {fileID: 21300000, guid: 4d8302dcc2794f649af8aca6163a7155, type: 3}
+  - {fileID: 21300000, guid: 63d7214601e87b1429fbe4fd5802b1eb, type: 3}
+  - {fileID: 21300000, guid: 5c5968138962fab4bb44afc56994594f, type: 3}
+  - {fileID: 21300000, guid: 58788ac838c1e484a8c718a06efdbfb0, type: 3}
+  - {fileID: 21300000, guid: c8c94e2d464f0044fa76c3252ddcf1d5, type: 3}
+  - {fileID: 21300000, guid: 4467419af3a757d468832f0901126869, type: 3}
+  img: {fileID: 1704024201}
 --- !u!1 &1714298225
 GameObject:
   m_ObjectHideFlags: 0
@@ -15772,6 +16408,7 @@ GameObject:
   - component: {fileID: 1735892950}
   - component: {fileID: 1735892952}
   - component: {fileID: 1735892951}
+  - component: {fileID: 1735892953}
   m_Layer: 5
   m_Name: girl2
   m_TagString: Clothing
@@ -15818,7 +16455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dae0894696c2cc14f85cf5c0aa320e3e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15836,6 +16473,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735892949}
   m_CullTransparentMesh: 1
+--- !u!114 &1735892953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735892949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 133340b97fb673140992f8839ddc1c2b, type: 3}
+  - {fileID: 21300000, guid: 49484d9e453b6434da54ab34f5fb5f05, type: 3}
+  - {fileID: 21300000, guid: 75eba44bf3b4e144ba3f4bce9d62bb32, type: 3}
+  - {fileID: 21300000, guid: c45d25e2c058ac54e9780a2a9c7f9545, type: 3}
+  - {fileID: 21300000, guid: 059eaa6003f3c2e4680c4aa9b22c7cb5, type: 3}
+  - {fileID: 21300000, guid: c07861a89f2d76541ada84527578e666, type: 3}
+  - {fileID: 21300000, guid: 5407c272680d95f4ab187d767d91ddb2, type: 3}
+  - {fileID: 21300000, guid: d0ea2e275b2334e48930124231d17144, type: 3}
+  img: {fileID: 1735892951}
 --- !u!1 &1737446628
 GameObject:
   m_ObjectHideFlags: 0
@@ -16093,6 +16752,7 @@ GameObject:
   - component: {fileID: 1766464460}
   - component: {fileID: 1766464462}
   - component: {fileID: 1766464461}
+  - component: {fileID: 1766464463}
   m_Layer: 5
   m_Name: wife3
   m_TagString: Clothing
@@ -16139,7 +16799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f0a1a5af71a899f43a55496de2a3e829, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16157,6 +16817,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766464459}
   m_CullTransparentMesh: 1
+--- !u!114 &1766464463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766464459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4746dbd7887d2024386d9d0cdaf33cb0, type: 3}
+  - {fileID: 21300000, guid: d13d49c667148fe4c8ffac49548e4c59, type: 3}
+  - {fileID: 21300000, guid: 2015731f73c4b194d9e1afee182cbcd6, type: 3}
+  - {fileID: 21300000, guid: 26ff19f5d40b1fa429e6472b5463fd31, type: 3}
+  - {fileID: 21300000, guid: f7686eaa9afef194c8196ed1a8fa4a5e, type: 3}
+  - {fileID: 21300000, guid: 829bbd61148e35c44865a5cfb44e6a0c, type: 3}
+  - {fileID: 21300000, guid: fcfac7744ae28074dbf75a8d2e35687e, type: 3}
+  - {fileID: 21300000, guid: 5ec656b179f61894e9168064f6f72929, type: 3}
+  img: {fileID: 1766464461}
 --- !u!1 &1771238332
 GameObject:
   m_ObjectHideFlags: 0
@@ -16168,6 +16850,7 @@ GameObject:
   - component: {fileID: 1771238333}
   - component: {fileID: 1771238335}
   - component: {fileID: 1771238334}
+  - component: {fileID: 1771238336}
   m_Layer: 5
   m_Name: girl3
   m_TagString: Clothing
@@ -16214,7 +16897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0611b1a7e4e311740a66a7cf421c24b9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16232,6 +16915,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771238332}
   m_CullTransparentMesh: 1
+--- !u!114 &1771238336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771238332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 813e44563696641488a12dc21c35dd42, type: 3}
+  - {fileID: 21300000, guid: 8025700552c6e6d48b1f74974690004f, type: 3}
+  - {fileID: 21300000, guid: a3bd5f0abdaeffa4ab9f0cd2426ac6bd, type: 3}
+  - {fileID: 21300000, guid: 888bad86fbe20714dafcbb481d1c3f1e, type: 3}
+  - {fileID: 21300000, guid: 31fc98c4f110f6d4786d1ee74cb995e1, type: 3}
+  - {fileID: 21300000, guid: 6d815e54082c59b4f84e90b7d0a5528d, type: 3}
+  - {fileID: 21300000, guid: 04a72cb73e0d5df4f93accdb786a62b6, type: 3}
+  - {fileID: 21300000, guid: f20bf1ab08579124bb6d6be86e2efd0f, type: 3}
+  img: {fileID: 1771238334}
 --- !u!1 &1776817873
 GameObject:
   m_ObjectHideFlags: 0
@@ -16243,6 +16948,7 @@ GameObject:
   - component: {fileID: 1776817874}
   - component: {fileID: 1776817876}
   - component: {fileID: 1776817875}
+  - component: {fileID: 1776817877}
   m_Layer: 5
   m_Name: baby2
   m_TagString: Clothing
@@ -16289,7 +16995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac074083b271ad74c92c75dc6414fe9c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16307,6 +17013,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776817873}
   m_CullTransparentMesh: 1
+--- !u!114 &1776817877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776817873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 017846704e789c246934180567263b1e, type: 3}
+  - {fileID: 21300000, guid: 855ada0df3d047440b84ece63921ead2, type: 3}
+  - {fileID: 21300000, guid: 4998003d936eb274a8609ad895d120c8, type: 3}
+  - {fileID: 21300000, guid: 919ee1aae5d007d41bcf07a7b5de2a20, type: 3}
+  - {fileID: 21300000, guid: d8909443525afb347894da8ea6b04639, type: 3}
+  - {fileID: 21300000, guid: 956ba8ef4dcbe2546b8bbf0315cd29a7, type: 3}
+  - {fileID: 21300000, guid: b6a7fafdf1f677e45b4f795d9075dfa6, type: 3}
+  - {fileID: 21300000, guid: 6acd06f6facfced4e81ccd8a9f801145, type: 3}
+  img: {fileID: 1776817875}
 --- !u!1 &1777234235
 GameObject:
   m_ObjectHideFlags: 0
@@ -16599,6 +17327,7 @@ GameObject:
   - component: {fileID: 1782213843}
   - component: {fileID: 1782213845}
   - component: {fileID: 1782213844}
+  - component: {fileID: 1782213846}
   m_Layer: 5
   m_Name: baby1
   m_TagString: Clothing
@@ -16645,7 +17374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac734af8b4f2a054a83acc97420e552e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16663,6 +17392,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782213842}
   m_CullTransparentMesh: 1
+--- !u!114 &1782213846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782213842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4f8138ff672edd6429fdefecce535538, type: 3}
+  - {fileID: 21300000, guid: 386cccbf9bf10cc49b8a3f31c641879f, type: 3}
+  - {fileID: 21300000, guid: 0c11a77eebb1d824f9422528c391e271, type: 3}
+  - {fileID: 21300000, guid: d3fac4809b3c8394f90da15bec95f41f, type: 3}
+  img: {fileID: 1782213844}
 --- !u!1 &1799765038
 GameObject:
   m_ObjectHideFlags: 0
@@ -16808,6 +17555,7 @@ GameObject:
   - component: {fileID: 1816876863}
   - component: {fileID: 1816876865}
   - component: {fileID: 1816876864}
+  - component: {fileID: 1816876866}
   m_Layer: 5
   m_Name: girl2
   m_TagString: Clothing
@@ -16854,7 +17602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a3fcf05eb852d884faaceec5c800c2ee, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16872,6 +17620,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816876862}
   m_CullTransparentMesh: 1
+--- !u!114 &1816876866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816876862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 5954018b35a3ae94087b39b163ab0720, type: 3}
+  - {fileID: 21300000, guid: 0f99048cc8c8a6546b5367ebfc0e46fe, type: 3}
+  - {fileID: 21300000, guid: 531ef95c6d7e4dc408a41fcc2f664e53, type: 3}
+  - {fileID: 21300000, guid: 8f55f484aeaad6a48b5a691706e6daef, type: 3}
+  - {fileID: 21300000, guid: 41fad3a9597f7484f95e3cb97435520b, type: 3}
+  - {fileID: 21300000, guid: 8b357bd0cea59db44a688d5cdf6fef98, type: 3}
+  - {fileID: 21300000, guid: c2fbb20932b9f7b45940c90cd0ae63a0, type: 3}
+  - {fileID: 21300000, guid: cc048befffb36e9409b0083864ffe688, type: 3}
+  img: {fileID: 1816876864}
 --- !u!1 &1818858708
 GameObject:
   m_ObjectHideFlags: 0
@@ -17126,6 +17896,7 @@ GameObject:
   - component: {fileID: 1842076755}
   - component: {fileID: 1842076757}
   - component: {fileID: 1842076756}
+  - component: {fileID: 1842076758}
   m_Layer: 5
   m_Name: boy2
   m_TagString: Clothing
@@ -17172,7 +17943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf80a951b59ab8348923ebca2ec5c827, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17190,6 +17961,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842076754}
   m_CullTransparentMesh: 1
+--- !u!114 &1842076758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842076754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4f5c0574c101bb54d89309b58e035068, type: 3}
+  - {fileID: 21300000, guid: 5cbe895ca5bd7274d8803639489d112e, type: 3}
+  - {fileID: 21300000, guid: 915ed713053ec9f4d82dcf4fa1bde0ca, type: 3}
+  - {fileID: 21300000, guid: d528dea5605228b45822fc88e5b75eb7, type: 3}
+  - {fileID: 21300000, guid: ae028080cfde2a24780626a83aea26f2, type: 3}
+  - {fileID: 21300000, guid: 29a469ca723dfaf4988aadb5c12a506c, type: 3}
+  - {fileID: 21300000, guid: bbd9ebce236b6614bb2255a1219561bc, type: 3}
+  - {fileID: 21300000, guid: 022859e3de3c69841a33da6c48c8636d, type: 3}
+  img: {fileID: 1842076756}
 --- !u!1 &1846896148
 GameObject:
   m_ObjectHideFlags: 0
@@ -17201,6 +17994,7 @@ GameObject:
   - component: {fileID: 1846896149}
   - component: {fileID: 1846896151}
   - component: {fileID: 1846896150}
+  - component: {fileID: 1846896152}
   m_Layer: 5
   m_Name: wife3
   m_TagString: Clothing
@@ -17247,7 +18041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e406606349099a49976c61d217ce6f2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17265,6 +18059,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846896148}
   m_CullTransparentMesh: 1
+--- !u!114 &1846896152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846896148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 581fdda5ef7022b42b07f4b140fb6d06, type: 3}
+  - {fileID: 21300000, guid: ba14f30c29fc68f439453435132aaae9, type: 3}
+  - {fileID: 21300000, guid: 7f1e1d3bda479fd44b1617961b98e262, type: 3}
+  - {fileID: 21300000, guid: 1848f0150f92d774ca816622debe6f0b, type: 3}
+  - {fileID: 21300000, guid: 7674449a4fb54f94ca399639acbfd622, type: 3}
+  - {fileID: 21300000, guid: 6f10e4d4ba5d22740bfa30c906f547ed, type: 3}
+  - {fileID: 21300000, guid: fd09357034937ee4aac0e131a4f80f3a, type: 3}
+  - {fileID: 21300000, guid: 677dded344cf5eb498d3e4f06f7b232b, type: 3}
+  img: {fileID: 1846896150}
 --- !u!1 &1867729208
 GameObject:
   m_ObjectHideFlags: 0
@@ -17780,6 +18596,7 @@ GameObject:
   - component: {fileID: 1918594486}
   - component: {fileID: 1918594488}
   - component: {fileID: 1918594487}
+  - component: {fileID: 1918594489}
   m_Layer: 5
   m_Name: You2
   m_TagString: Clothing
@@ -17826,7 +18643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d56a696ecf5a3a24685979a145491a38, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17844,6 +18661,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918594485}
   m_CullTransparentMesh: 1
+--- !u!114 &1918594489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918594485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 97f5269ec50656f4ca34480daf29350c, type: 3}
+  - {fileID: 21300000, guid: 0430b2c6bdce16a4d89fcf22baf174cd, type: 3}
+  - {fileID: 21300000, guid: 0bf3c62946ae77e4aaa73510ae73151d, type: 3}
+  - {fileID: 21300000, guid: 19f81aab22d3b9044adb9bd12faa899c, type: 3}
+  - {fileID: 21300000, guid: cd25610ef4b568a48a76637bef7919cd, type: 3}
+  - {fileID: 21300000, guid: d9a66685f1dcb944bb8584d733081bac, type: 3}
+  - {fileID: 21300000, guid: 3e3ac19cbe03e384cb527ab9843d9f66, type: 3}
+  - {fileID: 21300000, guid: 95e3730a7c634af4bb8bb31a1b354701, type: 3}
+  img: {fileID: 1918594487}
 --- !u!1 &1937950509
 GameObject:
   m_ObjectHideFlags: 0
@@ -17931,6 +18770,7 @@ GameObject:
   - component: {fileID: 1942090514}
   - component: {fileID: 1942090516}
   - component: {fileID: 1942090515}
+  - component: {fileID: 1942090517}
   m_Layer: 5
   m_Name: wife2
   m_TagString: Clothing
@@ -17977,7 +18817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5497674785d582f448476de58b8f568a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17995,6 +18835,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942090513}
   m_CullTransparentMesh: 1
+--- !u!114 &1942090517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942090513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: a4ab24a5eb5c91049a9c40ef0311da27, type: 3}
+  - {fileID: 21300000, guid: c9ebf5f75ef7aa44085cc38c40e0229d, type: 3}
+  - {fileID: 21300000, guid: 64167156213beeb40a55ebc8fefcf3fa, type: 3}
+  - {fileID: 21300000, guid: c592962ac0b556c4084b6743368c1756, type: 3}
+  - {fileID: 21300000, guid: a0585be88954a9c4d915e62c17a7d50c, type: 3}
+  - {fileID: 21300000, guid: 51866b1e9f212c24ba7778d1c9b55fb1, type: 3}
+  - {fileID: 21300000, guid: 3bc2e592ab0c2494ab42e4882513a246, type: 3}
+  - {fileID: 21300000, guid: 4a0ce675e7cc0a4468fc664f801d8869, type: 3}
+  img: {fileID: 1942090515}
 --- !u!1 &1989839834
 GameObject:
   m_ObjectHideFlags: 0
@@ -19216,6 +20078,7 @@ GameObject:
   - component: {fileID: 2098231337}
   - component: {fileID: 2098231339}
   - component: {fileID: 2098231338}
+  - component: {fileID: 2098231340}
   m_Layer: 5
   m_Name: You2
   m_TagString: Clothing
@@ -19262,7 +20125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39748b19a71aaa24397c9bac770a3e50, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19280,6 +20143,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098231336}
   m_CullTransparentMesh: 1
+--- !u!114 &2098231340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098231336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 2f33084f254a451498a862e888daa9dd, type: 3}
+  - {fileID: 21300000, guid: f103c956fd8d3c045b9c5dd013a14132, type: 3}
+  - {fileID: 21300000, guid: e35b1ef2d63812740b5a957384467363, type: 3}
+  - {fileID: 21300000, guid: e059695b9011c6444b378eebf68753c5, type: 3}
+  - {fileID: 21300000, guid: f6f647d5571b4c443a65c7c1d0454992, type: 3}
+  - {fileID: 21300000, guid: f228c6bc141a89d4393cb76661d68fcc, type: 3}
+  - {fileID: 21300000, guid: 758b5a790d9672944b8e38de80586fb4, type: 3}
+  - {fileID: 21300000, guid: 59d984c622f90ea4cbd6d128a8d8a821, type: 3}
+  img: {fileID: 2098231338}
 --- !u!1 &2109402563
 GameObject:
   m_ObjectHideFlags: 0
@@ -19291,6 +20176,7 @@ GameObject:
   - component: {fileID: 2109402564}
   - component: {fileID: 2109402566}
   - component: {fileID: 2109402565}
+  - component: {fileID: 2109402567}
   m_Layer: 5
   m_Name: girl2
   m_TagString: Clothing
@@ -19337,7 +20223,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c7d3c9dd02a724092054bcfca04cf4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19355,6 +20241,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109402563}
   m_CullTransparentMesh: 1
+--- !u!114 &2109402567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109402563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03cef6f3d048a0488d8c408f7bfc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 7bcbebde0d0cbd144b912d7e92d5ce19, type: 3}
+  - {fileID: 21300000, guid: bedd3afe63ff7c34d8c8b856a20e12a8, type: 3}
+  - {fileID: 21300000, guid: f32c3d57fc4403f4d94be7f18a8b6fb0, type: 3}
+  - {fileID: 21300000, guid: c6337e969db215147b7cef85a52669a5, type: 3}
+  - {fileID: 21300000, guid: c546b0c43dfc62241b83ad7187a03b5d, type: 3}
+  - {fileID: 21300000, guid: f48e6dbb982e7a24bb67cdb2f054b719, type: 3}
+  - {fileID: 21300000, guid: a8b5c54acab4b074c82baca76839d7a3, type: 3}
+  - {fileID: 21300000, guid: 0b780b6d5a16eb8448c6779760926e6c, type: 3}
+  img: {fileID: 2109402565}
 --- !u!1 &2110019203
 GameObject:
   m_ObjectHideFlags: 0

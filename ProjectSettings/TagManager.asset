@@ -6,6 +6,17 @@ TagManager:
   tags:
   - FamilyMember
   - Clothing
+  - Floor
+  - slot_tag
+  - Apple
+  - Cabbage
+  - Carrot
+  - Apple cider
+  - Flour
+  - Lemon
+  - Onion
+  - Orange
+  - Jar of Pickles
   layers:
   - Default
   - TransparentFX

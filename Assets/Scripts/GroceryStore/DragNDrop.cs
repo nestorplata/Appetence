@@ -11,6 +11,8 @@ public class DragNDrop : MonoBehaviour
     private bool isDragging;
     public GameObject slotPos;
     public GameObject objDrag;
+    private Placed placed;
+    private GameObject obj;
     private bool locked;
     Vector2 originalPos, offset, CurrSlotPos;
 
@@ -22,6 +24,11 @@ public class DragNDrop : MonoBehaviour
 
     public AudioSource trashCanOpen, trashCanClose;*/
 
+    public AudioClip clickDown;
+    public AudioClip clickUp;
+
+    private AudioSource sfx;
+
     public AudioSource correct, wrong;
 
     private TMP_Text currency;
@@ -30,51 +37,55 @@ public class DragNDrop : MonoBehaviour
     {
         currency = GameObject.Find("Money").GetComponent<TMP_Text>();
         correct = GameObject.Find("Correct").GetComponent<AudioSource>();
-        wrong = GameObject.Find("Wrong").GetComponent<AudioSource>();        
+        wrong = GameObject.Find("Wrong").GetComponent<AudioSource>();
+
+        if(fruitNames != "trash") {
+            obj = GameObject.FindWithTag(fruitNames);
+            if(obj != null) {
+                placed = obj.GetComponent<Placed>();
+            } else {
+                Debug.Log("obj is null");
+            }
+        }
     }
 
     void Start()
     {
         originalPos = transform.position;
+        sfx = GetComponent<AudioSource>();
     }
 
     public void OnMouseDown()
     {
         isDragging = true;
         offset = GetMousePos() - (Vector2)transform.position;
+        sfx.PlayOneShot(clickDown);
     }
 
     public void OnMouseUp()
     {
+        sfx.PlayOneShot(clickUp);
         isDragging = false;
 
-        // if (CurrSlotPos != Vector2.zero) 
-        // {
-            
-        //     objDrag.transform.position = CurrSlotPos;
-        //     Spawner.Instance.trash.closeTrash();
-        //     Destroy(this);
-        //     Destroy(GetComponent<Rigidbody2D>());
-        //     if (fruitNames == "trash")
-        //     {
-        //         Destroy(gameObject);
-        //         CurrencySystem.Instance.AddCurrency(40);
-        //         Debug.Log("Plus 40");
-        //         correct.Play();
-        //     }
-        // }
         if (collider.gameObject.TryGetComponent(out SlotScript fruitSlot) && fruitSlot.fruitNames == fruitNames)
         {
             if(fruitNames != "trash") {
                 CurrSlotPos = slotPos.transform.position;
                 CurrencySystem.Instance.AddCurrency(40);
                 Debug.Log("Plus 40");
+                if(placed != null) {
+                    placed.ToggleActive();
+                } else {
+                    Debug.LogError("placed is null");
+                }
                 correct.Play();
 
                 objDrag.transform.position = CurrSlotPos;
                 Spawner.Instance.trash.closeTrash();
                 Destroy(this);
                 Destroy(GetComponent<Rigidbody2D>());
+
+                Destroy(gameObject);
             } else if (fruitNames == "trash") {
                 objDrag.transform.position = CurrSlotPos;
                 Spawner.Instance.trash.closeTrash();
@@ -82,8 +93,8 @@ public class DragNDrop : MonoBehaviour
                 Destroy(GetComponent<Rigidbody2D>());
 
                 Destroy(gameObject);
-                CurrencySystem.Instance.AddCurrency(40);
-                Debug.Log("Plus 40");
+                //CurrencySystem.Instance.AddCurrency(40);
+                //Debug.Log("Plus 40");
                 correct.Play();
             }
         }
@@ -121,13 +132,6 @@ public class DragNDrop : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         collider = collision;
-        // if (collision.gameObject.TryGetComponent(out SlotScript fruitSlot) && fruitSlot.fruitNames == fruitNames)
-        // {
-        //     CurrSlotPos = slotPos.transform.position;
-        //     CurrencySystem.Instance.AddCurrency(40);
-        //     Debug.Log("Plus 40");
-        //     correct.Play();
-        // }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
