@@ -134,11 +134,12 @@ public class DragNDrop : MonoBehaviour
         collider = collision;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out SlotScript fruitSlot) && CurrSlotPos == new Vector2(fruitSlot.transform.position.x, fruitSlot.transform.position.y))
-        {
-            CurrSlotPos = Vector2.zero;
-        }
-    }
+    /** commenting this out makes the hitboxes more reliable when dropping in the correct slot, still off though gonna leave here for now though **/
+    // private void OnTriggerExit2D(Collider2D collision)
+    // {
+    //     if (collision.gameObject.TryGetComponent(out SlotScript fruitSlot) && CurrSlotPos == new Vector2(fruitSlot.transform.position.x, fruitSlot.transform.position.y))
+    //     {
+    //         CurrSlotPos = Vector2.zero;
+    //     }
+    // }
 }

@@ -10,7 +10,6 @@ public class Placed : MonoBehaviour
     public void ToggleActive() {
         if(canvasRenderer != null) {
             Debug.Log("made it in placed.cs");
-            canvasRenderer.cull = false;
             canvasRenderer.SetAlpha(1);
         }
     }
@@ -22,7 +21,6 @@ public class Placed : MonoBehaviour
 
         if(canvasRenderer != null) {
             canvasRenderer.SetAlpha(0);
-            canvasRenderer.cull = true;
         }
     }
 
