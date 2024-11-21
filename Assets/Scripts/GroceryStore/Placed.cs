@@ -15,6 +15,7 @@ public class Placed : MonoBehaviour
     }
 
     // Start is called before the first frame update
+    // demo
     void Start()
     {
         canvasRenderer = GetComponent<CanvasRenderer>();
