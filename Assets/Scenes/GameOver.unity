@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 296746592}
   - component: {fileID: 296746594}
   - component: {fileID: 296746593}
+  - component: {fileID: 296746595}
   m_Layer: 5
   m_Name: WifePicture
   m_TagString: Untagged
@@ -331,6 +332,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296746591}
   m_CullTransparentMesh: 1
+--- !u!114 &296746595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296746591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 1
 --- !u!1 &334545240
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +617,7 @@ GameObject:
   - component: {fileID: 490494412}
   - component: {fileID: 490494414}
   - component: {fileID: 490494413}
+  - component: {fileID: 490494415}
   m_Layer: 5
   m_Name: BabyGrave
   m_TagString: Untagged
@@ -667,6 +682,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490494411}
   m_CullTransparentMesh: 1
+--- !u!114 &490494415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490494411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 4
 --- !u!1 &768395680
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +706,7 @@ GameObject:
   - component: {fileID: 768395681}
   - component: {fileID: 768395683}
   - component: {fileID: 768395682}
+  - component: {fileID: 768395684}
   m_Layer: 5
   m_Name: BoyGrave
   m_TagString: Untagged
@@ -742,6 +771,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768395680}
   m_CullTransparentMesh: 1
+--- !u!114 &768395684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768395680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 2
 --- !u!1 &960121653
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +795,7 @@ GameObject:
   - component: {fileID: 960121654}
   - component: {fileID: 960121656}
   - component: {fileID: 960121655}
+  - component: {fileID: 960121657}
   m_Layer: 5
   m_Name: BabyPicture
   m_TagString: Untagged
@@ -817,6 +860,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960121653}
   m_CullTransparentMesh: 1
+--- !u!114 &960121657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960121653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 4
 --- !u!1 &991263652
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +1016,7 @@ GameObject:
   - component: {fileID: 1115463271}
   - component: {fileID: 1115463273}
   - component: {fileID: 1115463272}
+  - component: {fileID: 1115463274}
   m_Layer: 5
   m_Name: WifeGrave
   m_TagString: Untagged
@@ -1024,6 +1081,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115463270}
   m_CullTransparentMesh: 1
+--- !u!114 &1115463274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115463270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 1
 --- !u!1 &1161544248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1145,7 @@ GameObject:
   - component: {fileID: 1165223902}
   - component: {fileID: 1165223904}
   - component: {fileID: 1165223903}
+  - component: {fileID: 1165223905}
   m_Layer: 5
   m_Name: GirlGrave
   m_TagString: Untagged
@@ -1139,6 +1210,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165223901}
   m_CullTransparentMesh: 1
+--- !u!114 &1165223905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165223901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 3
 --- !u!1 &1211785244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1234,7 @@ GameObject:
   - component: {fileID: 1211785245}
   - component: {fileID: 1211785247}
   - component: {fileID: 1211785246}
+  - component: {fileID: 1211785248}
   m_Layer: 5
   m_Name: BoyPicture
   m_TagString: Untagged
@@ -1214,6 +1299,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211785244}
   m_CullTransparentMesh: 1
+--- !u!114 &1211785248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211785244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 2
 --- !u!1 &1212584104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1844,7 @@ GameObject:
   - component: {fileID: 1555111469}
   - component: {fileID: 1555111471}
   - component: {fileID: 1555111470}
+  - component: {fileID: 1555111472}
   m_Layer: 5
   m_Name: GirlPicture
   m_TagString: Untagged
@@ -1810,6 +1909,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555111468}
   m_CullTransparentMesh: 1
+--- !u!114 &1555111472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555111468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 3
 --- !u!1 &1578893459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,6 +3093,7 @@ GameObject:
   - component: {fileID: 1940421912}
   - component: {fileID: 1940421914}
   - component: {fileID: 1940421913}
+  - component: {fileID: 1940421915}
   m_Layer: 5
   m_Name: YouGrave
   m_TagString: Untagged
@@ -3045,6 +3158,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940421911}
   m_CullTransparentMesh: 1
+--- !u!114 &1940421915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940421911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &2013656903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3182,7 @@ GameObject:
   - component: {fileID: 2013656904}
   - component: {fileID: 2013656905}
   - component: {fileID: 2013656906}
+  - component: {fileID: 2013656907}
   m_Layer: 5
   m_Name: You
   m_TagString: Untagged
@@ -3120,6 +3247,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2013656907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013656903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee69050aca7b01141b3362735e7e3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: 0
 --- !u!1 &2069855342
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class ShopUI : MonoBehaviour
 
                 int clothingIndex = currentItem.clothingIndex;
 
-                GeneralState currentState = familyScript.Instance.GetGeneralState(MemberRole);
+                GeneralState currentState = familyScript.Instance.GetFamilyMember(MemberRole).GetGeneralState();
                 string CurrentStateString = familyMember.GetStateString(currentState);
                 familyUIManager.ChangeClothing(MemberRoleString, clothingIndex);
 

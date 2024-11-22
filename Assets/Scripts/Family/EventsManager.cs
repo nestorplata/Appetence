@@ -195,7 +195,7 @@ public class EventsManager : MonoBehaviour
     {
          
         familyMember ClosestToDie = familyScript.Instance.GetClosestToDead();
-        GeneralState CurrentState = familyScript.Instance.GetGeneralState(ClosestToDie);
+        GeneralState CurrentState = ClosestToDie.GetGeneralState();
 
         float audioLength = 0;
 

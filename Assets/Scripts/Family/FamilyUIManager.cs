@@ -89,7 +89,7 @@ public class FamilyUIManager : MonoBehaviour
     {
 
         string currentRoleString = familyMember.GetStateString(FamilyMember.Role);
-        GeneralState currentState = familyScript.Instance.GetGeneralState(FamilyMember.Role);
+        GeneralState currentState = FamilyMember.GetGeneralState();
         string currentStateString = familyMember.GetStateString(currentState);
         if (currentState == GeneralState.Dead)
         {

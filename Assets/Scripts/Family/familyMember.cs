@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class familyMember : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class familyMember : MonoBehaviour
     public AudioClip happy;
     public AudioClip Sad;
     public AudioClip sick;
+    public ToogleOwner FoodToogle;
+    public ToogleOwner MedToogle;
 
     public static string GetStateString(Enum value)
     {
@@ -25,6 +28,42 @@ public class familyMember : MonoBehaviour
             return attributes[0].Description;
         else
             return value.ToString();
+    }
+
+    public GeneralState GetGeneralState()
+    {
+        return GetGeneralState(this);
+    }
+
+    public GeneralState GetGeneralState(familyMember member)
+    {
+        if (IsDead(member))
+        {
+            return GeneralState.Dead;
+        }
+        if ((int)member.sickness > (int)member.Hunger & (int)member.sickness >= 1)
+        {
+            return GeneralState.Sick;
+        }
+        if ((int)member.Hunger > 0)
+        {
+            return GeneralState.Hungry;
+        }
+        return GeneralState.Satisfied;
+    }
+
+    public bool IsDead()
+    {
+        return IsDead(this);
+    }
+
+    public bool IsDead(familyMember member)
+    {
+        if (member.Hunger >= Hunger.Dead || member.sickness >= Sickness.Dead)
+        {
+            return true;
+        }
+        return false;
     }
 
 

@@ -50,6 +50,8 @@ MonoBehaviour:
   happy: {fileID: 0}
   Sad: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
   sick: {fileID: 8300000, guid: 995b05605660fa44298411fbea5d8ebe, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
 --- !u!1 &2960914340927862407
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +102,8 @@ MonoBehaviour:
   happy: {fileID: 8300000, guid: eb3269bddab247d4da356296035ba285, type: 3}
   Sad: {fileID: 0}
   sick: {fileID: 8300000, guid: 30029be5b7df4fd4280515c9fe3dd09c, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
 --- !u!1 &3146555016142369333
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,11 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Family:
-  - {fileID: 1768502991907010996}
   - {fileID: 5489374887229730229}
   - {fileID: 1931464673966838899}
   - {fileID: 4728409124813461762}
   - {fileID: 7398776266380784035}
+  - {fileID: 1768502991907010996}
   StartingDay: 1
   FamilyAllowedToPerish: 1
   day: 1
@@ -208,6 +212,8 @@ MonoBehaviour:
   happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
   Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
   sick: {fileID: 0}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
 --- !u!1 &7261142482429969614
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +264,8 @@ MonoBehaviour:
   happy: {fileID: 0}
   Sad: {fileID: 0}
   sick: {fileID: 0}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
 --- !u!1 &7738362323173153964
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,3 +316,5 @@ MonoBehaviour:
   happy: {fileID: 0}
   Sad: {fileID: 0}
   sick: {fileID: 0}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}

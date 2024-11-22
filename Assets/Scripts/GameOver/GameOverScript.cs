@@ -36,20 +36,18 @@ public class GameOverScript : MonoBehaviour
         foreach (TMP_Text member in familyList)
         {
             string MemberName = familyMember.GetStateString(Family[i].Role);
-            
             string HungerState = familyMember.GetStateString(Family[i].Hunger);
             string healthState = familyMember.GetStateString(Family[i].sickness);
 
 
             //print gameover information
             member.text = MemberName + " - " + HungerState + " - " +healthState;
-            i++;
 
-            Image MemberTombstone = searchImageTypeName(tombstones, MemberName);
-            Image MemberAlive = searchImageTypeName(people, MemberName);
-            switch (HungerState)
+            Image MemberTombstone = GetOwner(tombstones, Family[i]);
+            Image MemberAlive = GetOwner(people, Family[i]);
+            switch (Family[i].GetGeneralState())
             {
-                case "Dead":
+                case GeneralState.Dead:
                     MemberTombstone.gameObject.SetActive(true);
                     MemberAlive.gameObject.SetActive(false);
                     break;
@@ -58,9 +56,10 @@ public class GameOverScript : MonoBehaviour
                     MemberAlive.gameObject.SetActive(true);
                     break;
             }
+            i++;
             Debug.Log(MemberName + " - " + HungerState);
+        }            
 
-        }
 
 
 
@@ -78,16 +77,15 @@ public class GameOverScript : MonoBehaviour
         Application.Quit();
     }
 
-    public Image searchImageTypeName(Image[] Images, string Member)
+    public Image GetOwner(Image[] Image, familyMember Member)
     {
-        for (int i = 0; i < Images.Length; i++) {
+        for (int i = 0; i < Image.Length; i++) {
             {
-                string ObjectName = Images[i].gameObject.name;
-                bool containsName = ObjectName.IndexOf(Member, System.StringComparison.OrdinalIgnoreCase) >= 0;
-                if(containsName)
+                if(Image[i].GetComponent<ToogleOwner>().Owner == Member.Role)
                 {
-                    return Images[i];
+                    return Image[i];
                 }
+
             }
         }
         Debug.Log(Member + " not recognized");

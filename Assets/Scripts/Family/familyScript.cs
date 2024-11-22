@@ -44,15 +44,15 @@ public class familyScript : MonoBehaviour
 
     }
 
-    public bool DayUpdate(List<FamilyRole> foodList, List<FamilyRole> medList)
+    public bool DayUpdate()
     {
         day++;
         int MembersDead = 0;
         foreach (familyMember member in Family)
         {
-            if(!IsFamilyMemberDead(member))
+            if(!member.IsDead())
             {
-                if (foodList.Contains(member.Role))
+                if (member.FoodToogle.IsOn())
                 {
                     member.Hunger--;
                 }
@@ -60,7 +60,7 @@ public class familyScript : MonoBehaviour
                 {
                     member.Hunger++;
                 }
-                if (medList.Contains(member.Role))
+                if (member.MedToogle.IsOn())
                 {
                     member.sickness--;
                 }
@@ -69,18 +69,24 @@ public class familyScript : MonoBehaviour
                     member.sickness++;
                 }
             }
-            if( IsFamilyMemberDead(member))
+
+
+        }
+        foreach (familyMember member in Family)
+        {
+
+            if (member.IsDead())
             {
                 MembersDead++;
 
-                if(member.Role == FamilyRole.You || MembersDead > FamilyAllowedToPerish)
+                if (member.Role == FamilyRole.You || MembersDead > FamilyAllowedToPerish)
                 {
                     return true;
                 }
 
             }
-
         }
+
         return false;
     }
     public void Reset()
@@ -103,48 +109,12 @@ public class familyScript : MonoBehaviour
     }
 
 
-
-    public GeneralState GetGeneralState(FamilyRole Role)
-    {
-        return GetGeneralState(GetFamilyMember(Role));
-    }
-
-    public GeneralState GetGeneralState(familyMember member)
-    {
-        if (IsFamilyMemberDead(member))
-        {
-            return GeneralState.Dead;
-        }
-        if ((int)member.sickness >1)
-        {
-            return GeneralState.Sick;
-        }
-        if ((int)member.Hunger > 0)
-        {
-            return GeneralState.Hungry;
-        }
-        return GeneralState.Satisfied;
-    }
-
     public familyMember[] GetFamily()
     {
         return Family;
     }
 
-    public bool IsFamilyMemberDead(familyMember member)
-    {
-        if (member.Hunger >= Hunger.Dead || member.sickness >= Sickness.Dead)
-        {
-            return true;
-        }
-        return false;
-    }
 
-    public bool IsFamilyMemberDead(FamilyRole Role)
-    {
-        return IsFamilyMemberDead(GetFamilyMember(Role));
-
-    }
 
     public familyMember GetFamilyMember(FamilyRole DesiredMember)
     {
@@ -163,7 +133,7 @@ public class familyScript : MonoBehaviour
         familyMember Closestmember = null;
         foreach (var member in Family)
         {
-            if (GetGeneralState(member)>= LatestGeneralState)
+            if (member.GetGeneralState()>= LatestGeneralState)
             {
                 Closestmember = member;
             }

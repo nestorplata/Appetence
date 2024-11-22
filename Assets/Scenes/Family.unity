@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_text: Medicine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2269,6 +2269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 2
+  Toggle: {fileID: 0}
+  AffectsState: 0
 --- !u!1 &330048959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2331,7 @@ MonoBehaviour:
   m_text: Medicine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3756,14 +3758,6 @@ MonoBehaviour:
   shopUI: {fileID: 449375466}
   tutorialBackground: {fileID: 965835204}
   tutorialText: {fileID: 1212910087}
-  foodList: 
-  medList: 
-  familyList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   currency: {fileID: 422707478}
   Food: {fileID: 1584160373}
   Medicine: {fileID: 908337194}
@@ -3771,17 +3765,17 @@ MonoBehaviour:
   nextDayBtn: {fileID: 416985140}
   levelLoader: {fileID: 1255392225}
   FoodTogList:
-  - {fileID: 970810063}
-  - {fileID: 803340772}
-  - {fileID: 1627626994}
-  - {fileID: 1782058751}
-  - {fileID: 318850134}
+  - {fileID: 1627626997}
+  - {fileID: 318850137}
+  - {fileID: 1782058754}
+  - {fileID: 803340775}
+  - {fileID: 970810066}
   MedTogList:
-  - {fileID: 698918348}
-  - {fileID: 1000698829}
-  - {fileID: 1632942243}
-  - {fileID: 896407235}
-  - {fileID: 846200717}
+  - {fileID: 1632942246}
+  - {fileID: 846200720}
+  - {fileID: 896407238}
+  - {fileID: 1000698832}
+  - {fileID: 698918351}
   daysToWin: 10
   gameWonScene: GameSurvived
   purchaseSFX: {fileID: 694554856}
@@ -5219,7 +5213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &698918349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5303,6 +5297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 0
+  Toggle: {fileID: 0}
+  AffectsState: 1
 --- !u!1 &699642444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6198,6 +6194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 1
+  Toggle: {fileID: 0}
+  AffectsState: 0
 --- !u!1 &819358581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,7 +6288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &846200718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6374,6 +6372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 2
+  Toggle: {fileID: 0}
+  AffectsState: 1
 --- !u!1 &849016540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,7 +6604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &896407236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6688,6 +6688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 3
+  Toggle: {fileID: 0}
+  AffectsState: 1
 --- !u!1 &903322334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2365031488162740164, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
@@ -7582,6 +7584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 0
+  Toggle: {fileID: 0}
+  AffectsState: 0
 --- !u!1 &987350085
 GameObject:
   m_ObjectHideFlags: 0
@@ -7755,7 +7759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1000698830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7839,6 +7843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 1
+  Toggle: {fileID: 0}
+  AffectsState: 1
 --- !u!1 &1019690691
 GameObject:
   m_ObjectHideFlags: 0
@@ -11880,6 +11886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 4
+  Toggle: {fileID: 0}
+  AffectsState: 0
 --- !u!1 &1632942243
 GameObject:
   m_ObjectHideFlags: 0
@@ -11897,7 +11905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1632942244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11981,6 +11989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 4
+  Toggle: {fileID: 0}
+  AffectsState: 1
 --- !u!1001 &1635555057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13062,6 +13072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: 3
+  Toggle: {fileID: 0}
+  AffectsState: 0
 --- !u!1 &1799765038
 GameObject:
   m_ObjectHideFlags: 0
@@ -13607,7 +13619,7 @@ MonoBehaviour:
   m_text: Medicine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13722,18 +13734,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429520141068165078, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429520141068165078, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429520141068165078, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429520141068165078, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -13781,17 +13781,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1429520141068165078, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1478067879492452970, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
       propertyPath: m_Name
       value: LevelLoader
-      objectReference: {fileID: 0}
-    - target: {fileID: 2584541337517516884, guid: 46ba42de937c7d6479f5bfe163fdb6f5, type: 3}
-      propertyPath: m_Alpha
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15149,7 +15141,7 @@ MonoBehaviour:
   m_text: Medicine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 060f33d38b776954b8272742a24e39c1, type: 2}
+  m_sharedMaterial: {fileID: 4494719517892599032, guid: 5f2737163c0f21e498aa72b592576302, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15452,10 +15444,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter
       objectReference: {fileID: 0}
-    - target: {fileID: 7202139840586856368, guid: f6184ceed5ab56b4c8639d40df9b276c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15584,33 +15572,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 559342036}
     m_Modifications:
     - target: {fileID: 999767598102065144, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.84313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 999767598102065144, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.84313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 999767598102065144, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.84313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 999767598102065144, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1581779834}
-    - target: {fileID: 3437147599656712309, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.84313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 3437147599656712309, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.84313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 3437147599656712309, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.84313726
-      objectReference: {fileID: 0}
     - target: {fileID: 3437147599656712309, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -15698,10 +15662,6 @@ PrefabInstance:
     - target: {fileID: 6694352476044481923, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
       propertyPath: m_Name
       value: OpenedLetter
-      objectReference: {fileID: 0}
-    - target: {fileID: 6694352476044481923, guid: 146e322beb9debe4aa5a7fe86c770f24, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,15 +24,6 @@ public class FamilyMenuScript : MonoBehaviour
     [SerializeField]
     private TMP_Text tutorialText;
 
-
-    [SerializeField]
-    List<FamilyRole> foodList;
-    [SerializeField]
-    List<FamilyRole> medList;
-
-    [SerializeField]
-    TMP_Text[] familyList;
-
     [SerializeField]
     private TMP_Text currency;
 
@@ -48,13 +40,13 @@ public class FamilyMenuScript : MonoBehaviour
     [SerializeField]
     private LevelLoader levelLoader;
 
-    [SerializeField]
-    private GameObject[] FoodTogList;
 
-    
 
     [SerializeField]
-    private GameObject[] MedTogList;
+    private ToogleOwner[] FoodTogList;
+
+    [SerializeField]
+    private ToogleOwner[] MedTogList;
 
     [SerializeField]
     private int daysToWin = 10;
@@ -91,6 +83,7 @@ public class FamilyMenuScript : MonoBehaviour
         nextDayBtn.gameObject.SetActive(true);
         nextDayBtn.onClick.AddListener(OnNextDayButtonClick);
         
+        
         dayDisplay.text = "Day " + familyScript.Instance.day.ToString();
         
         if (familyScript.Instance.day >= daysToWin)
@@ -104,49 +97,29 @@ public class FamilyMenuScript : MonoBehaviour
         }
         foreach (familyMember member in familyScript.Instance.GetFamily())
         {
-            if (member.sickness== Sickness.Sick || member.sickness == Sickness.Bedridden )
-            {
-                GetRespectiveToogle(MedTogList, member.Role).SetActive(true);
-            }
-            if (member.sickness == Sickness.Dead || member.sickness == Sickness.Dead)
-            {
-                GetRespectiveToogle(FoodTogList, member.Role).SetActive(false);
-                GetRespectiveToogle(MedTogList, member.Role).SetActive(false);
+            member.FoodToogle = GetRespectiveToogle(FoodTogList, member.Role);
+            member.MedToogle = GetRespectiveToogle(MedTogList, member.Role);
 
-            }
+
+            bool IsSick = member.sickness == Sickness.Sick || member.sickness == Sickness.Bedridden;
+            member.MedToogle.gameObject.SetActive(IsSick);
+
+            member.FoodToogle.gameObject.SetActive(!member.IsDead());
         }
 
         //UpdateGameOverText();
 
     }
 
-    //public TMP_Text[] UpdateGameOverText()
-    //{
 
-    //    familyMember[] Family = familyScript.Instance.GetFamily();
-    //    for (int i = 0; i < Family.Length; i++)
-    //    {
-    //        familyList[i].text = Family[i].CharactherName + " - " + HungerValues[(int)Family[i].Hunger] + " - " + SicknessValues[(int)Family[i].sickness];
-    //        if (Family[i].sickness == Health.Sick || Family[i].sickness == Health.Bedridden)
-    //        {
-    //            GetRespectiveToogle(MedTogList, Family[i].Role).SetActive(true);
 
-    //        }
-    //        if (familyScript.Instance.IsFamilyMemberDead(Family[i]))
-    //        {
-    //            GetRespectiveToogle(FoodTogList, Family[i].Role).SetActive(false);
-    //            GetRespectiveToogle(MedTogList, Family[i].Role).SetActive(false);
-    //        }
-    //    }
-    //    return familyList;
-    //}
-
-    public GameObject GetRespectiveToogle(GameObject[] Toggles, FamilyRole role)
+    public ToogleOwner GetRespectiveToogle(ToogleOwner[] Toggles, FamilyRole role)
     {
-        foreach ( GameObject Toggle in Toggles)
+        foreach (ToogleOwner Toggle in Toggles)
         {
-            if (Toggle.GetComponent<ToogleOwner>().Owner == role)
+            if (Toggle.Owner == role)
             {
+                Toggle.SetToogle();
                 return Toggle;
             }
         }
@@ -163,9 +136,9 @@ public class FamilyMenuScript : MonoBehaviour
     {
         currency.text = CurrencySystem.Instance.GetCurrency().ToString();
 
-        totalCost.text = CalcTotal().ToString();
+        totalCost.text = GetSelectedTotalCost().ToString();
 
-        if (CurrencySystem.Instance.GetCurrency() < CalcTotal() && CalcTotal() != 0)
+        if (CurrencySystem.Instance.GetCurrency() < GetSelectedTotalCost() && GetSelectedTotalCost() != 0)
         {
             //totalCost.text = "TOO MUCH!";
             nextDayBtn.gameObject.SetActive(false);
@@ -208,27 +181,11 @@ public class FamilyMenuScript : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void UpdateButton()
+
+    public List<FamilyRole> UpdateOwnersList(ToogleOwner[] ToogleOwners)
     {
-
-        UpdateOwnersList(FoodTogList, foodList);
-        UpdateOwnersList(MedTogList, medList);
-
-
-        bool dead = familyScript.Instance.DayUpdate(foodList, medList);
-        CurrencySystem.Instance.AddCurrency(-CalcTotal());
-        if(dead){
-           // familyScript.Instance.FamilyListText = UpdateGameOverText();
-            SceneManager.LoadScene("GameOver");
-        }
-        else{
-            StartCoroutine(levelLoader.LoadLevel("LevelSelect"));
-        }
-    }
-
-    public void UpdateOwnersList(GameObject[] Bottons, List<FamilyRole> ButtonOwners)
-    {
-        foreach (GameObject FoodButoon in Bottons)
+        List<FamilyRole> ButtonOwners =  new List<FamilyRole>();
+        foreach (ToogleOwner FoodButoon in ToogleOwners)
         {
             FamilyRole owner = FoodButoon.GetComponent<ToogleOwner>().Owner;
             if (FoodButoon.GetComponent<Toggle>().isOn)
@@ -240,13 +197,24 @@ public class FamilyMenuScript : MonoBehaviour
                 ButtonOwners.Remove(owner);
             }
         }
+        return ButtonOwners;
     }
 
     private void OnNextDayButtonClick()
     {
         NextDayIsClicked = true;
         nextDayBtn.interactable = false;
-        UpdateButton();
+        bool IsGameOver = familyScript.Instance.DayUpdate();
+        CurrencySystem.Instance.AddCurrency(-GetSelectedTotalCost());
+        if (IsGameOver)
+        {
+            // familyScript.Instance.FamilyListText = UpdateGameOverText();
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            StartCoroutine(levelLoader.LoadLevel("LevelSelect"));
+        }
     }
 
     public void ShopButton()
@@ -265,28 +233,23 @@ public class FamilyMenuScript : MonoBehaviour
 
 
 
-    private int CalcTotal()
+    private int GetSelectedTotalCost()
     {
         totalCostVal = 0;
-        foreach (GameObject FoodTog in FoodTogList)
+        foreach (familyMember member in familyScript.Instance.GetFamily())
         {
-            if(FoodTog.GetComponent<Toggle>().isOn)
+           
+            if (member.FoodToogle.IsOn())
             {
                 totalCostVal += GetFoodCost();
             }
-        }
-
-        foreach (GameObject MedTog in MedTogList)
-        {
-            if (MedTog.GetComponent<Toggle>().isOn)
+            if (member.MedToogle && member.MedToogle.IsOn())
             {
                 totalCostVal += GetMedCost();
             }
         }
 
         // totalCostVal = foodList.Count * GetFoodCost()+ medList.Count * GetMedCost();
-
-
         if (CurrencySystem.Instance.GetCurrency() < 0 && totalCostVal <= 0)
         {
             return 0;
@@ -298,10 +261,10 @@ public class FamilyMenuScript : MonoBehaviour
     public int GetTotalCost()
     {
         int total = 0;
-        total = foodList.Count * GetFoodCost();
+        //total = foodList.Count * GetFoodCost();
         foreach (familyMember member in familyScript.Instance.GetFamily())
         {
-            if(familyScript.Instance.GetGeneralState(member)!=GeneralState.Dead)
+            if(member.GetGeneralState() != GeneralState.Dead)
             {
                 total += GetFoodCost();
 
