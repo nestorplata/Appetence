@@ -34,16 +34,39 @@ public class Timer : MonoBehaviour
             {
                 _countDownTime -= Time.deltaTime;
                 TimeUIUpdate(_countDownTime);
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    ChangeScene();
+
+                }
             }
             else
             {
-                Debug.Log("Time has run out!");
-                _countDownTime = 0;
-                CountStop();
-                StartCoroutine(_levelLoader.LoadLevel(_loadSceneName));
+
+                ChangeScene();
             }
+            
         }
     }
+
+    public void ChangeScene()
+    {
+        switch (familyScript.Instance.getDay())
+        {
+            default:
+                break;
+            case 2:
+                _loadSceneName = "LetterCutscene";
+                break;
+
+        }
+        Debug.Log("Time has run out!");
+        _countDownTime = 0;
+        CountStop();
+        StartCoroutine(_levelLoader.LoadLevel(_loadSceneName));
+    }
+
 
     public void CountStart()
     {

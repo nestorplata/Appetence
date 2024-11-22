@@ -206,6 +206,7 @@ public class FamilyMenuScript : MonoBehaviour
         nextDayBtn.interactable = false;
         bool IsGameOver = familyScript.Instance.DayUpdate();
         CurrencySystem.Instance.AddCurrency(-GetSelectedTotalCost());
+      
         if (IsGameOver)
         {
             // familyScript.Instance.FamilyListText = UpdateGameOverText();
