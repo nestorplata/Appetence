@@ -15,6 +15,8 @@ public class FamilyUIManager : MonoBehaviour
 
     private Dictionary<string, Dictionary<string, GameObject[]>> clothingOptions;
 
+    private 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class FamilyUIManager : MonoBehaviour
     {
         if (familyScript.Instance.getDay() == 1)
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
         }
         else

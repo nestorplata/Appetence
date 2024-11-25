@@ -15,7 +15,7 @@ public class familyScript : MonoBehaviour
 {
     [SerializeField] familyMember[] Family;
 
-    [SerializeField] private  int StartingDay = 0;
+    public static int StartingDay { get; private set; } = 1;
     [Range(0, 4)] public int FamilyAllowedToPerish =1;
 
 
@@ -97,7 +97,7 @@ public class familyScript : MonoBehaviour
             Family[i].sickness = Sickness.Healthy;
             //FamilyDeathList[i] = 0;
         }
-        day = 0;
+        day = StartingDay;
 
         CurrencySystem.Instance.ResetCurrency();
     }

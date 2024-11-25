@@ -25,16 +25,16 @@ public class ShopItem : ScriptableObject
         //firstItem.itemName.Visibility = Visibility.Visible;
         //firstItem.itemName.Text = $"Item Name: {firstItem.itemName}";
         //firstItem.itemDescription.Visibility = Visibility.Visible;
-        //firstItem.itemDescription.Text = $"Item Description: {firstItem.itemDescription}"  ;
+        //firstItem.itemDescription.Text = $"Item Description: {firstItem.itemDescription}";
         //firstItem.cost.Visibility = Visibility.Visible;
-        //firstItem.itemDescription.Text = $"Item Cost: {firstItem.cost} " ;
+        //firstItem.itemDescription.Text = $"Item Cost: {firstItem.cost} ";
         //// ... and so on
 
         //firstItem.nextUpgrade.Visibility = Visibility.Hidden;
         //// Checking for upgrades
         //if (firstItem.nextUpgrade != null)
         //{
-        //     firstItem.nextUpgrade.Visibility = Visibility.Visible;
+        //    firstItem.nextUpgrade.Visibility = Visibility.Visible;
         //    firstItem.nextUpgrade.itemName.Text = $"Next Upgrade: {firstItem.nextUpgrade.itemName}";
         //}
 
@@ -43,7 +43,7 @@ public class ShopItem : ScriptableObject
         //if (firstItem.isFinalUpgrade)
         //{
         //    firstItem.isFinalUpgrade.Visibility = Visibility.Visible;
-        //    firstItem.isFinalUpgrade.Text ="This is the final upgrade.";
+        //    firstItem.isFinalUpgrade.Text = "This is the final upgrade.";
         //}
     }
 }

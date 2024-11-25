@@ -32,7 +32,7 @@ public class Shop : MonoBehaviour
             GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
             ShopUI icon = newItem.GetComponent<ShopUI>();
 
-            if (currentDay == 0)
+            if (currentDay == 1)
             {
                 //Reset everything
                 icon.Setup(shop);

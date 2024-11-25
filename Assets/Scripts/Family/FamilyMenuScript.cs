@@ -90,8 +90,8 @@ public class FamilyMenuScript : MonoBehaviour
         {
             SceneManager.LoadScene(gameWonScene);
         }
-
-        if(familyScript.Instance.day > 0){
+        if(familyScript.Instance.day > familyScript.StartingDay)
+        {
             tutorialBackground.SetActive(false);
             tutorialText.enabled = false;
         }
