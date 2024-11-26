@@ -19,5 +19,6 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: fa6f4c1bf2984404496f4f3fc0d4022d, type: 3}
   nextUpgrade: {fileID: 0}
   isFinalUpgrade: 1
-  clothingIndex: 2
-  familyOwner: 3
+  ClothingLevel: 2
+  familyMember: 
+  Owner: 3

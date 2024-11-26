@@ -29,8 +29,8 @@ public class ShopUI : MonoBehaviour
 
         // Load the availability state
         bool savedAvailability = PlayerPrefs.GetInt(currentItem.itemName + "_available", item.available ? 1 : 0) == 1;
-        toggleItem.isOn = savedAvailability;
-        currentItem.available = savedAvailability;
+        toggleItem.isOn = true;
+        currentItem.available = true;
 
         itemIcon.sprite = item.itemIcon;  // Assign item icon
         buyButton.onClick.RemoveAllListeners();
@@ -60,22 +60,21 @@ public class ShopUI : MonoBehaviour
             if (familyUIManager != null)
             {
                 FamilyRole MemberRole = currentItem.Owner;
-                string MemberRoleString = familyMember.GetStateString(currentItem.Owner);
 
-                int clothingIndex = currentItem.clothingIndex;
+                int clothingIndex = currentItem.ClothingLevel;
+                Debug.Log(clothingIndex);
+
 
                 GeneralState currentState = familyScript.Instance.GetFamilyMember(MemberRole).GetGeneralState();
-                string CurrentStateString = familyMember.GetStateString(currentState);
+
                 familyUIManager.ChangeClothing(MemberRole, clothingIndex);
 
-                PlayerPrefs.SetInt(MemberRoleString + "_" + CurrentStateString + "_clothingIndex", clothingIndex);
-                PlayerPrefs.Save();
+
             }
 
             // Check for next upgrade
             if (currentItem.nextUpgrade != null)
             {
-                PlayerPrefs.SetInt(currentItem.nextUpgrade.itemName + "_available", 1);
                 Setup(currentItem.nextUpgrade);  // Load the next upgrade
             }
             else if (currentItem.isFinalUpgrade)
@@ -97,9 +96,9 @@ public class ShopUI : MonoBehaviour
         currentItem.available = available;
         toggleItem.isOn = available;
         // Save the availability state
-        PlayerPrefs.SetInt(currentItem.itemName + "_available", available ? 1 : 0);
-        PlayerPrefs.Save();
-        Debug.Log($"Saved availability for {currentItem.itemName}: {available}");
+        //PlayerPrefs.SetInt(currentItem.itemName + "_available", available ? 1 : 0);
+        //PlayerPrefs.Save();
+        //Debug.Log($"Saved availability for {currentItem.itemName}: {available}");
     }
 
 }

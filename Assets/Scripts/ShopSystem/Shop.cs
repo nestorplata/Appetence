@@ -17,9 +17,9 @@ public class Shop : MonoBehaviour
 
     private ShopUI shop;
 
-    //TESTING VARS
-    private int aliveFamily = 0;
-    private int sickFamily = 0;
+    ////TESTING VARS
+    //private int aliveFamily = 0;
+    //private int sickFamily = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +37,8 @@ public class Shop : MonoBehaviour
                 //Reset everything
                 icon.Setup(shop);
                 icon.SetAvailability(true);
-                PlayerPrefs.DeleteAll();
-                PlayerPrefs.Save();
+                //PlayerPrefs.DeleteAll();
+                //PlayerPrefs.Save();
             }
             else
             {

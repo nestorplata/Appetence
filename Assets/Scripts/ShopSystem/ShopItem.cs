@@ -13,7 +13,7 @@ public class ShopItem : ScriptableObject
     public Sprite itemIcon;
     public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
-    public int clothingIndex;
+    [Range(1,2)]public int ClothingLevel;
     public string familyMember;
     public FamilyRole Owner;
 

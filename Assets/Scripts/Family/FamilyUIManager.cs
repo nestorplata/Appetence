@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 //using static UnityEditor.VersionControl.Asset;
@@ -63,8 +65,10 @@ public class FamilyUIManager : MonoBehaviour
         familyMember member = familyScript.Instance.GetFamilyMember(familyRole);
 
         member.GetAnimatedFamily().gameObject.SetActive(false);
+        Debug.Log(member.GetAnimatedFamily().gameObject.name);
         member.ClothingLevel = ClothingLevel;
         member.GetAnimatedFamily().gameObject.SetActive(true);
+        Debug.Log(member.GetAnimatedFamily().gameObject.name);
     }
 }
 
