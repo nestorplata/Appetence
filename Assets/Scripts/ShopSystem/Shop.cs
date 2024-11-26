@@ -29,37 +29,43 @@ public class Shop : MonoBehaviour
         foreach (ShopItem ShopItem in shopItems)
         {
             //Setup
-            GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
-            ShopUI icon = newItem.GetComponent<ShopUI>();
-
-            if (currentDay == 1)
+            familyMember member = familyScript.Instance.GetFamilyMember(ShopItem.Owner);
+            if(!member.ShopItem)
             {
-                //Reset everything
-                icon.Setup(ShopItem);
-                icon.SetAvailability(true);
-                //PlayerPrefs.DeleteAll();
-                //PlayerPrefs.Save();
+                member.ShopItem = ShopItem;
             }
-            else
+            if (!member.IsDead())
             {
-                bool upgradeExists = PlayerPrefs.GetInt(ShopItem.nextUpgrade.itemName + "_available", ShopItem.nextUpgrade.available ? 1 : 0) == 1;
-                bool baseExists = PlayerPrefs.GetInt(ShopItem.itemName + "_available", ShopItem.available ? 1 : 0) == 1;
-
-                //switch()
-                // icon.SetAvailability(savedAvailability);
-                if (!baseExists && !upgradeExists)
+                GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
+                ShopUI icon = newItem.GetComponent<ShopUI>();
+                
+                if (member.ClothingLevel >= member.ShopItem.GetFinalClothingUpgradeLevel())
                 {
-                    icon.SetupSoldOut(ShopItem);
-                }
-                else if (baseExists)
-                {
-                    icon.Setup(ShopItem);
+                    icon.SetupSoldOut(member.ShopItem);
                 }
                 else
                 {
-                    icon.Setup(ShopItem.nextUpgrade);
+                    icon.Setup(member.ShopItem);
                 }
+
+                //if (currentDay == 1)
+                //{
+                //    //Reset everything
+                //    icon.Setup(ShopItem);
+                //    icon.SetAvailability(true);
+                //    //PlayerPrefs.DeleteAll();
+                //    //PlayerPrefs.Save();
+                //}
+                //else
+                //{
+
+
+                //    //switch()
+                //    // icon.SetAvailability(savedAvailability);
+
+                //}
             }
+
 
         }
 

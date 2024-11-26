@@ -12042,6 +12042,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675148293}
     m_Modifications:
+    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1919.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1919.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3893835514449472731, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
       propertyPath: m_Name
       value: Family
@@ -12124,6 +12148,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6663990560687151914, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1919.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

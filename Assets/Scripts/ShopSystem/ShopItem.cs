@@ -14,7 +14,6 @@ public class ShopItem : ScriptableObject
     public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
     [Range(1,2)]public int ClothingLevel;
-    public string familyMember;
     public FamilyRole Owner;
 
     void Start()
@@ -45,6 +44,14 @@ public class ShopItem : ScriptableObject
         //    firstItem.isFinalUpgrade.Visibility = Visibility.Visible;
         //    firstItem.isFinalUpgrade.Text = "This is the final upgrade.";
         //}
+    }
+    public int GetFinalClothingUpgradeLevel()
+    {
+        if(nextUpgrade)
+        {
+            return nextUpgrade.GetFinalClothingUpgradeLevel();
+        }
+        return ClothingLevel;
     }
 }
 

@@ -65,21 +65,23 @@ public class ShopUI : MonoBehaviour
                 familyMember member = familyScript.Instance.GetFamilyMember(MemberRole);
 
                 member.ChangeClothing(clothingIndex);
+                // Check for next upgrade
+                if (currentItem.nextUpgrade != null)
+                {
+                    member.ShopItem = currentItem.nextUpgrade;
+                    Setup(member.ShopItem);  // Load the next upgrade
+                }
+                else if (currentItem.isFinalUpgrade)
+                {
+                    itemName.text = "SOLD OUT";      // Display SOLD OUT
+                    itemDescription.text = "";       // Clear description
+                    itemCost.text = "";              // Clear cost
+                    buyButton.interactable = false;  // Disable the buy button
+                }
 
             }
 
-            // Check for next upgrade
-            if (currentItem.nextUpgrade != null)
-            {
-                Setup(currentItem.nextUpgrade);  // Load the next upgrade
-            }
-            else if (currentItem.isFinalUpgrade)
-            {
-                itemName.text = "SOLD OUT";      // Display SOLD OUT
-                itemDescription.text = "";       // Clear description
-                itemCost.text = "";              // Clear cost
-                buyButton.interactable = false;  // Disable the buy button
-            }
+
         }
         else
         {

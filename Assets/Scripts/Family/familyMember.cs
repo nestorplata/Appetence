@@ -18,6 +18,7 @@ public class familyMember : MonoBehaviour
     public ToogleOwner MedToogle;
     [Range(0,2)] public int ClothingLevel;
     public List<AnimationState> AnimationStates;
+    public ShopItem ShopItem;
 
     public static string GetStateString(Enum value)
     {
