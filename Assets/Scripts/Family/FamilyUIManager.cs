@@ -26,7 +26,11 @@ public class FamilyUIManager : MonoBehaviour
     {
         InitializeAnimations();
         LoadClothingLevel();
-        //UpdateAllFamilyClothing();
+
+        //if (!familyScript.Instance.IsFirstDay())
+        //{
+
+        //}
     }
 
 
@@ -42,35 +46,15 @@ public class FamilyUIManager : MonoBehaviour
 
     private void LoadClothingLevel()
     {
-
-        foreach (var animations in Animations)
-        {
-            foreach (var state in animations.States)
-            {
-                foreach (var clothing in state.Clothings)
-                {
-                    clothing.gameObject.SetActive(false);
-                }
-            }
-        }
-
         foreach (var member in familyScript.Instance.GetFamily())
         {
-            member.GetAnimatedFamily().gameObject.SetActive(true);
+            member.ChangeToCurrentClothing();
         }
-    }
 
-    public void ChangeClothing(FamilyRole familyRole, int ClothingLevel)
-    {
-        familyMember member = familyScript.Instance.GetFamilyMember(familyRole);
-
-        member.GetAnimatedFamily().gameObject.SetActive(false);
-        Debug.Log(member.GetAnimatedFamily().gameObject.name);
-        member.ClothingLevel = ClothingLevel;
-        member.GetAnimatedFamily().gameObject.SetActive(true);
-        Debug.Log(member.GetAnimatedFamily().gameObject.name);
     }
 }
+
+
 
 
 

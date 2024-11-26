@@ -141,6 +141,11 @@ public class familyScript : MonoBehaviour
         return Closestmember;
     }
 
+    public bool IsFirstDay()
+    {
+        return StartingDay == day;
+    }
+
 }
 
 

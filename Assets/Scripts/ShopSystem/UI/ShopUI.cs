@@ -62,13 +62,9 @@ public class ShopUI : MonoBehaviour
                 FamilyRole MemberRole = currentItem.Owner;
 
                 int clothingIndex = currentItem.ClothingLevel;
-                Debug.Log(clothingIndex);
+                familyMember member = familyScript.Instance.GetFamilyMember(MemberRole);
 
-
-                GeneralState currentState = familyScript.Instance.GetFamilyMember(MemberRole).GetGeneralState();
-
-                familyUIManager.ChangeClothing(MemberRole, clothingIndex);
-
+                member.ChangeClothing(clothingIndex);
 
             }
 

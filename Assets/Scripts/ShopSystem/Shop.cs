@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
     {
         int currentDay = familyScript.Instance.getDay();
 
-        foreach (ShopItem shop in shopItems)
+        foreach (ShopItem ShopItem in shopItems)
         {
             //Setup
             GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
@@ -35,27 +35,29 @@ public class Shop : MonoBehaviour
             if (currentDay == 1)
             {
                 //Reset everything
-                icon.Setup(shop);
+                icon.Setup(ShopItem);
                 icon.SetAvailability(true);
                 //PlayerPrefs.DeleteAll();
                 //PlayerPrefs.Save();
             }
             else
             {
-                bool upgradeExists = PlayerPrefs.GetInt(shop.nextUpgrade.itemName + "_available", shop.nextUpgrade.available ? 1 : 0) == 1;
-                bool baseExists = PlayerPrefs.GetInt(shop.itemName + "_available", shop.available ? 1 : 0) == 1;
+                bool upgradeExists = PlayerPrefs.GetInt(ShopItem.nextUpgrade.itemName + "_available", ShopItem.nextUpgrade.available ? 1 : 0) == 1;
+                bool baseExists = PlayerPrefs.GetInt(ShopItem.itemName + "_available", ShopItem.available ? 1 : 0) == 1;
+
+                //switch()
                 // icon.SetAvailability(savedAvailability);
                 if (!baseExists && !upgradeExists)
                 {
-                    icon.SetupSoldOut(shop);
+                    icon.SetupSoldOut(ShopItem);
                 }
                 else if (baseExists)
                 {
-                    icon.Setup(shop);
+                    icon.Setup(ShopItem);
                 }
                 else
                 {
-                    icon.Setup(shop.nextUpgrade);
+                    icon.Setup(ShopItem.nextUpgrade);
                 }
             }
 

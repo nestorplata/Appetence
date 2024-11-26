@@ -85,11 +85,26 @@ public class familyMember : MonoBehaviour
 
     public AnimatedFamily GetAnimatedFamily()
     {
-        return GetAnimationsState(GetGeneralState()).GetAnimatedFamily(ClothingLevel);
+        AnimationState state = GetAnimationsState(GetGeneralState());
+        //if (state == null) return null;
+        /*else */return state.GetAnimatedFamily(ClothingLevel);
 
     }
 
+    public void ChangeClothing( int Level)
+    {
+        GetAnimatedFamily().gameObject.SetActive(false);
+        if (GetGeneralState()!= GeneralState.Dead)
+        {
+            ClothingLevel = Level;
+            GetAnimatedFamily().gameObject.SetActive(true);
+        }
+    }
 
+    public void ChangeToCurrentClothing()
+    { 
+        ChangeClothing(ClothingLevel);
+    }
 
 
 }
