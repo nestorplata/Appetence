@@ -59,17 +59,19 @@ public class DragNDrop : MonoBehaviour
     {
         isDragging = true;
         offset = GetMousePos() - (Vector2)transform.position;
-        sfx.PlayOneShot(clickDown);
+        if(fruitNames != "trash") {
+            sfx.PlayOneShot(clickDown);
+        }
     }
 
     public void OnMouseUp()
     {
-        sfx.PlayOneShot(clickUp);
         isDragging = false;
 
         if (collider.gameObject.TryGetComponent(out SlotScript fruitSlot) && fruitSlot.fruitNames == fruitNames)
         {
             if(fruitNames != "trash") {
+                sfx.PlayOneShot(clickUp);
                 CurrSlotPos = slotPos.transform.position;
                 CurrencySystem.Instance.AddCurrency(40);
                 Debug.Log("Plus 40");
@@ -135,11 +137,11 @@ public class DragNDrop : MonoBehaviour
     }
 
     /** commenting this out makes the hitboxes more reliable when dropping in the correct slot, still off though gonna leave here for now though **/
-    // private void OnTriggerExit2D(Collider2D collision)
-    // {
-    //     if (collision.gameObject.TryGetComponent(out SlotScript fruitSlot) && CurrSlotPos == new Vector2(fruitSlot.transform.position.x, fruitSlot.transform.position.y))
-    //     {
-    //         CurrSlotPos = Vector2.zero;
-    //     }
-    // }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out SlotScript fruitSlot) && CurrSlotPos == new Vector2(fruitSlot.transform.position.x, fruitSlot.transform.position.y))
+        {
+            CurrSlotPos = Vector2.zero;
+        }
+    }
 }

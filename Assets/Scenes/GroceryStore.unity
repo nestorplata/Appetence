@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2015bc1f30f83ec4e85757f07c7dfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownSeconds: 180
+  countDownSeconds: 60
   countDownDisplay: {fileID: 660687426}
   _loadSceneName: Family
   _levelLoader: {fileID: 8794020}

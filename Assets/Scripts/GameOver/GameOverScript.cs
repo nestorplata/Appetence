@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Unity.VisualScripting;
-using UnityEditor.Search;
+//using UnityEditor.Search;
 
 public class GameOverScript : MonoBehaviour
 {
