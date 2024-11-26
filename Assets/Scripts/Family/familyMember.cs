@@ -16,6 +16,8 @@ public class familyMember : MonoBehaviour
     public AudioClip sick;
     public ToogleOwner FoodToogle;
     public ToogleOwner MedToogle;
+    [Range(0,2)] public int ClothingLevel;
+    public List<AnimationState> AnimationStates;
 
     public static string GetStateString(Enum value)
     {
@@ -65,6 +67,29 @@ public class familyMember : MonoBehaviour
         }
         return false;
     }
+
+    public AnimationState GetAnimationsState(GeneralState state)
+    {
+        foreach (var animationState in AnimationStates)
+        {
+            if (animationState.State == state) return animationState;
+        }
+        Debug.Log("Animation not found, returning first");
+        return AnimationStates[0];
+    }
+
+    public AnimatedFamily GetAnimatedFamily(GeneralState state, int clothinglevel)
+    {
+        return GetAnimationsState(state).GetAnimatedFamily(clothinglevel);
+    }
+
+    public AnimatedFamily GetAnimatedFamily()
+    {
+        return GetAnimationsState(GetGeneralState()).GetAnimatedFamily(ClothingLevel);
+
+    }
+
+
 
 
 }

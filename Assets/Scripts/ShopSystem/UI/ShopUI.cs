@@ -66,7 +66,7 @@ public class ShopUI : MonoBehaviour
 
                 GeneralState currentState = familyScript.Instance.GetFamilyMember(MemberRole).GetGeneralState();
                 string CurrentStateString = familyMember.GetStateString(currentState);
-                familyUIManager.ChangeClothing(MemberRoleString, clothingIndex);
+                familyUIManager.ChangeClothing(MemberRole, clothingIndex);
 
                 PlayerPrefs.SetInt(MemberRoleString + "_" + CurrentStateString + "_clothingIndex", clothingIndex);
                 PlayerPrefs.Save();
