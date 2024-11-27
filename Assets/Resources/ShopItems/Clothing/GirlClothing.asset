@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: GirlClothing
   m_EditorClassIdentifier: 
   itemName: Girl Clothing
-  itemDescription: des
+  itemDescription: 50% Discount on Food
   cost: 100
   available: 1
   itemIcon: {fileID: 21300000, guid: fa6f4c1bf2984404496f4f3fc0d4022d, type: 3}
   nextUpgrade: {fileID: 11400000, guid: ee314b4a6296407448d627cd4a5d02d2, type: 2}
   isFinalUpgrade: 0
   ClothingLevel: 1
-  familyMember: 
   Owner: 3

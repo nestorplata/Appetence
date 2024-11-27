@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: WifeClothingUpgrade
   m_EditorClassIdentifier: 
   itemName: Adult Clothing Upgrade
-  itemDescription: des
+  itemDescription: 50% Discount on Medicine
   cost: 200
   available: 1
   itemIcon: {fileID: 21300000, guid: 689a71694cb215a45b48bb9921e2b3b3, type: 3}
   nextUpgrade: {fileID: 0}
   isFinalUpgrade: 1
   ClothingLevel: 2
-  familyMember: 
   Owner: 1
