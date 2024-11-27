@@ -19,9 +19,14 @@ public class AnimatedFamily : MonoBehaviour
     float timer = 0;
 
     // Start is called before the first frame update
-    void Start()
+    //void Start()
+    //{
+    //}
+
+    private void OnEnable()
     {
         StartCoroutine(PlayAnimation());
+
     }
 
     IEnumerator PlayAnimation() {
