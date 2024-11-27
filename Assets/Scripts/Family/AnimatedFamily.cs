@@ -9,7 +9,7 @@ public class AnimatedFamily : MonoBehaviour
     public Sprite[] sprites;
 
     //duration of each sprite in the animation, adjust for speed
-    private float duration = 0.03F;
+    private float duration = 0.5F;
 
     //refrence the image that will play the animation, make sure the actual image component has none as the source
     public Image img;
@@ -21,19 +21,17 @@ public class AnimatedFamily : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        img.sprite = sprites[0];
+        StartCoroutine(PlayAnimation());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //
-        if((timer + Time.deltaTime) >= (duration / sprites.Length)) {
+    IEnumerator PlayAnimation() {
+        while(true) {
+            if(sprites.Length > 0) {
             img.sprite = sprites[index];
+            }
+            yield return new WaitForSeconds(duration);
             //used to loop around when we hit max length
             index = (index + 1) % sprites.Length;
         }
     }
 }
-
-
