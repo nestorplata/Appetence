@@ -27,10 +27,10 @@ public class FamilyMenuScript : MonoBehaviour
     [SerializeField]
     private TMP_Text currency;
 
-    [SerializeField]
-    private TMP_Text Food;
-    [SerializeField]
-    private TMP_Text Medicine;
+    //[SerializeField]
+    //private TMP_Text Food;
+    //[SerializeField]
+    //private TMP_Text Medicine;
     [SerializeField]
     private TMP_Text totalCost;
 
@@ -40,13 +40,10 @@ public class FamilyMenuScript : MonoBehaviour
     [SerializeField]
     private LevelLoader levelLoader;
 
-
-
     [SerializeField]
-    private ToogleOwner[] FoodTogList;
+    private ToogleOwner[] TogList;
 
-    [SerializeField]
-    private ToogleOwner[] MedTogList;
+
 
     [SerializeField]
     private int daysToWin = 10;
@@ -97,8 +94,7 @@ public class FamilyMenuScript : MonoBehaviour
         }
         foreach (familyMember member in familyScript.Instance.GetFamily())
         {
-            member.FoodToogle = GetRespectiveToogle(FoodTogList, member.Role);
-            member.MedToogle = GetRespectiveToogle(MedTogList, member.Role);
+            SetRespectiveToogle(TogList, member);
 
 
             bool IsSick = member.sickness == Sickness.Sick || member.sickness == Sickness.Bedridden;
@@ -107,23 +103,29 @@ public class FamilyMenuScript : MonoBehaviour
             member.FoodToogle.gameObject.SetActive(!member.IsDead());
         }
 
+        
+
         //UpdateGameOverText();
 
     }
 
 
 
-    public ToogleOwner GetRespectiveToogle(ToogleOwner[] Toggles, FamilyRole role)
+    public void SetRespectiveToogle(ToogleOwner[] Toggles, familyMember member)
     {
         foreach (ToogleOwner Toggle in Toggles)
         {
-            if (Toggle.Owner == role)
+            if (Toggle.Owner == member.Role)
             {
-                Toggle.SetToogle();
-                return Toggle;
+                member.MedToogle = Toggle.MedToogle;
+                member.FoodToogle = Toggle.FoodToogle;
+                member.UpdateToogleValues();
+
+
+
+
             }
         }
-        return null;
 
     }
 
@@ -134,9 +136,9 @@ public class FamilyMenuScript : MonoBehaviour
 
     public void Update()
     {
-        currency.text = CurrencySystem.Instance.GetCurrency().ToString();
+        currency.text = CurrencySystem.Instance.GetCurrency().ToString() + "$";
 
-        totalCost.text = GetSelectedTotalCost().ToString();
+        totalCost.text = GetSelectedTotalCost().ToString() + "$";
 
         if (CurrencySystem.Instance.GetCurrency() < GetSelectedTotalCost() && GetSelectedTotalCost() != 0)
         {
@@ -147,6 +149,7 @@ public class FamilyMenuScript : MonoBehaviour
         {
             nextDayBtn.gameObject.SetActive(true);
         }
+        
         if(Input.GetKeyDown(KeyCode.Escape)){
             MenuChange();
         }
@@ -240,13 +243,13 @@ public class FamilyMenuScript : MonoBehaviour
         foreach (familyMember member in familyScript.Instance.GetFamily())
         {
            
-            if (member.FoodToogle.IsOn())
+            if (member.FoodToogle.IsOn() )
             {
-                totalCostVal += GetFoodCost();
+                totalCostVal += member.foodCost;
             }
-            if (member.MedToogle && member.MedToogle.IsOn())
+            if (/*member.MedToogle &&*/ member.MedToogle.IsOn())
             {
-                totalCostVal += GetMedCost();
+                totalCostVal += member.MedCost;
             }
         }
 
@@ -267,11 +270,11 @@ public class FamilyMenuScript : MonoBehaviour
         {
             if(member.GetGeneralState() != GeneralState.Dead)
             {
-                total += GetFoodCost();
+                total += member.foodCost;
 
                 if(member.sickness == Sickness.Sick || member.sickness == Sickness.Bedridden)
                 {
-                    total += GetMedCost();
+                    total += member.MedCost;
                 }
             }
 
@@ -281,26 +284,8 @@ public class FamilyMenuScript : MonoBehaviour
         return total;
     }    
 
-    public void SetFoodCost(int newFoodCost)
-    {
-        foodCost = newFoodCost;
-        Food.text = "Food - " + newFoodCost.ToString();
-    }
 
-    public int GetFoodCost()
-    {
-        return foodCost;
-    }
 
-    public void SetMedCost(int newMedCost)
-    {
-        medCost = newMedCost;
-        Medicine.text = "Medicine - " + newMedCost.ToString();
-    }
 
-    public int GetMedCost()
-    {
-        return medCost;
-    }
 
 }

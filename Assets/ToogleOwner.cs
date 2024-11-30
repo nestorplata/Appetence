@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,8 +8,9 @@ using UnityEngine.UI;
 public class ToogleOwner : ObjectOwner
 {
 
-    public Toggle Toggle;
-    public AffectsState AffectsState;
+    public ToogleProperties FoodToogle;
+    public ToogleProperties MedToogle;
+    public TextMeshProUGUI MemberLabel;
 
     void Start()
     {
@@ -27,15 +29,9 @@ public class ToogleOwner : ObjectOwner
         //}
     }
 
-    public void SetToogle()
-    {
-        Toggle = GetComponent<Toggle>();
-    }
 
-    public bool IsOn()
-    {
-        return Toggle.isOn;
-    }
+
+
 }
 
 

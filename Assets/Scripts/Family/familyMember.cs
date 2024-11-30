@@ -14,8 +14,10 @@ public class familyMember : MonoBehaviour
     public AudioClip happy;
     public AudioClip Sad;
     public AudioClip sick;
-    public ToogleOwner FoodToogle;
-    public ToogleOwner MedToogle;
+    public ToogleProperties FoodToogle;
+    public ToogleProperties MedToogle;
+    public int foodCost = 60;
+    public int MedCost = 200;
     [Range(0,2)] public int ClothingLevel;
     public List<AnimationState> AnimationStates;
     public ShopItem ShopItem;
@@ -107,7 +109,12 @@ public class familyMember : MonoBehaviour
         ChangeClothing(ClothingLevel);
     }
 
+    public void UpdateToogleValues()
+    {
+        FoodToogle.CostText.text = foodCost.ToString();
+        MedToogle.CostText.text = MedToogle.ToString();
 
+    }
 }
 
 public enum GeneralState {

@@ -17,7 +17,6 @@ public class ShopItem : ScriptableObject
     [Range(1,2)]public int ClothingLevel;
     public FamilyRole Owner;
 
-
     public int GetFinalClothingUpgradeLevel()
     {
         if(nextUpgrade)

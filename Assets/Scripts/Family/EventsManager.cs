@@ -73,8 +73,9 @@ public class EventsManager : MonoBehaviour
         events.Add(new Events("Speeding Ticket", "You were pulled over for speeding and got a ticket for 100 coins", -100, 0, trafficStop));
         events.Add(new Events("Injury", "Work injuries, pay 100 coins", -100, 0, workInjury));
 
-        events.Add(new Events("Drought", "Drought caused food prices to increase to 80 coins", 80, 0, true, drought));
-        events.Add(new Events("Epidemic", "An Epidemic has caused the medicine costs to increase to 300", 0, 300, epidemic));
+        //multipliers
+        events.Add(new Events("Drought", "Drought caused food prices to increase to double", 2, 0, true, drought));
+        events.Add(new Events("Epidemic", "An Epidemic has caused the medicine costs to double", 0, 2, true, epidemic));
 
 
         //positive
@@ -118,14 +119,19 @@ public class EventsManager : MonoBehaviour
         if (selectedEvent.affectsEconomy)
         {
             Debug.Log("Affecting economy");
-            if (selectedEvent.foodPrice > 0)
+
+            foreach(familyMember member in familyScript.Instance.GetFamily())
             {
-                familyMenuScript.SetFoodCost(selectedEvent.foodPrice);
+                if (selectedEvent.FoodMultiplier > 0)
+                {
+                    member.foodCost *= selectedEvent.FoodMultiplier;
+                }
+                if (selectedEvent.MedMultiplier > 0)
+                {
+                    member.MedCost *= selectedEvent.MedMultiplier;
+                }
             }
-            if (selectedEvent.medPrice > 0)
-            {
-                familyMenuScript.SetMedCost(selectedEvent.medPrice);
-            }
+
         }
         else
         {

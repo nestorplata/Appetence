@@ -10,8 +10,8 @@ public class Events
     public int moneyChange;
     public int stressChange;
 
-    public int foodPrice;
-    public int medPrice;
+    public int FoodMultiplier;
+    public int MedMultiplier;
     public bool affectsEconomy;
 
     public AudioSource sfx;
@@ -29,12 +29,12 @@ public class Events
     }
 
     //Events affecting the economy
-    public Events(string name, string description, int foodPrice = 0, int medPrice = 0, bool affectsEconomy = true, AudioSource sound = null)
+    public Events(string name, string description, int FoodMultiplier = 1, int MedMultiplier = 1, bool affectsEconomy = true, AudioSource sound = null)
     {
         eventName = name;
         eventDescription = description;
-        this.foodPrice = foodPrice;
-        this.medPrice = medPrice;
+        this.FoodMultiplier = FoodMultiplier;
+        this.MedMultiplier = MedMultiplier;
         this.affectsEconomy = affectsEconomy;
         this.sound = sound;
     }

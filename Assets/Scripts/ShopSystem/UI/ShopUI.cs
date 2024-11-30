@@ -63,12 +63,14 @@ public class ShopUI : MonoBehaviour
 
                 int clothingIndex = currentItem.ClothingLevel;
                 familyMember member = familyScript.Instance.GetFamilyMember(MemberRole);
+                
 
                 member.ChangeClothing(clothingIndex);
                 // Check for next upgrade
                 if (currentItem.nextUpgrade != null)
                 {
                     member.ShopItem = currentItem.nextUpgrade;
+                    member.foodCost /= 2;
                     Setup(member.ShopItem);  // Load the next upgrade
                 }
                 else if (currentItem.isFinalUpgrade)
@@ -77,7 +79,11 @@ public class ShopUI : MonoBehaviour
                     itemDescription.text = "";       // Clear description
                     itemCost.text = "";              // Clear cost
                     buyButton.interactable = false;  // Disable the buy button
+                    member.MedCost /= 2;
+
                 }
+
+                member.UpdateToogleValues();
 
             }
 
