@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_SpriteState.m_SelectedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 629ccf364b95a5b4781912fd6d40d45b, type: 3}
+    - target: {fileID: 1950629834346688911, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_text
+      value: Medicine
+      objectReference: {fileID: 0}
     - target: {fileID: 2438703393960884547, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
       value: Wife
@@ -1166,13 +1170,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toogle
       objectReference: {fileID: 0}
+    - target: {fileID: 7232146564088384988, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7953966863051248808, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
       value: Background
-      objectReference: {fileID: 0}
-    - target: {fileID: 8215834087486980491, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
-      propertyPath: graphic
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1920577772831869959, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
@@ -5166,6 +5170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950629834346688911, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_text
+      value: Medicine
+      objectReference: {fileID: 0}
     - target: {fileID: 2438703393960884547, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
       value: Girl
@@ -5398,6 +5406,10 @@ PrefabInstance:
     - target: {fileID: 493861593950514026, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950629834346688911, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_text
+      value: Medicine
       objectReference: {fileID: 0}
     - target: {fileID: 2438703393960884547, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
@@ -7878,38 +7890,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675148293}
     m_Modifications:
-    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1919.9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 624021865699819539, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839444053914640566, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 13751ad04c22f5042bd117ec506c7eca, type: 3}
-    - target: {fileID: 839444053914640566, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1919.9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620405433812596493, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3893835514449472731, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
       propertyPath: m_Name
       value: Family
@@ -7992,22 +7972,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6663990560687151914, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1919.9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8881629611651375333, guid: 3d604ebdaa841c948b55a17e2b351411, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9465,6 +9429,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950629834346688911, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_text
+      value: Medicine
+      objectReference: {fileID: 0}
     - target: {fileID: 2438703393960884547, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
       value: Baby
@@ -10870,6 +10838,10 @@ PrefabInstance:
     - target: {fileID: 493861593950514026, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950629834346688911, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
+      propertyPath: m_text
+      value: Medicine
       objectReference: {fileID: 0}
     - target: {fileID: 2438703393960884547, guid: 31be331098c389f4b9d2a9004fe4d9c9, type: 3}
       propertyPath: m_Name
