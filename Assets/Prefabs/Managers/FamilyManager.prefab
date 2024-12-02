@@ -47,11 +47,16 @@ MonoBehaviour:
   Role: 0
   Hunger: 0
   sickness: 0
-  happy: {fileID: 0}
+  happy: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
   Sad: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
   sick: {fileID: 8300000, guid: 995b05605660fa44298411fbea5d8ebe, type: 3}
   FoodToogle: {fileID: 0}
   MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ShopItem: {fileID: 0}
 --- !u!1 &2960914340927862407
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,11 +104,16 @@ MonoBehaviour:
   Role: 2
   Hunger: 0
   sickness: 0
-  happy: {fileID: 8300000, guid: eb3269bddab247d4da356296035ba285, type: 3}
-  Sad: {fileID: 0}
+  happy: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
+  Sad: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
   sick: {fileID: 8300000, guid: 30029be5b7df4fd4280515c9fe3dd09c, type: 3}
   FoodToogle: {fileID: 0}
   MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ShopItem: {fileID: 0}
 --- !u!1 &3146555016142369333
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +169,6 @@ MonoBehaviour:
   - {fileID: 4728409124813461762}
   - {fileID: 7398776266380784035}
   - {fileID: 1768502991907010996}
-  StartingDay: 1
   FamilyAllowedToPerish: 1
   day: 1
 --- !u!1 &5323543770722107542
@@ -211,9 +220,14 @@ MonoBehaviour:
   sickness: 0
   happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
   Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
-  sick: {fileID: 0}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
   FoodToogle: {fileID: 0}
   MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ShopItem: {fileID: 0}
 --- !u!1 &7261142482429969614
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,11 +275,16 @@ MonoBehaviour:
   Role: 3
   Hunger: 0
   sickness: 0
-  happy: {fileID: 0}
-  Sad: {fileID: 0}
-  sick: {fileID: 0}
+  happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+  Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
   FoodToogle: {fileID: 0}
   MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ShopItem: {fileID: 0}
 --- !u!1 &7738362323173153964
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,8 +332,13 @@ MonoBehaviour:
   Role: 1
   Hunger: 0
   sickness: 0
-  happy: {fileID: 0}
-  Sad: {fileID: 0}
-  sick: {fileID: 0}
+  happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+  Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
   FoodToogle: {fileID: 0}
   MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ShopItem: {fileID: 0}

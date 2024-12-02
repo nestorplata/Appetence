@@ -10421,26 +10421,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1768502991907010996, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: happy
-      value: 
-      objectReference: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
-    - target: {fileID: 1768502991907010996, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: MedCost
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Sad
-      value: 
-      objectReference: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
-    - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: happy
-      value: 
-      objectReference: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
-    - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: MedCost
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3146555016142369333, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: m_Name
       value: FamilyManager
@@ -10484,46 +10464,6 @@ PrefabInstance:
     - target: {fileID: 4209736478958467211, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Sad
-      value: 
-      objectReference: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
-    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: sick
-      value: 
-      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
-    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: happy
-      value: 
-      objectReference: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
-    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: MedCost
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: Sad
-      value: 
-      objectReference: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
-    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: sick
-      value: 
-      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
-    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: happy
-      value: 
-      objectReference: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
-    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: MedCost
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7398776266380784035, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: sick
-      value: 
-      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
-    - target: {fileID: 7398776266380784035, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
-      propertyPath: MedCost
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
