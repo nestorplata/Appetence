@@ -56,4 +56,8 @@ public class ButtonSequencer : MonoBehaviour
     {
         numSequence.Clear();
     }
+
+    private IEnumerator Delay() {
+        yield return new WaitForSeconds(1.0f);
+    }
 }
