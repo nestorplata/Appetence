@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: 50% Discount on Food
   cost: 100
   available: 1
-  itemIcon: {fileID: 21300000, guid: 5f8d334f9cecb184fb75c4b236de56f9, type: 3}
+  itemIcon: {fileID: 21300000, guid: deec2fdfbff83eb44a0aab74167b865e, type: 3}
   nextUpgrade: {fileID: 11400000, guid: 0af0dfe0ab924b54eab063b633c4c00c, type: 2}
   isFinalUpgrade: 0
   ClothingLevel: 1

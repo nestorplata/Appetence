@@ -15,17 +15,25 @@ public class Shop : MonoBehaviour
     [SerializeField]
     private GameObject vertContainer;
 
+
     private ShopUI shop;
+
+    public List<Transform> Shelves;
 
     ////TESTING VARS
     //private int aliveFamily = 0;
     //private int sickFamily = 0;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         int currentDay = familyScript.Instance.getDay();
-
+        foreach(Transform Childs in vertContainer.transform)
+        {
+            Shelves.Add(Childs);
+        }
+        int x = 0;
+        int y = 0;
         foreach (ShopItem ShopItem in shopItems)
         {
             //Setup
@@ -36,7 +44,15 @@ public class Shop : MonoBehaviour
             }
             if (!member.IsDead())
             {
-                GameObject newItem = Instantiate(shopIcon, vertContainer.transform);
+                if(x==2)
+                {
+                    x = 0;
+                    y++;
+                }
+                GameObject newItem = Instantiate(shopIcon, Shelves[y]);
+                x++;
+                //newItem.transform.localPosition = new Vector3(500, 100 * i, 0);
+                //    i++;
                 ShopUI icon = newItem.GetComponent<ShopUI>();
                 
                 if (member.ClothingLevel >= member.ShopItem.GetFinalClothingUpgradeLevel())

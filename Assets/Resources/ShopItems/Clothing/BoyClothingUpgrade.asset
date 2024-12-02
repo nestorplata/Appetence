@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: 50% Discount on Medicine
   cost: 200
   available: 1
-  itemIcon: {fileID: 21300000, guid: 8b0c03b905dc06640ad019da8a19f3b8, type: 3}
+  itemIcon: {fileID: 21300000, guid: f3a819f562cb64143afd607e5af3c305, type: 3}
   nextUpgrade: {fileID: 0}
   isFinalUpgrade: 1
   ClothingLevel: 2

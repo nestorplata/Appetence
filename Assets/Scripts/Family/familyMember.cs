@@ -112,7 +112,7 @@ public class familyMember : MonoBehaviour
     public void UpdateToogleValues()
     {
         FoodToogle.CostText.text = foodCost.ToString();
-        MedToogle.CostText.text = MedToogle.ToString();
+        MedToogle.CostText.text = MedCost.ToString();
 
     }
 }

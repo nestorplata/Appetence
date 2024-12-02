@@ -25,10 +25,9 @@ public class ShopUI : MonoBehaviour
         currentItem = item;
         itemName.text = item.itemName;  // Assign item name
         itemDescription.text = item.itemDescription;  // Assign item description
-        itemCost.text = item.cost.ToString();  // Assign item cost
+        itemCost.text = item.cost.ToString() +"$";  // Assign item cost
 
         // Load the availability state
-        bool savedAvailability = PlayerPrefs.GetInt(currentItem.itemName + "_available", item.available ? 1 : 0) == 1;
         toggleItem.isOn = true;
         currentItem.available = true;
 

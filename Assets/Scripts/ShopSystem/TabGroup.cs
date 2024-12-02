@@ -18,7 +18,7 @@ public class TabGroup : MonoBehaviour
     {
         welcomeText = GameObject.Find("WelcomeText");
         //label = GameObject.Find("Labels");
-        label.SetActive(false);
+        //label.SetActive(false);
     }
     public void AddToList(TabButton button)
     {
