@@ -17,7 +17,7 @@ MonoBehaviour:
   cost: 200
   available: 1
   itemIcon: {fileID: 21300000, guid: 4b540343d9a337b4895118b1f7a9163a, type: 3}
-  nextUpgrade: {fileID: 11400000, guid: ee314b4a6296407448d627cd4a5d02d2, type: 2}
+  nextUpgrade: {fileID: 0}
   isFinalUpgrade: 1
   ClothingLevel: 1
   Owner: 0
