@@ -2481,7 +2481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10fd83fcd8805b84aa9c9db6f234f98f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3570ab84053c82543b4a2799463c505a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2897,11 +2897,11 @@ MonoBehaviour:
   nextDayBtn: {fileID: 416985140}
   levelLoader: {fileID: 1255392225}
   TogList:
+  - {fileID: 1500641657}
   - {fileID: 22135761}
   - {fileID: 62569041}
   - {fileID: 2005832786}
   - {fileID: 1327596714}
-  - {fileID: 1500641657}
   daysToWin: 10
   gameWonScene: GameSurvived
   purchaseSFX: {fileID: 694554856}
@@ -2941,11 +2941,11 @@ MonoBehaviour:
   panel: {fileID: 997251187}
   LetterObject: {fileID: 1508102172}
   FamilySFXObjects:
+  - {fileID: 139213966}
   - {fileID: 1520064853}
   - {fileID: 1957979467}
   - {fileID: 1880819492}
   - {fileID: 247792876}
-  - {fileID: 139213966}
   descriptionText: {fileID: 851898375}
   carBreakdown: {fileID: 748802599}
   drought: {fileID: 1019690693}
@@ -10422,9 +10422,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1768502991907010996, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: happy
+      value: 
+      objectReference: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
+    - target: {fileID: 1768502991907010996, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: MedCost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Sad
+      value: 
+      objectReference: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
+    - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: happy
+      value: 
+      objectReference: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
     - target: {fileID: 1931464673966838899, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: MedCost
       value: 200
@@ -10474,13 +10486,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Sad
+      value: 
+      objectReference: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: sick
+      value: 
+      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
+    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: happy
+      value: 
+      objectReference: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+    - target: {fileID: 4728409124813461762, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: MedCost
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: Sad
+      value: 
+      objectReference: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: sick
+      value: 
+      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
+    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: happy
+      value: 
+      objectReference: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+    - target: {fileID: 5489374887229730229, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: MedCost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7398776266380784035, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
+      propertyPath: sick
+      value: 
+      objectReference: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
     - target: {fileID: 7398776266380784035, guid: 2f2fe80e5ea10904ea18aea0d8c14864, type: 3}
       propertyPath: MedCost
       value: 200

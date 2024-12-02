@@ -133,7 +133,7 @@ public class familyScript : MonoBehaviour
         familyMember Closestmember = null;
         foreach (var member in Family)
         {
-            if (member.GetGeneralState()>= LatestGeneralState)
+            if (member.GetGeneralState()>= LatestGeneralState && member.GetGeneralState()!>=GeneralState.Dead)
             {
                 Closestmember = member;
             }

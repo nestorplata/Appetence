@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
+using System.Linq;
 
 public class EventsManager : MonoBehaviour
 {
@@ -169,9 +170,11 @@ public class EventsManager : MonoBehaviour
             {
                 LetterObject.SetActive(true);
             }
+
             if (!panel.activeSelf)
             {
                 playSFXSuccesion();
+
             }
 
 
@@ -199,39 +202,55 @@ public class EventsManager : MonoBehaviour
 
     public void playSFXSuccesion()
     {
-         
-        familyMember ClosestToDie = familyScript.Instance.GetClosestToDead();
-        GeneralState CurrentState = ClosestToDie.GetGeneralState();
 
+        AudioSource audioSource;
+        familyMember ClosestToDie;
         float audioLength = 0;
-
-        foreach (GameObject Owner in FamilySFXObjects)
+        if (familyScript.Instance.day == 1)
         {
-            if(Owner.GetComponent<ToogleOwner>().Owner == ClosestToDie.Role && CurrentState!=GeneralState.Dead)
-            {
-                AudioSource audioSource = Owner.GetComponent<AudioSource>();
-                switch(CurrentState)
-                {
-                    case GeneralState.Satisfied:
-                        audioSource.clip = ClosestToDie.happy;
-                        break;
-                    case GeneralState.Hungry:
-                        audioSource.clip = ClosestToDie.Sad;
-
-                        break;
-                    case GeneralState.Sick:
-                        audioSource.clip = ClosestToDie.sick;
-
-                        break;
-
-                }
-                if(audioSource.clip)
-                {
-                    audioSource.Play();
-                    audioLength = audioSource.clip.length;
-                }
-            }
         }
+        ClosestToDie = familyScript.Instance.GetFamilyMember(FamilyRole.Baby);
+
+        //else
+        //{
+        //    ClosestToDie = familyScript.Instance.GetClosestToDead();
+        //}
+
+        audioSource = GetRepectiveAudioSource(ClosestToDie.Role);
+        switch (ClosestToDie.GetGeneralState())
+        {
+            case GeneralState.Hungry:
+                audioSource.clip = ClosestToDie.Sad;
+                break;
+            case GeneralState.Sick:
+                audioSource.clip = ClosestToDie.sick;
+                break;
+            default:
+                audioSource.clip = ClosestToDie.happy;
+                break;
+
+        }
+        audioSource.Play();
+        audioLength = audioSource.clip.length;
+        //{
+
+        //    else
+        //    {
+
+        //    }
+        //    if (Owner.GetComponent<ToogleOwner>().Owner == ClosestToDie.Role && CurrentState!=GeneralState.Dead)
+        //    {
+        //        AudioSource audioSource = Owner.GetComponent<AudioSource>();
+
+        //        if(audioSource.clip)
+        //        {
+        //            audioSource.Play();
+        //            audioLength = audioSource.clip.length;
+        //        }
+        //    }
+        //}
+
+       
 
         //money
         int currentMoney = CurrencySystem.Instance.GetCurrency();
@@ -248,6 +267,18 @@ public class EventsManager : MonoBehaviour
         }
 
 
+    }
+
+    public AudioSource GetRepectiveAudioSource(FamilyRole role) {
+
+        foreach (GameObject Owner in FamilySFXObjects)
+        {
+            if(Owner.GetComponent<ToogleOwner>().Owner == role)
+            {
+                return Owner.GetComponent<AudioSource>();
+            }
+        }
+        return FamilySFXObjects.First().GetComponent<AudioSource>();
     }
 
 
