@@ -55,6 +55,9 @@ public class ItemRotator : MonoBehaviour
     [SerializeField]
     Transform _spawnPoint;
 
+    private float delayInput = 1.0f;
+    private bool isDelayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,6 +98,7 @@ public class ItemRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDelayed) return;
         currencyDisplay.text = CurrencySystem.Instance.GetCurrency().ToString();
         if(Input.GetKeyDown(KeyCode.Escape)){
             MenuChange();
@@ -120,6 +124,7 @@ public class ItemRotator : MonoBehaviour
             audioBuzzer.clip = failSound;
             audioBuzzer.Play();
 
+            StartCoroutine(Delay());
         }
         else if (buttonSequencer.GetNumberSequence().Length == itemReader.item.itemSequence.Length)
         {
@@ -144,10 +149,17 @@ public class ItemRotator : MonoBehaviour
             audioBuzzer.clip = correctSound;
             audioBuzzer.Play();
 
+            StartCoroutine(Delay());
         }
-
-
+        
     }
+    // input delay called from update
+    private IEnumerator Delay() {
+        isDelayed = true;
+        yield return new WaitForSeconds(delayInput);
+        isDelayed = false;
+    }
+
     public void MenuChange()
     {
         if(SettingsMenu){
@@ -199,9 +211,4 @@ public class ItemRotator : MonoBehaviour
 
         SceneManager.LoadScene("Main Menu");
     }
-
-
-
 }
-
-
