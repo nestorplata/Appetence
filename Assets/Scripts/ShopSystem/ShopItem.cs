@@ -14,16 +14,16 @@ public class ShopItem : ScriptableObject
     public Sprite itemIcon;
     public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
-    [Range(1,2)]public int ClothingLevel;
+    [Range(1,2)]public int Upgradelevel;
     public FamilyRole Owner;
 
-    public int GetFinalClothingUpgradeLevel()
+    public int GetFinalUpgradeLevel()
     {
         if(nextUpgrade)
         {
-            return nextUpgrade.GetFinalClothingUpgradeLevel();
+            return nextUpgrade.GetFinalUpgradeLevel();
         }
-        return ClothingLevel;
+        return Upgradelevel;
     }
 }
 

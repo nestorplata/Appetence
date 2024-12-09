@@ -55,7 +55,7 @@ public class Shop : MonoBehaviour
                 //    i++;
                 ShopUI icon = newItem.GetComponent<ShopUI>();
                 
-                if (member.ClothingLevel >= member.ShopItem.GetFinalClothingUpgradeLevel())
+                if (member.ClothingLevel >= member.ShopItem.GetFinalUpgradeLevel())
                 {
                     icon.SetupSoldOut(member.ShopItem);
                 }

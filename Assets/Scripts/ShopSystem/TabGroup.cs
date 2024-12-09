@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 public class TabGroup : MonoBehaviour
 {
     public List<TabButton> buttons;
@@ -14,7 +15,7 @@ public class TabGroup : MonoBehaviour
     private GameObject welcomeText;
     [SerializeField] private GameObject label;
 
-    private void Start()
+    public void Start()
     {
         welcomeText = GameObject.Find("WelcomeText");
         //label = GameObject.Find("Labels");
