@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class TechItem : ShopItem
 {
-    GameObject ItemToCreate;
+    
     override public void Functionality(ShopUI UI)
     {
 
     }
+
 }
