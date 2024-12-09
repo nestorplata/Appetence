@@ -7,7 +7,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField]
-    private ShopItem[] shopItems;
+    private ClothingItem[] shopItems;
 
     [SerializeField]
     private GameObject shopIcon;
@@ -34,7 +34,7 @@ public class Shop : MonoBehaviour
         }
         int x = 0;
         int y = 0;
-        foreach (ShopItem ShopItem in shopItems)
+        foreach (ClothingItem ShopItem in shopItems)
         {
             //Setup
             familyMember member = familyScript.Instance.GetFamilyMember(ShopItem.Owner);

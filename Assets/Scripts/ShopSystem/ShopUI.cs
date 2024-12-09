@@ -11,8 +11,8 @@ public class ShopUI : MonoBehaviour
     public Toggle toggleItem;
     public Image itemIcon;
     public Button buyButton;
-    private ShopItem currentItem;
-    private List<ShopItem> boughtItems = new List<ShopItem>();
+    private ClothingItem currentItem;
+    private List<ClothingItem> boughtItems = new List<ClothingItem>();
 
     private FamilyUIManager familyUIManager;
 
@@ -20,7 +20,7 @@ public class ShopUI : MonoBehaviour
     {
        familyUIManager = FindObjectOfType<FamilyUIManager>();
     }
-    public void Setup(ShopItem item)
+    public void Setup(ClothingItem item)
     {
         currentItem = item;
         itemName.text = item.itemName;  // Assign item name
@@ -37,7 +37,7 @@ public class ShopUI : MonoBehaviour
 
     }
 
-    public void SetupSoldOut(ShopItem item)
+    public void SetupSoldOut(ClothingItem item)
     {
         currentItem = item;
         itemName.text = "SOLD OUT";      // Display SOLD OUT
@@ -58,32 +58,7 @@ public class ShopUI : MonoBehaviour
             // Notify FamilyUIManager to change clothing
             if (familyUIManager != null)
             {
-                FamilyRole MemberRole = currentItem.Owner;
-
-                int clothingIndex = currentItem.Upgradelevel;
-                familyMember member = familyScript.Instance.GetFamilyMember(MemberRole);
-                
-
-                member.ChangeClothing(clothingIndex);
-                // Check for next upgrade
-                if (currentItem.nextUpgrade != null)
-                {
-                    member.ShopItem = currentItem.nextUpgrade;
-                    member.foodCost /= 2;
-                    Setup(member.ShopItem);  // Load the next upgrade
-                }
-                else if (currentItem.isFinalUpgrade)
-                {
-                    itemName.text = "SOLD OUT";      // Display SOLD OUT
-                    itemDescription.text = "";       // Clear description
-                    itemCost.text = "";              // Clear cost
-                    buyButton.interactable = false;  // Disable the buy button
-                    member.MedCost /= 2;
-
-                }
-
-                member.UpdateToogleValues();
-
+                currentItem.Functionality(this);
             }
 
 
