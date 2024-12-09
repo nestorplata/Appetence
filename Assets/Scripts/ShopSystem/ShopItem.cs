@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ShopItem", order = 1)]
 
-public class ScriptableItem : ScriptableObject
+public class ShopItem : ScriptableObject
 {
 
     public string itemName = "Affects the price of food";
@@ -10,9 +11,18 @@ public class ScriptableItem : ScriptableObject
     public int cost;
     public bool available;
     public Sprite itemIcon;
-    public ClothingItem nextUpgrade;  // Next upgrade
+    public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
     [Range(1, 2)] public int Upgradelevel;
 
     public virtual void Functionality(ShopUI UI) { }
+
+    public int GetFinalUpgradeLevel()
+    {
+        if (nextUpgrade)
+        {
+            return nextUpgrade.GetFinalUpgradeLevel();
+        }
+        return Upgradelevel;
+    }
 }

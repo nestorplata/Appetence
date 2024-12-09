@@ -5,19 +5,11 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ClothingItem", order = 1)]
-public class ClothingItem : ScriptableItem
+public class ClothingItem : ShopItem
 {
 
     public FamilyRole Owner;
 
-    public int GetFinalUpgradeLevel()
-    {
-        if (nextUpgrade)
-        {
-            return nextUpgrade.GetFinalUpgradeLevel();
-        }
-        return Upgradelevel;
-    }
 
     override public void Functionality(ShopUI UI)
     {

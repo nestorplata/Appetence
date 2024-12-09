@@ -11,8 +11,8 @@ public class ShopUI : MonoBehaviour
     public Toggle toggleItem;
     public Image itemIcon;
     public Button buyButton;
-    private ClothingItem currentItem;
-    private List<ClothingItem> boughtItems = new List<ClothingItem>();
+    private ShopItem currentItem;
+    private List<ShopItem> boughtItems = new List<ShopItem>();
 
     private FamilyUIManager familyUIManager;
 
@@ -20,7 +20,7 @@ public class ShopUI : MonoBehaviour
     {
        familyUIManager = FindObjectOfType<FamilyUIManager>();
     }
-    public void Setup(ClothingItem item)
+    public void Setup(ShopItem item)
     {
         currentItem = item;
         itemName.text = item.itemName;  // Assign item name
@@ -37,7 +37,7 @@ public class ShopUI : MonoBehaviour
 
     }
 
-    public void SetupSoldOut(ClothingItem item)
+    public void SetupSoldOut(ShopItem item)
     {
         currentItem = item;
         itemName.text = "SOLD OUT";      // Display SOLD OUT

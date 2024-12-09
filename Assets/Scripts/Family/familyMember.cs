@@ -20,7 +20,7 @@ public class familyMember : MonoBehaviour
     public int MedCost = 200;
     [Range(0,2)] public int ClothingLevel;
     public List<AnimationState> AnimationStates;
-    public ClothingItem ShopItem;
+    public ShopItem ShopItem;
 
     public static string GetStateString(Enum value)
     {
