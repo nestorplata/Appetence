@@ -7,23 +7,23 @@ using UnityEngine.UIElements;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ClothingItem", order = 1)]
 public class ClothingItem : ShopItem
 {
-
     public FamilyRole Owner;
-
+    private familyMember member;
+    public ClothingItem nextUpgrade;  // Next upgrade
 
     override public void Functionality(ShopUI UI)
     {
 
-        familyMember member = familyScript.Instance.GetFamilyMember(Owner);
 
-        member.ChangeClothing(Upgradelevel);
-        
+        member.ChangeClothing(UpgradeLevel);
+
         // Check for next upgrade
         if (nextUpgrade != null)
         {
-            member.ShopItem = nextUpgrade;
+            nextUpgrade.setMember(member);
+            member.CurrentClothing = nextUpgrade;
             member.foodCost /= 2;
-            UI.Setup(member.ShopItem);  // Load the next upgrade
+            UI.Setup(member.CurrentClothing);  // Load the next upgrade
         }
         else if (isFinalUpgrade)
         {
@@ -36,5 +36,35 @@ public class ClothingItem : ShopItem
 
         member.UpdateToogleValues();
     }
+
+    override public void Instantiate(ShopUI icon)
+    {
+        setMember(familyScript.Instance.GetFamilyMember(Owner));
+
+        icon.Setup(this);
+
+        if (member.CurrentClothing&&
+            member.ClothingLevel >= member.CurrentClothing.GetFinalUpgradeLevel())
+        {
+            icon.SetupSoldOut(member.CurrentClothing);
+        }
+
+
+    }
+
+    public void setMember(familyMember Member)
+    {
+        member = Member;
+    }
+    public int GetFinalUpgradeLevel()
+    {
+        if (nextUpgrade)
+        {
+            return nextUpgrade.GetFinalUpgradeLevel();
+        }
+        return UpgradeLevel;
+    }
+
+
 }
 

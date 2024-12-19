@@ -17,6 +17,6 @@ MonoBehaviour:
   cost: 500
   available: 0
   itemIcon: {fileID: 0}
-  nextUpgrade: {fileID: 0}
   isFinalUpgrade: 0
-  Upgradelevel: 0
+  UpgradeLevel: 1
+  nextUpgrade: {fileID: 0}

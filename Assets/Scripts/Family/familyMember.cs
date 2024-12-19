@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +10,8 @@ using UnityEngine.UI;
 public class familyMember : MonoBehaviour
 {
     public FamilyRole Role;
-    public Hunger Hunger = Hunger.Fine;
-    public Sickness sickness = Sickness.Healthy;
+    public Hunger Hunger;
+    public Sickness sickness;
     public AudioClip happy;
     public AudioClip Sad;
     public AudioClip sick;
@@ -20,7 +21,7 @@ public class familyMember : MonoBehaviour
     public int MedCost = 200;
     [Range(0,2)] public int ClothingLevel;
     public List<AnimationState> AnimationStates;
-    public ShopItem ShopItem;
+    public ClothingItem CurrentClothing;
 
     public static string GetStateString(Enum value)
     {
@@ -93,6 +94,10 @@ public class familyMember : MonoBehaviour
         /*else */return state.GetAnimatedFamily(ClothingLevel);
 
     }
+    public void GetClothingItems()
+    {
+       
+    }
 
     public void ChangeClothing( int Level)
     {
@@ -115,6 +120,7 @@ public class familyMember : MonoBehaviour
         MedToogle.CostText.text = MedCost.ToString();
 
     }
+
 }
 
 public enum GeneralState {

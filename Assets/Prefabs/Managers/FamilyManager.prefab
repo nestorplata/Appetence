@@ -56,7 +56,9 @@ MonoBehaviour:
   MedCost: 200
   ClothingLevel: 0
   AnimationStates: []
-  ShopItem: {fileID: 0}
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 00f1bfe58ff1a324f9b92307c2fd6e98, type: 2}
 --- !u!1 &2960914340927862407
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +115,10 @@ MonoBehaviour:
   MedCost: 200
   ClothingLevel: 0
   AnimationStates: []
-  ShopItem: {fileID: 0}
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 1d23ac1eb2585cf459c698e1fcbcca32, type: 2}
+  - {fileID: 11400000, guid: de6eee231c9fc7c4ba2fc0536368a2a9, type: 2}
 --- !u!1 &3146555016142369333
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +232,10 @@ MonoBehaviour:
   MedCost: 200
   ClothingLevel: 0
   AnimationStates: []
-  ShopItem: {fileID: 0}
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: d24ed56a97aaf2147aad870beb464390, type: 2}
+  - {fileID: 11400000, guid: 0af0dfe0ab924b54eab063b633c4c00c, type: 2}
 --- !u!1 &7261142482429969614
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +292,10 @@ MonoBehaviour:
   MedCost: 200
   ClothingLevel: 0
   AnimationStates: []
-  ShopItem: {fileID: 0}
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 221b1e415632fb54bbb8e2fa5824e420, type: 2}
+  - {fileID: 11400000, guid: ee314b4a6296407448d627cd4a5d02d2, type: 2}
 --- !u!1 &7738362323173153964
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,4 +352,7 @@ MonoBehaviour:
   MedCost: 200
   ClothingLevel: 0
   AnimationStates: []
-  ShopItem: {fileID: 0}
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 7bfdda472db18754aabaab8cd233ccd5, type: 2}
+  - {fileID: 11400000, guid: 13f51e20583f8404f91d7077fb48dd42, type: 2}

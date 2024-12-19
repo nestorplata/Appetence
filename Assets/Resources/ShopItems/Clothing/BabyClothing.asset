@@ -15,9 +15,9 @@ MonoBehaviour:
   itemName: Baby Clothes
   itemDescription: 50% Discount on Food
   cost: 100
-  available: 1
+  available: 0
   itemIcon: {fileID: 21300000, guid: deec2fdfbff83eb44a0aab74167b865e, type: 3}
-  nextUpgrade: {fileID: 11400000, guid: 0af0dfe0ab924b54eab063b633c4c00c, type: 2}
   isFinalUpgrade: 0
-  Upgradelevel: 1
+  UpgradeLevel: 1
   Owner: 4
+  nextUpgrade: {fileID: 11400000, guid: 0af0dfe0ab924b54eab063b633c4c00c, type: 2}

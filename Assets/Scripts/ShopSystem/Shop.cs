@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
@@ -13,7 +14,7 @@ public class Shop : MonoBehaviour
     [SerializeField]
     private GameObject shopIcon;
 
-    private List<PanelItems> ShopPanels;
+    public List<ShopPanel> ShopPanels;
 
 
     private ShopUI shop;
@@ -26,57 +27,38 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-
-        ShopPanels.Add(transform.GetComponentInChildren<PanelItems>());
-
+        ShopPanels = transform.GetComponentsInChildren<ShopPanel>(true).ToList();
         foreach (var panel in ShopPanels)
         {
             InstantiateShopPanel(panel);
         }
     }
 
-    public void InstantiateShopPanel(PanelItems ShopPanel)
+    public void InstantiateShopPanel(ShopPanel ShopPanel)
     {
         List<Transform> Shelves = new List<Transform>();
-
 
         foreach (Transform Childs in ShopPanel.transform)
         {
             Shelves.Add(Childs);
         }
-        int x = 0;
-        int y = 0;
-        foreach (ClothingItem ShopItem in ShopPanel.shopItems)
+        Vector2 Shelve = Vector2.zero;
+
+
+        foreach (var Item in ShopPanel.shopItems)
         {
-            //Setup
-            familyMember member = familyScript.Instance.GetFamilyMember(ShopItem.Owner);
-            if (!member.ShopItem)
+            
+            if (Shelve.x == 2)
             {
-                member.ShopItem = ShopItem;
+                Shelve.x = 0;
+                Shelve.y++;
             }
-            if (!member.IsDead())
-            {
-                if (x == 2)
-                {
-                    x = 0;
-                    y++;
-                }
-                GameObject newItem = Instantiate(shopIcon, Shelves[y]);
-                x++;
-                //newItem.transform.localPosition = new Vector3(500, 100 * i, 0);
-                //    i++;
-                ShopUI icon = newItem.GetComponent<ShopUI>();
+            GameObject newItem = Instantiate(shopIcon, Shelves[(int)Shelve.y]);
+            Shelve.x++;
+            ShopUI Icon = newItem.GetComponent<ShopUI>();
 
-                if (member.ClothingLevel >= member.ShopItem.GetFinalUpgradeLevel())
-                {
-                    icon.SetupSoldOut(member.ShopItem);
-                }
-                else
-                {
-                    icon.Setup(member.ShopItem);
-                }
+            Item.Instantiate(Icon);
 
-            }
         }
     }
 }

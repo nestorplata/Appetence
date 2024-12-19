@@ -5,24 +5,21 @@ using UnityEngine;
 
 public class ShopItem : ScriptableObject
 {
-
+    
     public string itemName = "Affects the price of food";
     public string itemDescription = "Cheapens food price";
     public int cost;
     public bool available;
     public Sprite itemIcon;
-    public ShopItem nextUpgrade;  // Next upgrade
     public bool isFinalUpgrade;   // Flag for final upgrade
-    [Range(1, 2)] public int Upgradelevel;
+    [Range(1, 2)] public int UpgradeLevel;
+
+
 
     public virtual void Functionality(ShopUI UI) { }
+    public virtual void Instantiate(ShopUI icon) {}
 
-    public int GetFinalUpgradeLevel()
-    {
-        if (nextUpgrade)
-        {
-            return nextUpgrade.GetFinalUpgradeLevel();
-        }
-        return Upgradelevel;
-    }
+
+
+
 }

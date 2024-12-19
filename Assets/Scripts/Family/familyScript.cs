@@ -16,11 +16,10 @@ public class familyScript : MonoBehaviour
     [SerializeField] familyMember[] Family;
 
     public static int StartingDay { get; private set; } = 1;
+
     [Range(0, 4)] public int FamilyAllowedToPerish =1;
 
-
     public static familyScript Instance { get; private set; }
-    
 
     [HideInInspector]public int day = 0;
 

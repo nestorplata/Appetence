@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32aeeebc479d33749a6e0cceff575560, type: 3}
-  m_Name: DadClothing
+  m_Script: {fileID: 11500000, guid: d13319e2306d97c4a885967e34cfe0ae, type: 3}
+  m_Name: HeaterUpgrade
   m_EditorClassIdentifier: 
-  itemName: Dad Clothing
-  itemDescription: 50% Discount on Medicine
-  cost: 200
-  available: 1
-  itemIcon: {fileID: 21300000, guid: 4b540343d9a337b4895118b1f7a9163a, type: 3}
+  itemName: Heater
+  itemDescription: Makes family less likely to get sick
+  cost: 1000
+  available: 0
+  itemIcon: {fileID: 0}
   isFinalUpgrade: 1
-  UpgradeLevel: 1
-  Owner: 0
+  UpgradeLevel: 2
   nextUpgrade: {fileID: 0}
