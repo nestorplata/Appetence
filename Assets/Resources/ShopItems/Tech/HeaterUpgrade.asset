@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: HeaterUpgrade
   m_EditorClassIdentifier: 
   itemName: Heater
-  itemDescription: Makes family less likely to get sick
+  itemDescription: Makes family Impossible to get sick
   cost: 1000
-  available: 0
+  available: 1
   itemIcon: {fileID: 0}
   isFinalUpgrade: 1
   UpgradeLevel: 2
   nextUpgrade: {fileID: 0}
+  SicknessChance: 100
