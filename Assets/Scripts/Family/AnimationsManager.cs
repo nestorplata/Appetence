@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 //using static UnityEditor.VersionControl.Asset;
 
-public class FamilyUIManager : MonoBehaviour
+public class AnimationsManager : MonoBehaviour
 {
     //[SerializeField]
     //private GameObject satisfiedState;
@@ -16,8 +16,8 @@ public class FamilyUIManager : MonoBehaviour
     //private GameObject sickState;
 
     //private Dictionary<string, Dictionary<string, GameObject[]>> clothingOptions;
-    public List<AnimationsOwner> Animations;
-
+    public List<AnimationsOwner> FamilyAnimations;
+    private FamilyMenuScript menuScript;
 
 
 
@@ -36,12 +36,15 @@ public class FamilyUIManager : MonoBehaviour
 
     private void InitializeAnimations()
     {
-        foreach (var Animation in Animations)
+        menuScript = GetComponent<FamilyMenuScript>();
+        foreach (var Animation in FamilyAnimations)
         {
             Animation.Initialize();
             familyMember member = familyScript.Instance.GetFamilyMember(Animation.Owner);
             member.AnimationStates = Animation.States;
         }
+
+
     }
 
     private void LoadClothingLevel()

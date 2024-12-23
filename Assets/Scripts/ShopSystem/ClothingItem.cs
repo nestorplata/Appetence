@@ -11,7 +11,7 @@ public class ClothingItem : ShopItem
     private familyMember member;
     public ClothingItem nextUpgrade;  // Next upgrade
 
-    override public void Functionality(ShopUI UI)
+    override public void Functionality(ShopItemUI UI)
     {
 
 
@@ -37,7 +37,7 @@ public class ClothingItem : ShopItem
         member.UpdateToogleValues();
     }
 
-    override public void Instantiate(ShopUI icon)
+    override public void Instantiate(ShopItemUI icon)
     {
         setMember(familyScript.Instance.GetFamilyMember(Owner));
 

@@ -284,6 +284,10 @@ public class FamilyMenuScript : MonoBehaviour
         return total;
     }    
 
+    public GameObject GetShopUI()
+    {
+        return shopUI;
+    }
 
 
 

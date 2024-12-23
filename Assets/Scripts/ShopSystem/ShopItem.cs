@@ -16,8 +16,8 @@ public class ShopItem : ScriptableObject
 
 
 
-    public virtual void Functionality(ShopUI UI) { }
-    public virtual void Instantiate(ShopUI icon) {}
+    public virtual void Functionality(ShopItemUI UI) { }
+    public virtual void Instantiate(ShopItemUI icon) {}
 
 
 

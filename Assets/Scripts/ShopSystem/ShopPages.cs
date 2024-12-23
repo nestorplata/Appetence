@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Windows;
 //using static UnityEditor.Progress;
 
-public class Shop : MonoBehaviour
+public class ShopPages : MonoBehaviour
 {
 
 
@@ -15,10 +15,6 @@ public class Shop : MonoBehaviour
     private GameObject shopIcon;
 
     public List<ShopPanel> ShopPanels;
-
-
-    private ShopUI shop;
-
 
     ////TESTING VARS
     //private int aliveFamily = 0;
@@ -55,7 +51,7 @@ public class Shop : MonoBehaviour
             }
             GameObject newItem = Instantiate(shopIcon, Shelves[(int)Shelve.y]);
             Shelve.x++;
-            ShopUI Icon = newItem.GetComponent<ShopUI>();
+            ShopItemUI Icon = newItem.GetComponent<ShopItemUI>();
 
             Item.Instantiate(Icon);
 

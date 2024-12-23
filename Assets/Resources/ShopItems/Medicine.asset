@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Medicine
   m_EditorClassIdentifier: 
   itemName: Medicine
+  itemDescription: Cheapens food price
   cost: 200
-  availible: 0
+  available: 0
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  isFinalUpgrade: 0
+  UpgradeLevel: 1
+  Owner: 0
+  nextUpgrade: {fileID: 0}

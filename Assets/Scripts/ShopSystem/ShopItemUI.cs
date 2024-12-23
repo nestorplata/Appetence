@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-public class ShopUI : MonoBehaviour
+public class ShopItemUI : MonoBehaviour
 {
     public TMP_Text itemName;
     public TMP_Text itemDescription;
@@ -14,11 +14,11 @@ public class ShopUI : MonoBehaviour
     private ShopItem currentItem;
     private List<ShopItem> boughtItems = new List<ShopItem>();
 
-    private FamilyUIManager familyUIManager;
+    private AnimationsManager familyUIManager;
 
     private void Start()
     {
-       familyUIManager = FindObjectOfType<FamilyUIManager>();
+       familyUIManager = FindObjectOfType<AnimationsManager>();
     }
     public void Setup(ShopItem item)
     {

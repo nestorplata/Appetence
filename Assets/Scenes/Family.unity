@@ -2466,6 +2466,7 @@ GameObject:
   - component: {fileID: 559342038}
   - component: {fileID: 559342039}
   - component: {fileID: 559342040}
+  - component: {fileID: 559342041}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2656,15 +2657,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 559342032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afdba599c0921d748a3507796cdf15df, type: 3}
+  m_Script: {fileID: 11500000, guid: 691e243782a382b469c468445e6af422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animations:
-  - {fileID: 516700700}
-  - {fileID: 307992090}
+  FamilyAnimations:
+  - {fileID: 455553709}
   - {fileID: 311118558}
   - {fileID: 524210133}
-  - {fileID: 455553709}
+  - {fileID: 307992090}
+  - {fileID: 516700700}
+--- !u!114 &559342041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559342032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35eadd2c9e9ec9b47bf53c27903f7d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TechAnimations: []
 --- !u!1 &595227400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a9a638f1399d94abc7106e9567f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &724681483
 GameObject:
   m_ObjectHideFlags: 0
@@ -7054,6 +7069,7 @@ MonoBehaviour:
   technologies:
   - animator: {fileID: 700946731}
     item: {fileID: 11400000, guid: 74e180961aafb1945bbbef214990b78b, type: 2}
+  techitems: []
 --- !u!1 &1550663522
 GameObject:
   m_ObjectHideFlags: 0

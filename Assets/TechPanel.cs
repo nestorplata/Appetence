@@ -13,11 +13,13 @@ public class TechPanel : ShopPanel
     
     public List<Technology> technologies;
     
+    public List<TechItem> techitems;
+
 
 }
 
 [System.Serializable]
-public struct Technology
+public class Technology 
 {
     public TechAnimator animator;
     public TechItem item;

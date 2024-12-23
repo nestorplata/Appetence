@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TechItem", order = 2)]
@@ -9,11 +10,13 @@ public class TechItem : ShopItem
 {
     public TechItem nextUpgrade;  // Next upgrade
     [Range(0,100)]public int SicknessChance = 50;
-    TechAnimator animator;
-    override public void Functionality(ShopUI UI)
+    public TechType type;
+    public TechAnimator animator;
+    override public void Functionality(ShopItemUI UI)
     {
         if (nextUpgrade != null)
         {
+            animator.addUpgradeLevel();
             UI.Setup(nextUpgrade);  // Load the next upgrade
         }
         else if (isFinalUpgrade)
@@ -25,7 +28,7 @@ public class TechItem : ShopItem
         
     }
 
-    override public void Instantiate(ShopUI icon)
+    override public void Instantiate(ShopItemUI icon)
     {
         
 
@@ -35,6 +38,7 @@ public class TechItem : ShopItem
         {
             icon.SetupSoldOut(this);
         }
+        
 
     }
 
@@ -47,4 +51,10 @@ public class TechItem : ShopItem
         }
         return UpgradeLevel;
     }
+}
+
+public enum TechType
+{
+    Heater,
+
 }
