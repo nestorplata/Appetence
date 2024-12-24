@@ -39,7 +39,7 @@ public class ShopManager : MonoBehaviour
         TechAnimations = TechAnimContainer.GetComponentsInChildren<TechAnimator>().ToList();
         TabGroup = Shop.GetComponentInChildren<TabGroup>();
         ShopPages = Shop.GetComponentInChildren<ShopScriptable>();
-        ShopPages.Instantiate();
+        //ShopPages.Instantiate();
 
     }
 

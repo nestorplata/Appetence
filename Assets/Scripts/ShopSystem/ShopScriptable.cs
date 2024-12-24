@@ -1,70 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
 //using static UnityEditor.Progress;
 
+//Make singleton
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Shop", order = 2)]
 public class ShopScriptable : ScriptableObject
 {
+    [field: SerializeField]
+    public GameObject ShopWindow{ get; private set; }
 
+    [field: SerializeField]
+    public GameObject ShopPanelContainer {  get; private set;  }
 
-    [SerializeField]
-    private GameObject ShopWindow;
-    [SerializeField]
-    private GameObject ShopPanelContainer;
-    [SerializeField]
-    private GameObject ShopPanel;
-    [SerializeField]
-    private GameObject ItemIcon;
-    public List<ShopPanel> ShopPanels;
+    [field: SerializeField]
+    public GameObject ShopPanel { get; private set; }
+    [field: SerializeField]
+    public GameObject ItemIcon { get; private set; }
+    [field: SerializeField]
+    public List<ShopPanel> ShopPanels { get; private set; }
 
     ////TESTING VARS
     //private int aliveFamily = 0;
     //private int sickFamily = 0;
 
     // Start is called before the first frame update
-    public void Instantiate()
-    {
-        //ShopPanels = transform.GetComponentsInChildren<ShopPanel>(true).ToList();
-        //foreach (var panel in ShopPanels)
-        //{
-        //    InstantiateShopPanel(panel);
-        //    panel.Instantiate();
-        //}
-    }
-
-    public void InstantiateShopPanel(ShopPanel ShopPanel)
-    {
-        List<Transform> Shelves = new List<Transform>();
-
-        //foreach (Transform Childs in ShopPanel.transform)
-        //{
-        //    Shelves.Add(Childs);
-        //}
-        //Vector2 Shelve = Vector2.zero;
-
-
-        //foreach (var Item in ShopPanel.shopItems)
-        //{
-            
-        //    if (Shelve.x == 2)
-        //    {
-        //        Shelve.x = 0;
-        //        Shelve.y++;
-        //    }
-        //    GameObject newItem = Instantiate(shopIcon, Shelves[(int)Shelve.y]);
-        //    Shelve.x++;
-        //    ShopItemUI Icon = newItem.GetComponent<ShopItemUI>();
-
-        //    Item.Instantiate(Icon);
-
-
-        //}
-    }
+    
 
     public ShopPanel GetPanel(System.Type type)
     {
