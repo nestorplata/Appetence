@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ClothingItem", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Item/Clothing", order = 1)]
 public class ClothingItem : ShopItem
 {
     public FamilyRole Owner;

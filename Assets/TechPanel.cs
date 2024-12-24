@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
 
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Panel/Technology", order = 2)]
 public class TechPanel : ShopPanel
 {
     public List<TechItem> TechItems;

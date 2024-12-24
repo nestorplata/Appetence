@@ -7,14 +7,19 @@ using UnityEngine;
 using UnityEngine.Windows;
 //using static UnityEditor.Progress;
 
-public class ShopPages : MonoBehaviour
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Shop", order = 2)]
+public class ShopScriptable : ScriptableObject
 {
 
 
-    
     [SerializeField]
-    private GameObject shopIcon;
-
+    private GameObject ShopWindow;
+    [SerializeField]
+    private GameObject ShopPanelContainer;
+    [SerializeField]
+    private GameObject ShopPanel;
+    [SerializeField]
+    private GameObject ItemIcon;
     public List<ShopPanel> ShopPanels;
 
     ////TESTING VARS
@@ -24,23 +29,23 @@ public class ShopPages : MonoBehaviour
     // Start is called before the first frame update
     public void Instantiate()
     {
-        ShopPanels = transform.GetComponentsInChildren<ShopPanel>(true).ToList();
-        foreach (var panel in ShopPanels)
-        {
-            InstantiateShopPanel(panel);
-            panel.Instantiate();
-        }
+        //ShopPanels = transform.GetComponentsInChildren<ShopPanel>(true).ToList();
+        //foreach (var panel in ShopPanels)
+        //{
+        //    InstantiateShopPanel(panel);
+        //    panel.Instantiate();
+        //}
     }
 
     public void InstantiateShopPanel(ShopPanel ShopPanel)
     {
         List<Transform> Shelves = new List<Transform>();
 
-        foreach (Transform Childs in ShopPanel.transform)
-        {
-            Shelves.Add(Childs);
-        }
-        Vector2 Shelve = Vector2.zero;
+        //foreach (Transform Childs in ShopPanel.transform)
+        //{
+        //    Shelves.Add(Childs);
+        //}
+        //Vector2 Shelve = Vector2.zero;
 
 
         //foreach (var Item in ShopPanel.shopItems)

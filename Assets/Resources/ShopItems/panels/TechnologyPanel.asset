@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32aeeebc479d33749a6e0cceff575560, type: 3}
-  m_Name: Empty
+  m_Script: {fileID: 11500000, guid: 8172bc385b77f9d4faa64f464f2ba6f3, type: 3}
+  m_Name: TechnologyPanel
   m_EditorClassIdentifier: 
-  itemName: Null
-  itemDescription: Null
-  cost: 0
-  available: 0
-  itemIcon: {fileID: 0}
-  isFinalUpgrade: 0
-  UpgradeLevel: 1
-  Owner: 0
-  nextUpgrade: {fileID: 0}
+  TechItems:
+  - {fileID: 11400000, guid: 74e180961aafb1945bbbef214990b78b, type: 2}

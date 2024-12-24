@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TechItem", order = 2)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Item/Technology", order = 2)]
 
 public class TechItem : ShopItem
 {
