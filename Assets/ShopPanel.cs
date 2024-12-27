@@ -8,13 +8,11 @@ public class ShopPanel : MonoBehaviour
     public ScriptablePanel ScriptablePanel;
     public List<GameObject> Shelves;
 
-    public ShopPanel(ScriptablePanel Panel)
-    {
-        this.ScriptablePanel = Panel;
 
-    }
-    public void InstantiateItems(GameObject ItemIcon)
+    public void InstantiateItems(ScriptablePanel ScriptablePanel, GameObject ItemIcon)
     {
+        this.ScriptablePanel = ScriptablePanel;
+
         ScriptablePanel.Instantiate();
         foreach (Transform shelve in transform)
         {
@@ -22,7 +20,7 @@ public class ShopPanel : MonoBehaviour
         }
         Vector2 ShelvePosition = Vector2.zero;
 
-        foreach (var Item in ScriptablePanel.Items)
+        foreach (var Item in ScriptablePanel.GetItems())
         {
             if (ShelvePosition.x == 2)
             {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46256cd0dedaeb040bc9da93703c2659, type: 3}
   m_Name: ClothingPanel
   m_EditorClassIdentifier: 
-  shopItems:
+  ClothItems:
   - {fileID: 11400000, guid: d24ed56a97aaf2147aad870beb464390, type: 2}
   - {fileID: 11400000, guid: 1d23ac1eb2585cf459c698e1fcbcca32, type: 2}
   - {fileID: 11400000, guid: 00f1bfe58ff1a324f9b92307c2fd6e98, type: 2}

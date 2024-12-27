@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
@@ -12,6 +13,11 @@ public class TechPanel : ScriptablePanel
     {
 
        // ShopManager.Instance.TechAnimations;
+    }
+
+    public override List<ShopItem> GetItems()
+    {
+        return TechItems.ToList<ShopItem>();
     }
 
 

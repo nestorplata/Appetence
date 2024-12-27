@@ -15,15 +15,15 @@ public class shopSetter : MonoBehaviour
 
     public void Instantiate()
     {
-        
-        foreach (var PanelScript in  Scriptable.ShopPanels)
+        foreach (ScriptablePanel ScriptablePanel in  Scriptable.ShopPanels)
         {
-            ShopPanel Panel = Panel = new ShopPanel(PanelScript);
 
             GameObject PanelObject = Instantiate(Scriptable.ShopPanelContainer, transform);
-            PanelObject.AddComponent<ShopPanel>();
-            Panel.InstantiateItems(Scriptable.ItemIcon);
+            ShopPanel Panel = PanelObject.GetComponent<ShopPanel>();
+            Panel.InstantiateItems(ScriptablePanel, Scriptable.ItemIcon);
             ShopPanels.Add(Panel);
+
+
         }
     }
 
