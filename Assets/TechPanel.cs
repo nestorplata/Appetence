@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Windows;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Panel/Technology", order = 2)]
-public class TechPanel : ShopPanel
+public class TechPanel : ScriptablePanel
 {
     public List<TechItem> TechItems;
     public override void Instantiate()

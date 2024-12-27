@@ -1021,15 +1021,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8527321110273333119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b527100bdae9f4f8c4a886a8396b16, type: 3}
+  m_Script: {fileID: 11500000, guid: 409e87b6c12d95c4780ae68be8fc6c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: {fileID: 8235760354446409814}
-  itemDescription: {fileID: 9042101779072662185}
-  itemCost: {fileID: 6131164611825124824}
-  toggleItem: {fileID: 6123187847246330432}
-  itemIcon: {fileID: 1047982535978646272}
-  buyButton: {fileID: 3057154485268874340}
+  itemName: {fileID: 0}
+  itemDescription: {fileID: 0}
+  itemCost: {fileID: 0}
+  toggleItem: {fileID: 0}
+  itemIcon: {fileID: 0}
+  buyButton: {fileID: 0}
 --- !u!223 &3683942120832624312
 Canvas:
   m_ObjectHideFlags: 0

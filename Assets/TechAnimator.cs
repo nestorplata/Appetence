@@ -12,6 +12,7 @@ public class TechAnimator : MonoBehaviour
     void Start()
     {
         m_Animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame

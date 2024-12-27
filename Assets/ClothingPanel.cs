@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Panel/Clothing", order = 2)]
 
-public class ClothingPanel : ShopPanel
+public class ClothingPanel : ScriptablePanel
 {
     [SerializeField]
     public List<ClothingItem> shopItems;

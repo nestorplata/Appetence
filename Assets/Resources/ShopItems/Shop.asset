@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609618fe2878d3b4cbb174062854e3a7, type: 3}
   m_Name: Shop
   m_EditorClassIdentifier: 
-  ShopWindow: {fileID: 334317726101875499, guid: 6e4ea0bfc0e2f054c9b87fa25648ee2e, type: 3}
-  ShopPanelContainer: {fileID: 0}
-  ShopPanel: {fileID: 7004569675065748707, guid: d257e5b5581f4744a95acf8c0219a317, type: 3}
-  ItemIcon: {fileID: 8527321110273333119, guid: 9cf0dc84ac0c3564981ed7c239519a80, type: 3}
-  ShopPanels:
+  <ShopPanelContainer>k__BackingField: {fileID: 7004569675065748707, guid: d257e5b5581f4744a95acf8c0219a317, type: 3}
+  <ItemIcon>k__BackingField: {fileID: 8527321110273333119, guid: 9cf0dc84ac0c3564981ed7c239519a80, type: 3}
+  <ShopPanels>k__BackingField:
   - {fileID: 11400000, guid: a3df1db02c351844290db1adea63c21f, type: 2}
   - {fileID: 11400000, guid: e8a5da45069251a42afeabf5bc38e723, type: 2}

@@ -11,7 +11,7 @@ public class TabGroup : MonoBehaviour
     public Sprite tabHover;
     public Sprite tabActive;
     public TabButton tabSelected;
-    public List<GameObject> panels;
+    public List<ShopPanel> panels;
     private GameObject welcomeText;
     [SerializeField] private GameObject label;
 
@@ -45,11 +45,11 @@ public class TabGroup : MonoBehaviour
         {
             if (i == index)
             {
-                panels[i].SetActive(true);               
+                panels[i].gameObject.SetActive(true);               
             }
             else
             {
-                panels[i].SetActive(false);
+                panels[i].gameObject.SetActive(false);
             }
         }
     }

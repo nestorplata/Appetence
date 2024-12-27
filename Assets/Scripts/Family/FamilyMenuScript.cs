@@ -14,9 +14,12 @@ public class FamilyMenuScript : MonoBehaviour
     private GameObject settingsUI;
     private bool SettingsMenu = false;
 
-    [SerializeField] 
+    [SerializeField]
     private GameObject shopUI;
     private bool shopMenu = false;
+
+    [field: SerializeField]
+    public GameObject TechAnimations { private set; get; }
 
     [SerializeField]
     private GameObject tutorialBackground;
@@ -102,7 +105,8 @@ public class FamilyMenuScript : MonoBehaviour
 
             member.FoodToogle.gameObject.SetActive(!member.IsDead());
         }
-
+        
+        
         
 
         //UpdateGameOverText();

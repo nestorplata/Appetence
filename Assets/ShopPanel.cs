@@ -1,18 +1,42 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 
-public class ShopPanel : ScriptableObject
+
+public class ShopPanel : MonoBehaviour
 {
-    private List<ShopItem> Items = new List<ShopItem>();
-    public virtual void Instantiate()
+    public ScriptablePanel ScriptablePanel;
+    public List<GameObject> Shelves;
+
+    public ShopPanel(ScriptablePanel Panel)
     {
-        
-        throw new NotImplementedException();
+        this.ScriptablePanel = Panel;
+
     }
-    //Call this at the end
-    public void SetItems(List<ShopItem> items)
-        { this.Items = items; }
+    public void InstantiateItems(GameObject ItemIcon)
+    {
+        ScriptablePanel.Instantiate();
+        foreach (Transform shelve in transform)
+        {
+            Shelves.Add(shelve.gameObject);
+        }
+        Vector2 ShelvePosition = Vector2.zero;
+
+        foreach (var Item in ScriptablePanel.Items)
+        {
+            if (ShelvePosition.x == 2)
+            {
+                ShelvePosition.x = 0;
+                ShelvePosition.y++;
+            }
+            GameObject newItem = Instantiate(ItemIcon, Shelves[(int)ShelvePosition.y].transform);
+            ShelvePosition.x++;
+            ShopItemUI Icon = newItem.GetComponent<ShopItemUI>();
+
+            Item.Instantiate(Icon);
+
+
+        }
+    }
 }
+

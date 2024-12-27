@@ -15,18 +15,15 @@ using UnityEngine.Windows;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Shop", order = 2)]
 public class ShopScriptable : ScriptableObject
 {
-    [field: SerializeField]
-    public GameObject ShopWindow{ get; private set; }
+
 
     [field: SerializeField]
     public GameObject ShopPanelContainer {  get; private set;  }
 
     [field: SerializeField]
-    public GameObject ShopPanel { get; private set; }
-    [field: SerializeField]
     public GameObject ItemIcon { get; private set; }
     [field: SerializeField]
-    public List<ShopPanel> ShopPanels { get; private set; }
+    public List<ScriptablePanel> ShopPanels { get; private set; }
 
     ////TESTING VARS
     //private int aliveFamily = 0;
@@ -35,7 +32,7 @@ public class ShopScriptable : ScriptableObject
     // Start is called before the first frame update
     
 
-    public ShopPanel GetPanel(System.Type type)
+    public ScriptablePanel GetPanel(System.Type type)
     {
         foreach(var Panel in ShopPanels)
         {
