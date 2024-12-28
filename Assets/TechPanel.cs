@@ -9,12 +9,29 @@ using UnityEngine.Windows;
 public class TechPanel : ScriptablePanel
 {
     public List<TechItem> TechItems;
+    
     public override void Instantiate()
     {
-
-       // ShopManager.Instance.TechAnimations;
+        foreach(var Animation in AnimationsManager.Instance.TechAnimations)
+        {
+            Animation.Item = GetItem(Animation.TechType);
+            GetItem(Animation.TechType).animator = Animation;
+            /*TechItem item =*/
+            //item.animator = Animation;
+        }
     }
 
+    public TechItem GetItem(TechType TechType)
+    {
+        foreach(var item in TechItems)
+        {
+            if (item.TechType ==TechType)
+            {
+                return item;
+            }
+        }
+        return null;
+    }
     public override List<ShopItem> GetItems()
     {
         return TechItems.ToList<ShopItem>();

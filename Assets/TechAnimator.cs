@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class TechAnimator : MonoBehaviour
 {
-    Animator m_Animator;
-    public TechType type;
+    public Animator m_Animator;
+    public TechType TechType;
+    public TechItem Item;
     string UpgradeKey = "UpgradeLevel";
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,14 @@ public class TechAnimator : MonoBehaviour
 
     public void ChangeUpgradeLevel(int i)
     {
-        if(i>=0 != i<=3)
+        if(i>=0 && i<=3)
         {
             m_Animator.SetInteger(UpgradeKey, i);
         }
-        Debug.Log("range not taken");
+        else
+        {
+            Debug.Log("range not taken");
+        }
     }
     public void addUpgradeLevel()
     {

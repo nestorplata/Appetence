@@ -10,16 +10,30 @@ public class TechItem : ShopItem
 {
     public TechItem nextUpgrade;  // Next upgrade
     [Range(0,100)]public int SicknessChance = 50;
-    public TechType type;
+    public TechType TechType;
     public TechAnimator animator;
+    override public void Instantiate(ShopItemUI icon)
+    {
+
+
+        icon.Setup(this);
+
+        //if (UpgradeLevel >= GetFinalUpgradeLevel())
+        //{
+        //    icon.SetupSoldOut(this);
+        //}
+
+
+    }
     override public void Functionality(ShopItemUI UI)
     {
-        if (nextUpgrade != null)
+        animator.addUpgradeLevel();
+        if (!isFinalUpgrade())
         {
-            animator.addUpgradeLevel();
             UI.Setup(nextUpgrade);  // Load the next upgrade
+            nextUpgrade.animator = animator;
         }
-        else if (isFinalUpgrade)
+        else 
         {
 
             UI.SetupSoldOut(this);
@@ -28,19 +42,7 @@ public class TechItem : ShopItem
         
     }
 
-    override public void Instantiate(ShopItemUI icon)
-    {
-        
 
-        icon.Setup(this);
-
-        if (UpgradeLevel >= GetFinalUpgradeLevel())
-        {
-            icon.SetupSoldOut(this);
-        }
-        
-
-    }
 
 
     public int GetFinalUpgradeLevel()
@@ -50,6 +52,10 @@ public class TechItem : ShopItem
             return nextUpgrade.GetFinalUpgradeLevel();
         }
         return UpgradeLevel;
+    }
+    public bool isFinalUpgrade()
+    {
+        return !nextUpgrade;
     }
 }
 

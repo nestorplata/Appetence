@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,36 +9,37 @@ using UnityEngine.UI;
 
 public class AnimationsManager : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameObject satisfiedState;
-    //[SerializeField]
-    //private GameObject hungryState;
-    //[SerializeField]
-    //private GameObject sickState;
+    public static AnimationsManager Instance { get; private set; }
 
-    //private Dictionary<string, Dictionary<string, GameObject[]>> clothingOptions;
-    public List<AnimationsOwner> FamilyAnimations;
+    //Family
     private FamilyMenuScript menuScript;
+    public List<AnimationsOwner> FamilyAnimations;
 
+    //Tech
+    [field: SerializeField]
+    public GameObject TechAnimationsObject { private set; get; }
+    public List<TechAnimator> TechAnimations;
 
-
-
+    public void Awake()
+    {
+    }
     // Start is called before the first frame update
     private void Start()
     {
+        Instance = this;
+
         InitializeAnimations();
         LoadClothingLevel();
 
-        //if (!familyScript.Instance.IsFirstDay())
-        //{
 
-        //}
     }
 
 
     private void InitializeAnimations()
     {
         menuScript = GetComponent<FamilyMenuScript>();
+        TechAnimations = TechAnimationsObject.GetComponentsInChildren<TechAnimator>().ToList();
+
         foreach (var Animation in FamilyAnimations)
         {
             Animation.Initialize();

@@ -17,7 +17,8 @@ MonoBehaviour:
   cost: 500
   available: 0
   itemIcon: {fileID: 21300000, guid: cdb395864435d814996d3af26b2f76f6, type: 3}
-  isFinalUpgrade: 0
   UpgradeLevel: 1
-  nextUpgrade: {fileID: 11400000, guid: e33c8e59da9309746ac62a04002167be, type: 2}
+  nextUpgrade: {fileID: 0}
   SicknessChance: 50
+  TechType: 0
+  animator: {fileID: 0}

@@ -2591,7 +2591,6 @@ MonoBehaviour:
   playUI: {fileID: 1675148292}
   settingsUI: {fileID: 2045931733}
   shopUI: {fileID: 449375466}
-  <TechAnimations>k__BackingField: {fileID: 1443841244}
   tutorialBackground: {fileID: 965835204}
   tutorialText: {fileID: 1212910087}
   currency: {fileID: 422707478}
@@ -2679,6 +2678,8 @@ MonoBehaviour:
   - {fileID: 524210133}
   - {fileID: 307992090}
   - {fileID: 516700700}
+  <TechAnimationsObject>k__BackingField: {fileID: 1443841244}
+  TechAnimations: []
 --- !u!1 &595227400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,7 +3457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a9a638f1399d94abc7106e9567f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  m_Animator: {fileID: 0}
+  TechType: 0
+  Item: {fileID: 0}
 --- !u!1 &724681483
 GameObject:
   m_ObjectHideFlags: 0

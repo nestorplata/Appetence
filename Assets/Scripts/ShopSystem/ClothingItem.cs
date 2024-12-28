@@ -18,20 +18,17 @@ public class ClothingItem : ShopItem
         member.ChangeClothing(UpgradeLevel);
 
         // Check for next upgrade
-        if (nextUpgrade != null)
+        if (!isFinalUpgrade())
         {
             nextUpgrade.setMember(member);
             member.CurrentClothing = nextUpgrade;
             member.foodCost /= 2;
             UI.Setup(member.CurrentClothing);  // Load the next upgrade
         }
-        else if (isFinalUpgrade)
+        else
         {
-
             member.MedCost /= 2;
             UI.SetupSoldOut(this);
-
-
         }
 
         member.UpdateToogleValues();
@@ -63,6 +60,10 @@ public class ClothingItem : ShopItem
             return nextUpgrade.GetFinalUpgradeLevel();
         }
         return UpgradeLevel;
+    }
+    public bool isFinalUpgrade()
+    {
+        return !nextUpgrade;
     }
 
 

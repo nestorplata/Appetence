@@ -11,7 +11,6 @@ public class ShopItem : ScriptableObject
     public int cost;
     public bool available;
     public Sprite itemIcon;
-    public bool isFinalUpgrade;   // Flag for final upgrade
     [Range(1, 2)] public int UpgradeLevel;
 
 

@@ -18,8 +18,7 @@ public class FamilyMenuScript : MonoBehaviour
     private GameObject shopUI;
     private bool shopMenu = false;
 
-    [field: SerializeField]
-    public GameObject TechAnimations { private set; get; }
+
 
     [SerializeField]
     private GameObject tutorialBackground;

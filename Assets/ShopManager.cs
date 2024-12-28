@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    FamilyMenuScript Menu;
-    GameObject TechAnimContainer;
-    List<TechAnimator> TechAnimations;
+
 
     TabGroup TabGroup;
     shopSetter ShopSetter;
@@ -18,9 +16,8 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        Menu = GetComponentInParent<FamilyMenuScript>();
-        TechAnimContainer = Menu.TechAnimations;
-        TechAnimations = TechAnimContainer.GetComponentsInChildren<TechAnimator>().ToList();
+
+
         TabGroup = GetComponentInChildren<TabGroup>();
         ShopSetter = GetComponentInChildren<shopSetter>();
 
