@@ -8138,7 +8138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 851, y: 445.75}
+  m_AnchoredPosition: {x: 864.2, y: 456.2}
   m_SizeDelta: {x: 160, y: 128.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777234237
@@ -9860,14 +9860,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pages
       objectReference: {fileID: 0}
-    - target: {fileID: 1094421065797189861, guid: 2c91d1f5ca766d54dabc3351b62be322, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093029980602751420, guid: 2c91d1f5ca766d54dabc3351b62be322, type: 3}
-      propertyPath: ScriptableShop
-      value: 
-      objectReference: {fileID: 11400000, guid: 32539e2631e34a64681f61a06956db81, type: 2}
     - target: {fileID: 6351642212364497847, guid: 2c91d1f5ca766d54dabc3351b62be322, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

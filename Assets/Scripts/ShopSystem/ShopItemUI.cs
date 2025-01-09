@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ShopItemUI : MonoBehaviour
 {
+    public Color TextColor;
     public TMP_Text itemName;
     public TMP_Text itemDescription;
     public TMP_Text itemCost;
@@ -26,6 +27,9 @@ public class ShopItemUI : MonoBehaviour
         itemName.text = item.itemName;  // Assign item name
         itemDescription.text = item.itemDescription;  // Assign item description
         itemCost.text = item.cost.ToString() +"$";  // Assign item cost
+        itemName.color = TextColor;
+        itemDescription.color = TextColor;
+        itemCost.color = TextColor;
 
         // Load the availability state
         toggleItem.isOn = true;
