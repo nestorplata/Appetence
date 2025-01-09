@@ -22,7 +22,7 @@ public class ShopManager : MonoBehaviour
         ShopSetter = GetComponentInChildren<shopSetter>();
 
         ShopSetter.Instantiate();
-        TabGroup.panels = ShopSetter.ShopPanels;
+        //TabGroup.panels = ShopSetter.ShopPanels;
     }
 
 

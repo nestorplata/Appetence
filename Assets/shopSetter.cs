@@ -19,6 +19,7 @@ public class shopSetter : MonoBehaviour
         {
 
             GameObject PanelObject = Instantiate(Scriptable.ShopPanelContainer, transform);
+            PanelObject.SetActive(true);
             ShopPanel Panel = PanelObject.GetComponent<ShopPanel>();
             Panel.InstantiateItems(ScriptablePanel, Scriptable.ItemIcon);
             ShopPanels.Add(Panel);
