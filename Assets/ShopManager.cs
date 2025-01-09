@@ -18,7 +18,7 @@ public class ShopManager : MonoBehaviour
     {
 
 
-        TabGroup = GetComponentInChildren<TabGroup>();
+        //TabGroup = GetComponentInChildren<TabGroup>();
         ShopSetter = GetComponentInChildren<shopSetter>();
 
         ShopSetter.Instantiate();

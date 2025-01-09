@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8172bc385b77f9d4faa64f464f2ba6f3, type: 3}
   m_Name: TechnologyPanel
   m_EditorClassIdentifier: 
+  BackGround: {fileID: 0}
+  ShopItemPrefab: {fileID: 8527321110273333119, guid: 9cf0dc84ac0c3564981ed7c239519a80, type: 3}
   TechItems:
   - {fileID: 11400000, guid: 74e180961aafb1945bbbef214990b78b, type: 2}

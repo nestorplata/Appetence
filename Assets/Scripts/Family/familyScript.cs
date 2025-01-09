@@ -114,7 +114,6 @@ public class familyScript : MonoBehaviour
     }
 
 
-
     public familyMember GetFamilyMember(FamilyRole DesiredMember)
     {
         foreach (var member in Family)

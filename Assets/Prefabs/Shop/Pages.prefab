@@ -48,5 +48,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fced6481daacc8488a9630ced65f958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scriptable: {fileID: 11400000, guid: 32539e2631e34a64681f61a06956db81, type: 2}
+  ScriptableShop: {fileID: 11400000, guid: 32539e2631e34a64681f61a06956db81, type: 2}
   <ShopPanels>k__BackingField: []

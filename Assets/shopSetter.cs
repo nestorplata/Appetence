@@ -4,24 +4,25 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shopSetter : MonoBehaviour
 {
     [SerializeField]
-    ShopScriptable Scriptable;
+    ShopScriptable ScriptableShop;
     [field: SerializeField]
     public List<ShopPanel> ShopPanels { private set; get; }
     // Start is called before the first frame update
 
     public void Instantiate()
     {
-        foreach (ScriptablePanel ScriptablePanel in  Scriptable.ShopPanels)
+        foreach (ScriptablePanel ScriptablePanel in  ScriptableShop.ShopPanels)
         {
 
-            GameObject PanelObject = Instantiate(Scriptable.ShopPanelContainer, transform);
-            PanelObject.SetActive(true);
-            ShopPanel Panel = PanelObject.GetComponent<ShopPanel>();
-            Panel.InstantiateItems(ScriptablePanel, Scriptable.ItemIcon);
+            ShopPanel Panel = Instantiate(ScriptableShop.ShopPanelContainer, transform).GetComponent<ShopPanel>();
+            Panel.gameObject.SetActive(true);
+            Panel.SetImage(ScriptablePanel.BackGround);
+            Panel.InstantiateItems(ScriptablePanel, ScriptableShop.ItemIcon);
             ShopPanels.Add(Panel);
 
 
