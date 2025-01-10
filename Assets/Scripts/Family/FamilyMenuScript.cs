@@ -16,7 +16,6 @@ public class FamilyMenuScript : MonoBehaviour
 
     [SerializeField]
     private GameObject shopUI;
-    private bool shopMenu = false;
 
 
 
@@ -226,16 +225,8 @@ public class FamilyMenuScript : MonoBehaviour
 
     public void ShopButton()
     {
-        if (shopMenu)
-        {
-            shopUI.SetActive(false);
-            shopMenu = false;
-        }
-        else
-        {
-            shopUI.SetActive(true);
-            shopMenu = true;
-        }
+        shopUI.SetActive(!shopUI.activeSelf);
+
     }
 
 

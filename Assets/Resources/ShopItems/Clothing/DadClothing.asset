@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32aeeebc479d33749a6e0cceff575560, type: 3}
   m_Name: DadClothing
   m_EditorClassIdentifier: 
-  itemName: Dad Clothing
-  itemDescription: 50% Discount on Medicine
+  itemName: Workwear
+  itemDescription: 50% off Medicine
   cost: 200
   available: 1
   itemIcon: {fileID: 21300000, guid: 4b540343d9a337b4895118b1f7a9163a, type: 3}
-  isFinalUpgrade: 1
   UpgradeLevel: 1
   Owner: 0
   nextUpgrade: {fileID: 0}
