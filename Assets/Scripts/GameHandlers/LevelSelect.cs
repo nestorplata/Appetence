@@ -9,7 +9,6 @@ public class LevelSelect : MonoBehaviour
 
     public Button FactoryButton;
     public Button GroceryButton;
-
     [SerializeField]
     private LevelLoader levelLoader;
 
@@ -19,14 +18,29 @@ public class LevelSelect : MonoBehaviour
 
         FactoryButton.onClick.AddListener(() => LoadFactory());
         GroceryButton.onClick.AddListener(() => LoadGrocery());
+
+        if(familyScript.Instance.day ==1)
+        {
+            int random = Random.Range(0, 2);
+
+            GameObject DeactivateJob;
+            switch (random)
+            {
+                case 1:
+                    DeactivateJob = FactoryButton.gameObject;
+                    break;
+                default:
+                    DeactivateJob = GroceryButton.gameObject;
+
+                    break;
+            }
+            DeactivateJob.SetActive(false);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //GroceryButton.interactable = false;
-    }
 
+        // Update is called once per frame
     public void LoadFactory()
     {
         StartCoroutine(levelLoader.LoadLevel("FactoryTutorial"));
