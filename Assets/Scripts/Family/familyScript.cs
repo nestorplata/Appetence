@@ -1,5 +1,4 @@
 using JetBrains.Annotations;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +17,7 @@ public class familyScript : MonoBehaviour
     public static int StartingDay { get; private set; } = 1;
 
     [Range(0, 4)] public int FamilyAllowedToPerish =1;
+    [Range(0, 5)] public int FamilyAllowedToGetSick = 4;
 
     public static familyScript Instance { get; private set; }
 
@@ -58,14 +58,19 @@ public class familyScript : MonoBehaviour
                 else
                 {
                     member.Hunger++;
+
+                    if (day > 2)
+                    {
+                        int random = Random.Range(0, 100);
+                        if (random > 60 && GetSicknessCount() <= FamilyAllowedToGetSick)
+                        {
+                            member.sickness++;
+                        }
+                    }
                 }
                 if (member.MedToogle.IsOn())
                 {
-                    member.sickness--;
-                }
-                else
-                {
-                    member.sickness++;
+                    member.sickness = Sickness.Healthy;
                 }
             }
 
@@ -125,6 +130,18 @@ public class familyScript : MonoBehaviour
 
     }
 
+    public int GetSicknessCount()
+    {
+        int i=0;
+        foreach(var member in Family)
+        {
+            if(member.sickness >Sickness.Healthy)
+            {
+                i++;
+            }
+        }
+        return i;
+    }
     public familyMember GetClosestToDead()
     {
         GeneralState LatestGeneralState = GeneralState.Satisfied;
