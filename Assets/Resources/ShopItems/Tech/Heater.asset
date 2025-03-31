@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13319e2306d97c4a885967e34cfe0ae, type: 3}
+  m_Name: Heater
+  m_EditorClassIdentifier: 
+  itemName: Heater
+  itemDescription: Makes family less likely to get sick
+  cost: 500
+  available: 0
+  itemIcon: {fileID: 21300000, guid: cdb395864435d814996d3af26b2f76f6, type: 3}
+  UpgradeLevel: 1
+  nextUpgrade: {fileID: 0}
+  SicknessChance: 50
+  TechType: 0
+  animator: {fileID: 0}

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8339404644783738678}
   - component: {fileID: 8192019888229150877}
-  - component: {fileID: -7646957707291936004}
   - component: {fileID: -4391114165386656909}
   - component: {fileID: -7292933295978314754}
+  - component: {fileID: 8595522198482879339}
+  - component: {fileID: 6855699260614221458}
   m_Layer: 6
   m_Name: Apple cider
   m_TagString: Untagged
@@ -87,8 +88,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-7646957707291936004
-BoxCollider2D:
+--- !u!114 &-4391114165386656909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440620414349768034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3a2002b7df02d46a3fc23fb7740fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitNames: Apple cider
+  slotPos: {fileID: 5633652233581215903, guid: bef6bdb97ba7d4a428d6ec70e68546a6, type: 3}
+  objDrag: {fileID: 3440620414349768034}
+  clickDown: {fileID: 8300000, guid: 330af3cdb038cea43b2ea625e96e924f, type: 3}
+  clickUp: {fileID: 8300000, guid: 8b52fcf13e03f984d85ac898502008a1, type: 3}
+  correct: {fileID: 0}
+  wrong: {fileID: 0}
+--- !u!50 &-7292933295978314754
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440620414349768034}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &8595522198482879339
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,48 +176,173 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24}
-  m_EdgeRadius: 0
---- !u!114 &-4391114165386656909
-MonoBehaviour:
+  m_Points:
+    m_Paths:
+    - - {x: 1.18, y: -4.12}
+      - {x: 1.36, y: -4.0499997}
+      - {x: 1.54, y: -3.8899999}
+      - {x: 1.5999999, y: -3.78}
+      - {x: 1.62, y: -3.73}
+      - {x: 1.64, y: -3.6699998}
+      - {x: 1.65, y: -3.3899999}
+      - {x: 1.67, y: -3.1299999}
+      - {x: 1.67, y: -2.83}
+      - {x: 1.66, y: -2.6699998}
+      - {x: 1.66, y: -1.09}
+      - {x: 1.67, y: -1.0799999}
+      - {x: 1.67, y: 0.39999998}
+      - {x: 1.66, y: 0.41}
+      - {x: 1.66, y: 1.06}
+      - {x: 1.5999999, y: 1.35}
+      - {x: 1.54, y: 1.49}
+      - {x: 1.4399999, y: 1.7099999}
+      - {x: 1.37, y: 1.8199999}
+      - {x: 1.25, y: 1.9699999}
+      - {x: 0.71999997, y: 2.6299999}
+      - {x: 0.55, y: 2.97}
+      - {x: 0.5, y: 3.12}
+      - {x: 0.5, y: 3.6999998}
+      - {x: 0.48999998, y: 4.06}
+      - {x: 0.53, y: 4.08}
+      - {x: 0.59999996, y: 4.23}
+      - {x: 0.59999996, y: 4.31}
+      - {x: 0.56, y: 4.3399997}
+      - {x: 0.57, y: 4.5299997}
+      - {x: 0.51, y: 4.5699997}
+      - {x: 0.32, y: 4.6}
+      - {x: 0.089999996, y: 4.62}
+      - {x: -0.17, y: 4.62}
+      - {x: -0.32, y: 4.61}
+      - {x: -0.53999996, y: 4.5499997}
+      - {x: -0.57, y: 4.5299997}
+      - {x: -0.56, y: 4.35}
+      - {x: -0.62, y: 4.3199997}
+      - {x: -0.58, y: 4.16}
+      - {x: -0.51, y: 4.06}
+      - {x: -0.48999998, y: 4.0499997}
+      - {x: -0.5, y: 3.6799998}
+      - {x: -0.5, y: 3.1399999}
+      - {x: -0.55, y: 2.96}
+      - {x: -0.65999997, y: 2.75}
+      - {x: -0.79999995, y: 2.53}
+      - {x: -1.37, y: 1.81}
+      - {x: -1.4399999, y: 1.7099999}
+      - {x: -1.5799999, y: 1.41}
+      - {x: -1.62, y: 1.2099999}
+      - {x: -1.65, y: 1.05}
+      - {x: -1.66, y: 0.94}
+      - {x: -1.67, y: 0.42999998}
+      - {x: -1.67, y: -1.2099999}
+      - {x: -1.66, y: -1.22}
+      - {x: -1.66, y: -3.1299999}
+      - {x: -1.65, y: -3.3899999}
+      - {x: -1.64, y: -3.6699998}
+      - {x: -1.63, y: -3.74}
+      - {x: -1.53, y: -3.8899999}
+      - {x: -1.43, y: -3.98}
+      - {x: -1.36, y: -4.04}
+      - {x: -1.18, y: -4.12}
+      - {x: -0.93, y: -4.23}
+      - {x: -0.53999996, y: -4.3399997}
+      - {x: -0.29999998, y: -4.36}
+      - {x: 0.29999998, y: -4.36}
+      - {x: 0.47, y: -4.3399997}
+      - {x: 0.58, y: -4.3199997}
+      - {x: 0.84, y: -4.2599998}
+  m_UseDelaunayMesh: 0
+--- !u!82 &6855699260614221458
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3440620414349768034}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d3a2002b7df02d46a3fc23fb7740fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruitNames: Apple cider
-  slotPos: {fileID: 5633652233581215903, guid: bef6bdb97ba7d4a428d6ec70e68546a6, type: 3}
-  objDrag: {fileID: 3440620414349768034}
---- !u!50 &-7292933295978314754
-Rigidbody2D:
   serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3440620414349768034}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

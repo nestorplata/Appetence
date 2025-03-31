@@ -1,0 +1,358 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2825768991012798933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6141433383010218353}
+  - component: {fileID: 1768502991907010996}
+  m_Layer: 0
+  m_Name: Dad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6141433383010218353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825768991012798933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4209736478958467211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768502991907010996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825768991012798933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Role: 0
+  Hunger: 0
+  sickness: 0
+  happy: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
+  Sad: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
+  sick: {fileID: 8300000, guid: 995b05605660fa44298411fbea5d8ebe, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 00f1bfe58ff1a324f9b92307c2fd6e98, type: 2}
+--- !u!1 &2960914340927862407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8116902016765568581}
+  - component: {fileID: 1931464673966838899}
+  m_Layer: 0
+  m_Name: boy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8116902016765568581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960914340927862407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4209736478958467211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931464673966838899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960914340927862407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Role: 2
+  Hunger: 0
+  sickness: 0
+  happy: {fileID: 8300000, guid: 30ad01554d993cf4ebfd6dfd204c3593, type: 3}
+  Sad: {fileID: 8300000, guid: fad9d05b1a181434b8ef00c48d6d07f8, type: 3}
+  sick: {fileID: 8300000, guid: 30029be5b7df4fd4280515c9fe3dd09c, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 1d23ac1eb2585cf459c698e1fcbcca32, type: 2}
+  - {fileID: 11400000, guid: de6eee231c9fc7c4ba2fc0536368a2a9, type: 2}
+--- !u!1 &3146555016142369333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4209736478958467211}
+  - component: {fileID: 9186584556698974779}
+  m_Layer: 0
+  m_Name: FamilyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4209736478958467211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146555016142369333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6141433383010218353}
+  - {fileID: 5126736304091712072}
+  - {fileID: 8116902016765568581}
+  - {fileID: 3279532928006899165}
+  - {fileID: 2085312238259514939}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9186584556698974779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146555016142369333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d89b037667b3a542beb9853f1510f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Family:
+  - {fileID: 5489374887229730229}
+  - {fileID: 1931464673966838899}
+  - {fileID: 4728409124813461762}
+  - {fileID: 7398776266380784035}
+  - {fileID: 1768502991907010996}
+  FamilyAllowedToPerish: 1
+  day: 1
+--- !u!1 &5323543770722107542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085312238259514939}
+  - component: {fileID: 7398776266380784035}
+  m_Layer: 0
+  m_Name: Baby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085312238259514939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5323543770722107542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4209736478958467211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7398776266380784035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5323543770722107542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Role: 4
+  Hunger: 0
+  sickness: 0
+  happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+  Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: d24ed56a97aaf2147aad870beb464390, type: 2}
+  - {fileID: 11400000, guid: 0af0dfe0ab924b54eab063b633c4c00c, type: 2}
+--- !u!1 &7261142482429969614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3279532928006899165}
+  - component: {fileID: 4728409124813461762}
+  m_Layer: 0
+  m_Name: Girl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3279532928006899165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261142482429969614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4209736478958467211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4728409124813461762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261142482429969614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Role: 3
+  Hunger: 0
+  sickness: 0
+  happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+  Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 221b1e415632fb54bbb8e2fa5824e420, type: 2}
+  - {fileID: 11400000, guid: ee314b4a6296407448d627cd4a5d02d2, type: 2}
+--- !u!1 &7738362323173153964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5126736304091712072}
+  - component: {fileID: 5489374887229730229}
+  m_Layer: 0
+  m_Name: Wife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5126736304091712072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738362323173153964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4209736478958467211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5489374887229730229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738362323173153964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4143cf245bd261c409386342f69d3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Role: 1
+  Hunger: 0
+  sickness: 0
+  happy: {fileID: 8300000, guid: 0167c7147e56c4244bb965a67cf66991, type: 3}
+  Sad: {fileID: 8300000, guid: 59adcfa66ec67a74489c43244b6b39ee, type: 3}
+  sick: {fileID: 8300000, guid: 235979e6ca1078d42ac3feffcdd779d1, type: 3}
+  FoodToogle: {fileID: 0}
+  MedToogle: {fileID: 0}
+  foodCost: 60
+  MedCost: 200
+  ClothingLevel: 0
+  AnimationStates: []
+  ClothingItems:
+  - {fileID: 11400000, guid: ef092ac8116c2454f89784abaedfe297, type: 2}
+  - {fileID: 11400000, guid: 7bfdda472db18754aabaab8cd233ccd5, type: 2}
+  - {fileID: 11400000, guid: 13f51e20583f8404f91d7077fb48dd42, type: 2}

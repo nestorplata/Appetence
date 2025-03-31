@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46256cd0dedaeb040bc9da93703c2659, type: 3}
+  m_Name: ClothingPanel
+  m_EditorClassIdentifier: 
+  BackGround: {fileID: 21300000, guid: 7d21066b689963a4db2b2fc3b41d9c30, type: 3}
+  ShopItemPrefab: {fileID: 8527321110273333119, guid: 9cf0dc84ac0c3564981ed7c239519a80, type: 3}
+  ClothItems:
+  - {fileID: 11400000, guid: d24ed56a97aaf2147aad870beb464390, type: 2}
+  - {fileID: 11400000, guid: 1d23ac1eb2585cf459c698e1fcbcca32, type: 2}
+  - {fileID: 11400000, guid: 00f1bfe58ff1a324f9b92307c2fd6e98, type: 2}
+  - {fileID: 11400000, guid: 221b1e415632fb54bbb8e2fa5824e420, type: 2}
+  - {fileID: 11400000, guid: 7bfdda472db18754aabaab8cd233ccd5, type: 2}

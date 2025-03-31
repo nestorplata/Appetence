@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32aeeebc479d33749a6e0cceff575560, type: 3}
   m_Name: BoyClothingUpgrade
   m_EditorClassIdentifier: 
-  itemName: Boy Clothes Upgrade
-  itemDescription: des
+  itemName: Shirt
+  itemDescription: 50% off Medicine
   cost: 200
-  available: 1
-  itemIcon: {fileID: 21300000, guid: 8b0c03b905dc06640ad019da8a19f3b8, type: 3}
+  available: 0
+  itemIcon: {fileID: 21300000, guid: f3a819f562cb64143afd607e5af3c305, type: 3}
+  UpgradeLevel: 2
+  Owner: 2
   nextUpgrade: {fileID: 0}
-  isFinalUpgrade: 1
-  clothingIndex: 2
-  familyMember: boy

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CurrencySystem : MonoBehaviour
 {
-    private int currency = 350; //if changed, also change in Reset() function in familyScript
+    [SerializeField] private int StartingCurrency;
+    [SerializeField] public int currency; //if changed, also change in Reset() function in familyScript
 
     public static CurrencySystem Instance { get; private set; }
 
@@ -13,7 +14,7 @@ public class CurrencySystem : MonoBehaviour
         if (Instance != null)
         {
             //Debug.LogError("There is more than one instance!");
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
 
@@ -24,6 +25,7 @@ public class CurrencySystem : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
+        currency = StartingCurrency;
     }
 
     public void AddCurrency(int amount)
@@ -40,5 +42,10 @@ public class CurrencySystem : MonoBehaviour
     public void SetCurrency(int cur)
     {
         currency = cur;
+    }
+
+    public void ResetCurrency()
+    {
+        currency = StartingCurrency;
     }
 }

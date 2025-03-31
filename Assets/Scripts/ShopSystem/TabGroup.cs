@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 public class TabGroup : MonoBehaviour
 {
     public List<TabButton> buttons;
@@ -10,15 +11,15 @@ public class TabGroup : MonoBehaviour
     public Sprite tabHover;
     public Sprite tabActive;
     public TabButton tabSelected;
-    public List<GameObject> panels;
+    public List<ShopPanel> panels;
     private GameObject welcomeText;
     [SerializeField] private GameObject label;
 
-    private void Start()
+    public void Start()
     {
         welcomeText = GameObject.Find("WelcomeText");
         //label = GameObject.Find("Labels");
-        label.SetActive(false);
+        //label.SetActive(false);
     }
     public void AddToList(TabButton button)
     {
@@ -44,11 +45,11 @@ public class TabGroup : MonoBehaviour
         {
             if (i == index)
             {
-                panels[i].SetActive(true);               
+                panels[i].gameObject.SetActive(true);               
             }
             else
             {
-                panels[i].SetActive(false);
+                panels[i].gameObject.SetActive(false);
             }
         }
     }
